@@ -17,6 +17,10 @@ export interface FilingTable {
   // ("CONSOLIDATED BALANCE SHEETS") sits.
   heading: string;
   rows: string[][];
+  // A unit declared once for the whole document ("All amounts are
+  // presented in millions of U.S. dollars, unless otherwise specified"),
+  // for statements that don't repeat it above their figures (Deere).
+  documentUnit: string | null;
 }
 
 export interface ParsedFiling {
@@ -26,7 +30,10 @@ export interface ParsedFiling {
 const HEADING_LOOKBACK_CHARS = 300;
 
 function clean(s: string): string {
-  return s.replace(/\u00a0/g, " ").replace(/[\u2014\u2013]/g, "-").replace(/\s+/g, " ").trim();
+  // Zero-width spaces and byte-order marks are invisible but common in
+  // filings (Deere's are full of them), and they turn empty spacer cells
+  // into cells that look non-empty.
+  return s.replace(/[\u200b\u200c\u200d\ufeff]/g, "").replace(/\u00a0/g, " ").replace(/[\u2014\u2013]/g, "-").replace(/\s+/g, " ").trim();
 }
 
 // Financial tables split one number across several cells: "$" in one,
@@ -52,7 +59,21 @@ function mergeCells(cells: string[]): string[] {
   return out.map((c) => c.replace(/^\$\s*/, "").replace(/^\(\$/, "("));
 }
 
-export function parseFiling(html: string): ParsedFiling {
+// Takes every document that makes up the report: the 10-K itself, plus any
+// annual report exhibit its statements are incorporated from. Tables are
+// numbered continuously across documents.
+export function parseFiling(documents: string | string[]): ParsedFiling {
+  const tables: FilingTable[] = [];
+  for (const html of Array.isArray(documents) ? documents : [documents]) {
+    collectTables(html, tables);
+  }
+  return { tables };
+}
+
+const DOCUMENT_UNIT =
+  /\ball (dollar )?amounts (are |have been )?(presented|stated|expressed|reported|shown) in (thousands|millions|billions)\b/i;
+
+function collectTables(html: string, tables: FilingTable[]): void {
   const $ = cheerio.load(html);
 
   $("ix\\:header, script, style").remove();
@@ -63,7 +84,6 @@ export function parseFiling(html: string): ParsedFiling {
 
   // Walk the document in order, keeping a rolling window of the text seen
   // so far, so each table can be labeled with whatever came right before it.
-  const tables: FilingTable[] = [];
   let recentText = "";
 
   const visit = (node: AnyNode) => {
@@ -86,8 +106,15 @@ export function parseFiling(html: string): ParsedFiling {
           );
           if (cells.length > 0) rows.push(cells);
         });
-      if (rows.length > 0) {
-        tables.push({ index: tables.length, heading: clean(recentText), rows });
+      const heading = clean(recentText);
+      const previous = tables[tables.length - 1];
+      // A statement that runs past a page break continues in a new table
+      // headed "(Continued)" (Citigroup's balance sheet splits assets from
+      // liabilities this way). Joined back up, it's one statement again.
+      if (rows.length > 0 && previous && /\(continued\)/i.test(heading)) {
+        previous.rows.push(...rows);
+      } else if (rows.length > 0) {
+        tables.push({ index: tables.length, heading, rows, documentUnit: null });
       }
       // Some filers (Chevron, for one) put a statement's title in its own
       // tiny table right above the numbers. A small table with no figures
@@ -105,10 +132,13 @@ export function parseFiling(html: string): ParsedFiling {
     for (const child of node.children) visit(child);
   };
 
+  const firstOwnTable = tables.length;
   const root = $.root()[0];
   for (const child of root.children) visit(child);
 
-  return { tables };
+  const documentUnit =
+    clean($.root().text()).match(DOCUMENT_UNIT)?.[4]?.toLowerCase() ?? null;
+  for (const t of tables.slice(firstOwnTable)) t.documentUnit = documentUnit;
 }
 
 export function tableToText(table: FilingTable): string {

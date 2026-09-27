@@ -51,10 +51,27 @@ const SIGNATURES: Record<StatementKind, StatementSignature> = {
   },
 };
 
-// Statements from a parent-company-only schedule or a segment breakdown
-// look like the real thing but aren't the consolidated figures.
+// Tables that carry a statement's rows and even its title but aren't the
+// consolidated statement: parent-company-only "condensed" statements (a
+// 10-K's real statements are never condensed), segment and business-line
+// breakdowns, consolidating schedules that split the totals by business
+// (Deere), banks' average balance sheets (Schwab), a subsidiary's
+// summarized balance sheet (Citigroup), and multi-year summaries.
 const NOT_CONSOLIDATED =
-  /parent company|condensed (financial|statements?) of (the )?registrant|schedule i\b|segment/i;
+  /parent company|parent[- ]only|condensed|of (the )?registrant|schedule i\b|segment|consolidating|average balance|summarized|selected financial data|financial highlights|selected metrics/i;
+
+// A primary statement has one figure column per year it presents: two for
+// a balance sheet, three for income and cash flows. Consolidating
+// schedules (Caterpillar) and five-year summaries (Deere) have many more.
+const MAX_TYPICAL_COLUMNS = 4;
+
+function typicalNumericColumns(table: FilingTable): number {
+  const counts = table.rows
+    .map((r) => r.slice(1).filter(isNumericCell).length)
+    .filter((n) => n > 0)
+    .sort((a, b) => a - b);
+  return counts.length ? counts[Math.floor(counts.length / 2)] : 0;
+}
 
 const MIN_NUMERIC_ROWS = 8;
 
@@ -83,6 +100,7 @@ export function scoreTable(table: FilingTable, kind: StatementKind): Candidate {
   if (sig.title.test(table.heading)) score += 15;
   if (NOT_CONSOLIDATED.test(table.heading)) score -= 40;
   if (sig.lookalike?.test(table.heading)) score -= 40;
+  if (typicalNumericColumns(table) > MAX_TYPICAL_COLUMNS) score -= 25;
   if (numericRows < MIN_NUMERIC_ROWS) score -= 30;
   score += Math.min(numericRows, 40) * 0.25;
 
@@ -99,4 +117,35 @@ export function rankCandidates(
     .filter((c) => c.score > 0)
     .sort((a, b) => b.score - a.score || a.table.index - b.table.index)
     .slice(0, top);
+}
+
+// A statement that runs past a page break often continues in the next
+// table with nothing above it but a page number (Citigroup's income
+// statement puts EPS there; J&J's cash flow statement puts financing
+// activities there). A following table whose heading has no words in it
+// is part of the same statement, so it's folded back in.
+const MAX_CONTINUATIONS = 2;
+
+function isContinuation(table: FilingTable): boolean {
+  const heading = table.heading.replace(/table of contents/gi, "");
+  return !/[a-z]{3,}/i.test(heading);
+}
+
+export function locateStatement(
+  tables: FilingTable[],
+  kind: StatementKind,
+): { table: FilingTable; candidate: Candidate; runnerUp: Candidate | null } | null {
+  const [best, runnerUp] = rankCandidates(tables, kind, 2);
+  if (!best) return null;
+  const rows = [...best.table.rows];
+  for (let i = 1; i <= MAX_CONTINUATIONS; i++) {
+    const next = tables[best.table.index + i];
+    if (!next || !isContinuation(next)) break;
+    rows.push(...next.rows);
+  }
+  return {
+    table: { ...best.table, rows },
+    candidate: best,
+    runnerUp: runnerUp ?? null,
+  };
 }

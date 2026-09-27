@@ -1,3 +1,5 @@
+import * as cheerio from "cheerio";
+
 // Thin client for SEC EDGAR. Two rules from sec.gov shape everything here:
 // every request must identify who is making it (User-Agent with contact
 // info - unidentified bots are refused), and no more than 10 requests per
@@ -63,12 +65,20 @@ interface TickerEntry {
   title: string;
 }
 
+// The ticker map is one ~1MB file covering every filer; fetch it once per
+// process instead of once per lookup.
+let tickerMap: Promise<Record<string, TickerEntry>> | null = null;
+
 export async function lookupTicker(
   ticker: string,
 ): Promise<{ cik: number; name: string } | null> {
-  const all = await secJson<Record<string, TickerEntry>>(
+  tickerMap ??= secJson<Record<string, TickerEntry>>(
     "https://www.sec.gov/files/company_tickers.json",
-  );
+  ).catch((err) => {
+    tickerMap = null;
+    throw err;
+  });
+  const all = await tickerMap;
   const match = Object.values(all).find(
     (e) => e.ticker.toUpperCase() === ticker.toUpperCase(),
   );
@@ -131,4 +141,47 @@ export async function listFilings(
 
 export async function fetchFilingHtml(filing: FilingRef): Promise<string> {
   return secText(filing.url);
+}
+
+export interface FilingDocument {
+  type: string;
+  name: string;
+  url: string;
+}
+
+function filingFolder(filing: FilingRef): string {
+  return `https://www.sec.gov/Archives/edgar/data/${filing.cik}/${filing.accessionNumber.replace(/-/g, "")}`;
+}
+
+// Some companies (IBM, Wells Fargo, U.S. Bancorp among them) don't put
+// their financial statements in the 10-K document itself. They incorporate
+// them by reference from the annual report to shareholders, filed in the
+// same submission as Exhibit 13. The filing index lists every document
+// with its type, so the report can be found without guessing file names.
+//
+// Only EX-13 is ever returned. The same index also lists the XBRL
+// instance and linkbase files, which are the answer key and must never
+// reach an agent.
+export async function listAnnualReportExhibits(
+  filing: FilingRef,
+): Promise<FilingDocument[]> {
+  const html = await secText(
+    `${filingFolder(filing)}/${filing.accessionNumber}-index.htm`,
+  );
+  const $ = cheerio.load(html);
+  const docs: FilingDocument[] = [];
+  $("table.tableFile tr").each((_, tr) => {
+    const cells = $(tr)
+      .find("td")
+      .map((__, td) => $(td).text().trim())
+      .get();
+    if (cells.length < 4) return;
+    const type = cells[3];
+    // The document cell reads "name.htm   iXBRL" for inline XBRL files.
+    const name = cells[2].split(/\s+/)[0];
+    if (/^EX-13(\.\d+)?$/.test(type) && /\.html?$/i.test(name)) {
+      docs.push({ type, name, url: `${filingFolder(filing)}/${name}` });
+    }
+  });
+  return docs;
 }
