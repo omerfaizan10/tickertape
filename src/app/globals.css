@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0a0b0d;
+  --surface: #121317;
+  --surface-2: #191b20;
+  --border: #24262c;
+  --border-soft: #1a1c22;
+  --text: #e7e8ea;
+  --text-muted: #94969e;
+  --text-faint: #55575f;
+  --accent: #4fb8d6;
+  --accent-soft: #163842;
+
+  --approve: #34d399;
+  --approve-soft: #0f2c22;
+  --review: #f2b84b;
+  --review-soft: #33260c;
+  --escalate: #f2646b;
+  --escalate-soft: #341417;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-border-soft: var(--border-soft);
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+  --color-text-faint: var(--text-faint);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-approve: var(--approve);
+  --color-approve-soft: var(--approve-soft);
+  --color-review: var(--review);
+  --color-review-soft: var(--review-soft);
+  --color-escalate: var(--escalate);
+  --color-escalate-soft: var(--escalate-soft);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--text);
+}
+
+* {
+  border-color: var(--border);
+}
+
+table {
+  border-collapse: collapse;
+}
+
+details > summary {
+  cursor: pointer;
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
