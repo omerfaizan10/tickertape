@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "db:migrate": "tsx scripts/migrate.ts",
-    "golden:build": "tsx scripts/build-golden-set.ts"
+    "golden:build": "tsx scripts/build-golden-set.ts",
+    "eval": "tsx scripts/eval.ts"
   },
   "dependencies": {
     "cheerio": "^1.2.0",

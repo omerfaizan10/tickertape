@@ -57,6 +57,30 @@ export interface RunAgentStepParams<T> {
     | Promise<{ output: T; toolCalls?: ToolCallRecord[] }>;
 }
 
+// Three extractors run in parallel per filing, and a batch eval keeps that
+// up for minutes, which saturates the account's tokens-per-minute limit.
+// The SDK's own retries back off for seconds; a saturated window needs
+// tens of seconds. So a rate-limit error waits for the window to roll over
+// before trying again, instead of failing the agent. Any other error is
+// real and surfaces immediately.
+const RATE_LIMIT_ATTEMPTS = 5;
+const RATE_LIMIT_WAIT_MS = 15_000;
+
+async function withRateLimitRetry<T>(call: () => Promise<T>): Promise<T> {
+  for (let attempt = 1; ; attempt++) {
+    try {
+      return await call();
+    } catch (err) {
+      const status = (err as { status?: number }).status;
+      if (status !== 429 || attempt >= RATE_LIMIT_ATTEMPTS) throw err;
+      const jitter = Math.random() * 3000;
+      await new Promise((r) =>
+        setTimeout(r, RATE_LIMIT_WAIT_MS * attempt + jitter),
+      );
+    }
+  }
+}
+
 function costUsd(tokensIn: number, tokensOut: number): number {
   return (
     (tokensIn / 1000) * PRICE_PER_1K_INPUT +
@@ -118,13 +142,18 @@ export async function runAgentStep<T>(
   let tokensIn = 0;
   let tokensOut = 0;
 
-  for (let round = 0; round < maxToolRounds; round++) {
-    const response = await openai.chat.completions.create({
-      model: CHAT_MODEL,
-      messages,
-      tools: toolDefs.length > 0 ? toolDefs : undefined,
-      tool_choice: toolDefs.length > 0 ? "auto" : undefined,
-    });
+  // Without tools there is nothing to loop over: go straight to the
+  // structured answer. (A free-text first call would read the whole
+  // statement twice and double the cost for nothing.)
+  for (let round = 0; toolDefs.length > 0 && round < maxToolRounds; round++) {
+    const response = await withRateLimitRetry(() =>
+      openai.chat.completions.create({
+        model: CHAT_MODEL,
+        messages,
+        tools: toolDefs.length > 0 ? toolDefs : undefined,
+        tool_choice: toolDefs.length > 0 ? "auto" : undefined,
+      }),
+    );
 
     tokensIn += response.usage?.prompt_tokens ?? 0;
     tokensOut += response.usage?.completion_tokens ?? 0;
@@ -160,24 +189,28 @@ export async function runAgentStep<T>(
     }
   }
 
-  messages.push({
-    role: "user",
-    content:
-      "Respond now with only the final structured result matching the required schema. Do not call any more tools.",
-  });
+  if (toolDefs.length > 0) {
+    messages.push({
+      role: "user",
+      content:
+        "Respond now with only the final structured result matching the required schema. Do not call any more tools.",
+    });
+  }
 
-  const finalResponse = await openai.chat.completions.create({
-    model: CHAT_MODEL,
-    messages,
-    response_format: {
-      type: "json_schema",
-      json_schema: {
-        name: `${params.agentName}_output`,
-        schema: z.toJSONSchema(params.outputSchema, { target: "draft-7" }),
-        strict: true,
+  const finalResponse = await withRateLimitRetry(() =>
+    openai.chat.completions.create({
+      model: CHAT_MODEL,
+      messages,
+      response_format: {
+        type: "json_schema",
+        json_schema: {
+          name: `${params.agentName}_output`,
+          schema: z.toJSONSchema(params.outputSchema, { target: "draft-7" }),
+          strict: true,
+        },
       },
-    },
-  });
+    }),
+  );
 
   tokensIn += finalResponse.usage?.prompt_tokens ?? 0;
   tokensOut += finalResponse.usage?.completion_tokens ?? 0;

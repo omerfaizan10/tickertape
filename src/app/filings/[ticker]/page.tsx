@@ -74,7 +74,7 @@ export default async function FilingPage({
   return (
     <div className="flex flex-col gap-8">
       <div>
-        <Link href="/" className="text-xs text-text-muted hover:text-text">
+        <Link href="/golden" className="text-xs text-text-muted hover:text-text">
           ← golden set
         </Link>
         <div className="mt-2 flex flex-wrap items-baseline gap-3">

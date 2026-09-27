@@ -30,6 +30,12 @@ export interface AnswerKeyEntry {
   // its investing cash flow) or basic and diluted EPS round to the same
   // cent.
   rowLabels: string[];
+  // Other values the SEC also tags for this field that are printed on the
+  // same statement. Revenue is the real case: Walmart tags both "Revenues"
+  // (total revenues, $713B) and revenue from contracts with customers (net
+  // sales, $706B), and both lines are on its income statement. When the
+  // SEC's own data has two valid answers on the page, either one counts.
+  alternates: number[];
 }
 
 export type AnswerKey = Partial<Record<FieldKey, AnswerKeyEntry>>;
@@ -112,22 +118,28 @@ export function buildAnswerKey(
   for (const spec of specs) {
     const table = statements[spec.statement];
     let fallback: AnswerKeyEntry | null = null;
+    const onPage: AnswerKeyEntry[] = [];
     for (const concept of spec.concepts) {
       const value = factFor(facts, concept, spec, accn, periodEnd);
       if (value === null) continue;
       const rowLabels = table ? findOnStatement(table, value, spec.unit) : [];
-      const entry = {
+      const entry: AnswerKeyEntry = {
         value,
         concept,
         onStatement: rowLabels.length > 0,
         rowLabels,
+        alternates: [],
       };
-      if (entry.onStatement) {
-        key[spec.key] = entry;
-        fallback = null;
-        break;
-      }
-      fallback ??= entry;
+      if (entry.onStatement) onPage.push(entry);
+      else fallback ??= entry;
+    }
+    if (onPage.length > 0) {
+      const [primary, ...rest] = onPage;
+      primary.alternates = [...new Set(rest.map((e) => e.value))].filter(
+        (v) => v !== primary.value,
+      );
+      key[spec.key] = primary;
+      continue;
     }
     if (fallback) key[spec.key] = fallback;
   }

@@ -1,6 +1,11 @@
 import Link from "next/link";
 
-const LINKS = [{ href: "/", label: "golden set" }];
+const LINKS = [
+  { href: "/analyze", label: "analyze" },
+  { href: "/eval", label: "eval" },
+  { href: "/runs", label: "runs" },
+  { href: "/golden", label: "golden set" },
+];
 
 export function Nav() {
   return (

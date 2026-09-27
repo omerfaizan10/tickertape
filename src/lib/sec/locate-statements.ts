@@ -73,7 +73,17 @@ function typicalNumericColumns(table: FilingTable): number {
   return counts.length ? counts[Math.floor(counts.length / 2)] : 0;
 }
 
-const MIN_NUMERIC_ROWS = 8;
+// A primary statement is long. Across the 54 golden-set filings the
+// smallest real ones have 14 (income), 18 (balance) and 26 (cash flow)
+// rows with figures, while summaries that reuse a statement's title -
+// BlackRock's MD&A table introduced as "the consolidated statements of
+// cash flows, excluding the impact of CIPs" - run about a dozen. These
+// floors sit under the real minimums with margin.
+const MIN_NUMERIC_ROWS: Record<StatementKind, number> = {
+  income: 10,
+  balance: 15,
+  cashflow: 20,
+};
 
 function isNumericCell(c: string): boolean {
   return /^\(?-?[\d,]+(\.\d+)?\)?%?$/.test(c) && /\d/.test(c);
@@ -101,7 +111,7 @@ export function scoreTable(table: FilingTable, kind: StatementKind): Candidate {
   if (NOT_CONSOLIDATED.test(table.heading)) score -= 40;
   if (sig.lookalike?.test(table.heading)) score -= 40;
   if (typicalNumericColumns(table) > MAX_TYPICAL_COLUMNS) score -= 25;
-  if (numericRows < MIN_NUMERIC_ROWS) score -= 30;
+  if (numericRows < MIN_NUMERIC_ROWS[kind]) score -= 30;
   score += Math.min(numericRows, 40) * 0.25;
 
   return { table, score, numericRows, rowsMatched };

@@ -1,16 +1,17 @@
 import { config } from "dotenv";
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "fs";
+import { mkdirSync, writeFileSync } from "fs";
 import { join } from "path";
 import {
-  fetchFilingHtml,
-  listAnnualReportExhibits,
-  secText,
   listFilings,
   lookupTicker,
   padCik,
   secJson,
 } from "../src/lib/sec/client";
 import { parseFiling, type FilingTable } from "../src/lib/sec/filing-text";
+import {
+  cachedJson,
+  loadFilingDocuments,
+} from "../src/lib/sec/filing-source";
 import {
   locateStatement,
   type StatementKind,
@@ -86,23 +87,7 @@ const COMPANIES: [string, string][] = [
   ["DUK", "Telecom & Utilities"],
 ];
 
-const CACHE = join(process.cwd(), "data", "cache");
 const OUT = join(process.cwd(), "data", "golden", "golden-set.json");
-
-async function cached<T>(
-  file: string,
-  fetcher: () => Promise<T>,
-  asJson: boolean,
-): Promise<T> {
-  const path = join(CACHE, file);
-  if (existsSync(path)) {
-    const raw = readFileSync(path, "utf-8");
-    return (asJson ? JSON.parse(raw) : raw) as T;
-  }
-  const data = await fetcher();
-  writeFileSync(path, asJson ? JSON.stringify(data) : (data as string));
-  return data;
-}
 
 const KINDS: StatementKind[] = ["income", "balance", "cashflow"];
 
@@ -117,36 +102,16 @@ async function buildOne(
     return { ticker, skipped: `${co.name} has no 10-K on file` };
   }
 
-  const html = await cached(
-    `${ticker}-${filing.accessionNumber}.html`,
-    () => fetchFilingHtml(filing),
-    false,
-  );
-  const facts = await cached<CompanyFacts>(
+  const facts = await cachedJson<CompanyFacts>(
     `facts-${padCik(co.cik)}-${filing.accessionNumber}.json`,
     () =>
       secJson(
         `https://data.sec.gov/api/xbrl/companyfacts/CIK${padCik(co.cik)}.json`,
       ),
-    true,
   );
+  const { documents, exhibitUrls } = await loadFilingDocuments(ticker, filing);
 
-  const exhibits = await cached(
-    `exhibits-${filing.accessionNumber}.json`,
-    () => listAnnualReportExhibits(filing),
-    true,
-  );
-  const exhibitHtml = await Promise.all(
-    exhibits.map((doc) =>
-      cached(
-        `${ticker}-${filing.accessionNumber}-${doc.name}`,
-        () => secText(doc.url),
-        false,
-      ),
-    ),
-  );
-
-  const { tables } = parseFiling([html, ...exhibitHtml]);
+  const { tables } = parseFiling(documents);
   const statements: GoldenFiling["statements"] = {};
   const statementTables: Partial<Record<StatementKind, FilingTable>> = {};
   for (const kind of KINDS) {
@@ -171,7 +136,7 @@ async function buildOne(
     periodEnd: filing.reportDate,
     filingDate: filing.filingDate,
     url: filing.url,
-    exhibits: exhibits.map((d) => d.url),
+    exhibits: exhibitUrls,
     statements,
     answerKey: buildAnswerKey(
       facts,
@@ -184,7 +149,6 @@ async function buildOne(
 }
 
 async function main() {
-  mkdirSync(CACHE, { recursive: true });
   mkdirSync(join(process.cwd(), "data", "golden"), { recursive: true });
 
   const filings: GoldenFiling[] = [];
