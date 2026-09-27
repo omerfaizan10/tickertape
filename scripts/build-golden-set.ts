@@ -19,9 +19,9 @@ import { detectScale } from "../src/lib/sec/units";
 import { FIELDS } from "../src/lib/fields";
 import {
   buildAnswerKey,
-  type AnswerKey,
   type CompanyFacts,
 } from "../src/lib/eval/answer-key";
+import type { GoldenFiling } from "../src/lib/golden";
 
 config({ path: ".env.local", quiet: true });
 
@@ -102,29 +102,6 @@ async function cached<T>(
   const data = await fetcher();
   writeFileSync(path, asJson ? JSON.stringify(data) : (data as string));
   return data;
-}
-
-interface LocatedStatement {
-  tableIndex: number;
-  score: number;
-  runnerUpScore: number | null;
-  scale: number;
-}
-
-export interface GoldenFiling {
-  ticker: string;
-  sector: string;
-  cik: number;
-  companyName: string;
-  accessionNumber: string;
-  periodEnd: string;
-  filingDate: string;
-  url: string;
-  // Exhibit 13 documents the statements were incorporated from, when the
-  // 10-K itself doesn't contain them.
-  exhibits: string[];
-  statements: Partial<Record<StatementKind, LocatedStatement>>;
-  answerKey: AnswerKey;
 }
 
 const KINDS: StatementKind[] = ["income", "balance", "cashflow"];
