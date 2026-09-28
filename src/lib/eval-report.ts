@@ -1,4 +1,4 @@
-import { existsSync, readFileSync } from "fs";
+import { existsSync, readdirSync, readFileSync } from "fs";
 import { join } from "path";
 import type { ReconciliationCheck } from "./agent/types";
 import type { FieldKey } from "./fields";
@@ -81,6 +81,66 @@ export interface RevisionEvalReport {
 
 export function loadRevisionEval(): RevisionEvalReport | null {
   const path = join(process.cwd(), "eval", "revisions.json");
+  if (!existsSync(path)) return null;
+  return JSON.parse(readFileSync(path, "utf-8"));
+}
+
+export interface ModelRow {
+  model: string;
+  graded: number;
+  correct: number;
+  costPerFiling: number;
+  secondsPerFiling: number;
+  retried: number;
+  filings: number;
+}
+
+// Full-golden-set runs only: the headline report plus eval/models/*.json.
+export function loadModelComparison(): ModelRow[] {
+  const files = [join(process.cwd(), "eval", "results.json")];
+  const dir = join(process.cwd(), "eval", "models");
+  if (existsSync(dir)) {
+    files.push(
+      ...readdirSync(dir)
+        .filter((f) => f.endsWith(".json"))
+        .map((f) => join(dir, f)),
+    );
+  }
+  const rows: ModelRow[] = [];
+  for (const f of files) {
+    if (!existsSync(f)) continue;
+    const r: EvalReport = JSON.parse(readFileSync(f, "utf-8"));
+    if (r.mode !== "live") continue;
+    rows.push({
+      model: r.model,
+      graded: r.graded.length,
+      correct: r.graded.filter(isCorrect).length,
+      costPerFiling: r.runs.reduce((s, x) => s + x.costUsd, 0) / r.runs.length,
+      secondsPerFiling:
+        r.runs.reduce((s, x) => s + x.latencyMs, 0) / r.runs.length / 1000,
+      retried: r.runs.filter((x) => x.retryCount > 0).length,
+      filings: r.runs.length,
+    });
+  }
+  const golden = Math.max(...rows.map((r) => r.filings), 0);
+  return rows
+    .filter((r) => r.filings === golden)
+    .sort((a, b) => a.costPerFiling - b.costPerFiling);
+}
+
+export interface NarrativeReport {
+  claims: {
+    ticker: string;
+    claim: {
+      quoteVerified: boolean;
+      scope: string;
+      verdict: "consistent" | "inconsistent" | "not_checked";
+    };
+  }[];
+}
+
+export function loadNarrativeReport(): NarrativeReport | null {
+  const path = join(process.cwd(), "eval", "narrative.json");
   if (!existsSync(path)) return null;
   return JSON.parse(readFileSync(path, "utf-8"));
 }

@@ -2,14 +2,14 @@ import type { FieldKey } from "../fields";
 
 // Bumped whenever a prompt changes, so eval runs can be compared across
 // prompt versions instead of silently mixing them.
-export const PROMPT_VERSION = "v3";
+export const PROMPT_VERSION = "v4";
 
 // What each field means, in the terms a statement actually uses. These are
 // the distinctions that decide which row is right, and every one of them
 // came from a real filing in the golden set.
 export const FIELD_GUIDE: Record<FieldKey, string> = {
   revenue:
-    'Total revenue for the whole company: the single total line ("Total net sales", "Total revenues", "Net revenues"). Revenue means sales of goods and services; it excludes other income, investment income and equity-affiliate income, so when a statement prints "Total revenues and other income", pick the revenue line above it that excludes the other income (e.g. "Sales and other operating revenues"). Banks: the total net revenue line, often "Total net revenue" or "Revenues, net of interest expense". Not a single product line, not interest income alone. If the statement never prints one company-wide revenue total, return null.',
+    'Total revenue for the whole company: the single total line ("Total net sales", "Total revenues", "Net revenues"). Revenue means sales of goods and services; it excludes other income, investment income and equity-affiliate income, so when a statement prints "Total revenues and other income", pick the revenue line above it that excludes the other income (e.g. "Sales and other operating revenues"). If no line excludes it (insurers such as CVS and UnitedHealth fold investment income into "Total revenues"), use the total revenues line; never return null when a total revenues line is printed. Banks: the total net revenue line, often "Total net revenue" or "Revenues, net of interest expense". Not a single product line, not interest income alone. If the statement never prints one company-wide revenue total, return null.',
   operatingIncome:
     'Operating income, under whatever name the company uses: "Operating income", "Income from operations", "Operating profit", "Operating earnings", "Earnings from operations", "Earnings/(loss) from operations". Many banks, insurers and some industrials do not print this line at all: return null rather than substituting pretax income.',
   netIncome:

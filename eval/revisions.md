@@ -1,27 +1,25 @@
 # Restatement detection evaluation
 
-Run on 2026-09-28T07:03:05.840Z. Model: `gpt-4o-mini`. Prompt version: `v3`.
+Run on 2026-09-28T07:49:06.082Z. Model: `gpt-6-luna`. Prompt version: `v4`.
 
 For each golden-set filing the pipeline reads this year's 10-K and last year's. Code compares last year's figures as this year's 10-K reprints them against as last year's 10-K originally reported them, and flags anything more than rounding apart. Ground truth is the SEC's XBRL for both filings.
 
-- **Prior-year figures compared:** 533 across 54 filing pairs
+- **Prior-year figures compared:** 539 across 54 filing pairs
 - **Actually revised (per XBRL):** 12
 - **Precision:** 100.0% (12 of 12 flags were real)
 - **Recall:** 100.0% (12 of 12 revisions caught)
-- **False alarms:** 0 of 521 unrevised figures
+- **False alarms:** 0 of 527 unrevised figures
 - **Both amounts right on caught revisions:** 12/12
 
 ## Explanations (from the filings' own text, quotes checked word for word)
 
-- **BAC** (revenue): accounting change. The increase in total revenue is due to a change in accounting methods applied retrospectively to align financial presentation with the economic impact of certain equity investments. Quote: "The primary impact of the accounting changes is a reclassification between income statement line items that nets income tax credits and benefits against the investment expense."
-- **BAC** (netIncome, epsDiluted, totalAssets, totalLiabilities, totalEquity): accounting change. Net income, diluted EPS, total assets, total liabilities, and total equity reflect the retroactive application of revised accounting methods for certain tax-related equity investments. Quote: "Certain prior-period information presented herein has been revised to reflect the accounting method changes."
-- **C** (revenue (Total revenue)): reclassification. The figure for total revenue has been updated due to certain reclassifications and updates made to prior periods’ financial statements. Quote: "Certain reclassifications and updates have been made to the prior periods’ financial statements and notes to conform to the current period’s presentation."
-- **HON** (revenue (Total revenue), cash (Cash and cash equivalents)): discontinued operations. The revenue and cash figures were revised because they now exclude the financial results of the Advanced Materials business, which has been classified as discontinued operations due to its spin-off. Quote: "Results of operations, financial position, and cash flows for the Advanced Materials business are reported as discontinued operations for all periods presented and the notes to the financial statements have been adjusted on a retrospective basis."
-- **HON** (revenue (Total revenue), cash (Cash and cash equivalents)): reclassification. The revised revenue and cash figures reflect a reclassification of some amounts in the financial statements to align with the current year's presentation format. Quote: "Certain prior year amounts are reclassified to conform to the current year presentation."
-- **LLY** (totalLiabilities): unexplained. The change in total liabilities is not explicitly explained in the current report. (no verified quote)
-- **LLY** (totalEquity): unexplained. The revision in total equity lacks any specific explanation in the current report. (no verified quote)
-- **USB** (operatingCashFlow): reclassification. The operating cash flow was revised due to changes in the company's methods of evaluating performance and realigning business segments, resulting in prior period results being recast for comparability. Quote: "Prior period results were recast and presented on a comparable basis."
-- **USB** (financingCashFlow): reclassification. The financing cash flow was revised because the company's methodology for designations and allocations changed, which affected how prior period results were presented. Quote: "Certain items in prior periods have been reclassified to conform to the current period presentation."
+- **BAC** (revenue (Total revenue)): accounting change. The Corporation retrospectively changed accounting methods for certain tax-related equity investments. The change reclassifies income-statement items, including netting tax credits and benefits against investment expense, which explains the revised revenue presentation. Quote: "The primary impact of the accounting changes is a reclassification between income statement line items that nets income tax credits and benefits against the investment expense."
+- **BAC** (netIncome (Net income attributable to the company), epsDiluted (Diluted EPS), totalAssets (Total assets), totalLiabilities (Total liabilities), totalEquity (Total shareholders' equity attributable to the company)): accounting change. The Corporation retrospectively changed accounting methods for certain tax-related equity investments, including a cumulative adjustment to retained earnings. The report says the changes had an insignificant impact on annualized net income, but does not specify how they account for each of these listed revisions. Quote: "The accounting changes were applied retrospectively to the earliest period presented, resulting in a cumulative adjustment that decreased retained earnings by $ 1.2 billion as of January 1, 2023."
+- **C** (revenue (Total revenue)): unexplained. The passages do not explain why the reprinted total revenue is lower than originally reported. (no verified quote)
+- **HON** (revenue (Total revenue)): discontinued operations. The Advanced Materials business was spun off, and its results are presented as discontinued operations for all periods. Removing those results from the reprinted comparative figures explains the lower revenue. Quote: "Results of operations, financial position, and cash flows for the Advanced Materials business are reported as discontinued operations for all periods presented and the notes to the financial statements have been adjusted on a retrospective basis."
+- **HON** (cash (Cash and cash equivalents)): discontinued operations. The Advanced Materials business was spun off, and its financial position is presented as discontinued operations for all periods. Removing its financial position from the reprinted comparative figures explains the lower cash balance. Quote: "Results of operations, financial position, and cash flows for the Advanced Materials business are reported as discontinued operations for all periods presented and the notes to the financial statements have been adjusted on a retrospective basis."
+- **LLY** (totalEquity): unexplained. The passage discusses a future disclosure standard and does not explain the change in shareholders’ equity. (no verified quote)
+- **USB** (operatingCashFlow, financingCashFlow): unexplained. The passages do not explain the changes to these cash flow figures. (no verified quote)
 
 ## Every flag and every miss
 

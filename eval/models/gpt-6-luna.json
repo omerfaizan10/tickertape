@@ -1,6 +1,6 @@
 {
-  "runAt": "2026-09-28T07:42:43.627Z",
-  "model": "gpt-6-luna@none",
+  "runAt": "2026-09-28T07:44:38.620Z",
+  "model": "gpt-6-luna",
   "mode": "live",
   "promptVersion": "v4",
   "graded": [
@@ -4937,6 +4937,137 @@
       "groundingMismatch": false
     },
     {
+      "ticker": "TGT",
+      "sector": "Consumer",
+      "field": "revenue",
+      "expected": 104780000000,
+      "actual": 104780000000,
+      "outcome": "correct",
+      "rowLabel": "Net sales",
+      "expectedRows": [
+        "Net sales"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "TGT",
+      "sector": "Consumer",
+      "field": "operatingIncome",
+      "expected": 5117000000,
+      "actual": 5117000000,
+      "outcome": "correct",
+      "rowLabel": "Operating income",
+      "expectedRows": [
+        "Operating income"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "TGT",
+      "sector": "Consumer",
+      "field": "netIncome",
+      "expected": 3705000000,
+      "actual": 3705000000,
+      "outcome": "correct",
+      "rowLabel": "Net earnings",
+      "expectedRows": [
+        "Net earnings"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "TGT",
+      "sector": "Consumer",
+      "field": "epsDiluted",
+      "expected": 8.13,
+      "actual": 8.13,
+      "outcome": "correct",
+      "rowLabel": "Diluted earnings per share",
+      "expectedRows": [
+        "Diluted earnings per share"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "TGT",
+      "sector": "Consumer",
+      "field": "cash",
+      "expected": 5488000000,
+      "actual": 5488000000,
+      "outcome": "correct",
+      "rowLabel": "Cash and cash equivalents",
+      "expectedRows": [
+        "Cash and cash equivalents"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "TGT",
+      "sector": "Consumer",
+      "field": "totalAssets",
+      "expected": 59490000000,
+      "actual": 59490000000,
+      "outcome": "correct",
+      "rowLabel": "Total assets",
+      "expectedRows": [
+        "Total assets",
+        "Total liabilities and shareholders' investment"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "TGT",
+      "sector": "Consumer",
+      "field": "totalEquity",
+      "expected": 16165000000,
+      "actual": 16165000000,
+      "outcome": "correct",
+      "rowLabel": "Total shareholders' investment",
+      "expectedRows": [
+        "Total shareholders' investment"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "TGT",
+      "sector": "Consumer",
+      "field": "operatingCashFlow",
+      "expected": 6562000000,
+      "actual": 6562000000,
+      "outcome": "correct",
+      "rowLabel": "Cash provided by operating activities",
+      "expectedRows": [
+        "Cash provided by operating activities"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "TGT",
+      "sector": "Consumer",
+      "field": "investingCashFlow",
+      "expected": -3649000000,
+      "actual": -3649000000,
+      "outcome": "correct",
+      "rowLabel": "Cash used in investing activities",
+      "expectedRows": [
+        "Cash used in investing activities"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "TGT",
+      "sector": "Consumer",
+      "field": "financingCashFlow",
+      "expected": -2187000000,
+      "actual": -2187000000,
+      "outcome": "correct",
+      "rowLabel": "Cash used in financing activities",
+      "expectedRows": [
+        "Cash used in financing activities"
+      ],
+      "groundingMismatch": false
+    },
+    {
       "ticker": "HD",
       "sector": "Consumer",
       "field": "revenue",
@@ -5077,137 +5208,6 @@
       "rowLabel": "Net cash used in financing activities",
       "expectedRows": [
         "Net cash used in financing activities"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "TGT",
-      "sector": "Consumer",
-      "field": "revenue",
-      "expected": 104780000000,
-      "actual": 104780000000,
-      "outcome": "correct",
-      "rowLabel": "Net sales",
-      "expectedRows": [
-        "Net sales"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "TGT",
-      "sector": "Consumer",
-      "field": "operatingIncome",
-      "expected": 5117000000,
-      "actual": 5117000000,
-      "outcome": "correct",
-      "rowLabel": "Operating income",
-      "expectedRows": [
-        "Operating income"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "TGT",
-      "sector": "Consumer",
-      "field": "netIncome",
-      "expected": 3705000000,
-      "actual": 3705000000,
-      "outcome": "correct",
-      "rowLabel": "Net earnings",
-      "expectedRows": [
-        "Net earnings"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "TGT",
-      "sector": "Consumer",
-      "field": "epsDiluted",
-      "expected": 8.13,
-      "actual": 8.13,
-      "outcome": "correct",
-      "rowLabel": "Diluted earnings per share",
-      "expectedRows": [
-        "Diluted earnings per share"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "TGT",
-      "sector": "Consumer",
-      "field": "cash",
-      "expected": 5488000000,
-      "actual": 5488000000,
-      "outcome": "correct",
-      "rowLabel": "Cash and cash equivalents",
-      "expectedRows": [
-        "Cash and cash equivalents"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "TGT",
-      "sector": "Consumer",
-      "field": "totalAssets",
-      "expected": 59490000000,
-      "actual": 59490000000,
-      "outcome": "correct",
-      "rowLabel": "Total assets",
-      "expectedRows": [
-        "Total assets",
-        "Total liabilities and shareholders' investment"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "TGT",
-      "sector": "Consumer",
-      "field": "totalEquity",
-      "expected": 16165000000,
-      "actual": 16165000000,
-      "outcome": "correct",
-      "rowLabel": "Total shareholders' investment",
-      "expectedRows": [
-        "Total shareholders' investment"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "TGT",
-      "sector": "Consumer",
-      "field": "operatingCashFlow",
-      "expected": 6562000000,
-      "actual": 6562000000,
-      "outcome": "correct",
-      "rowLabel": "Cash provided by operating activities",
-      "expectedRows": [
-        "Cash provided by operating activities"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "TGT",
-      "sector": "Consumer",
-      "field": "investingCashFlow",
-      "expected": -3649000000,
-      "actual": -3649000000,
-      "outcome": "correct",
-      "rowLabel": "Cash used in investing activities",
-      "expectedRows": [
-        "Cash used in investing activities"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "TGT",
-      "sector": "Consumer",
-      "field": "financingCashFlow",
-      "expected": -2187000000,
-      "actual": -2187000000,
-      "outcome": "correct",
-      "rowLabel": "Cash used in financing activities",
-      "expectedRows": [
-        "Cash used in financing activities"
       ],
       "groundingMismatch": false
     },
@@ -7166,12 +7166,12 @@
   ],
   "runs": [
     {
-      "runId": "10c43f30-3140-4d91-aa3e-9e0738af7550",
+      "runId": "4b9ef48e-55fc-483f-b3ff-618019ac7022",
       "accessionNumber": "0001193125-26-323660",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0006048,
-      "latencyMs": 3486,
+      "costUsd": 0.0006558,
+      "latencyMs": 3934,
       "checks": [
         {
           "name": "balance_identity",
@@ -7238,12 +7238,12 @@
       ]
     },
     {
-      "runId": "88a5f083-2193-4370-a6d7-70eeb49a95aa",
+      "runId": "f435d292-95cd-4c53-b950-d0103d6546c9",
       "accessionNumber": "0000320193-25-000079",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0005836999999999999,
-      "latencyMs": 3709,
+      "costUsd": 0.0006467,
+      "latencyMs": 4365,
       "checks": [
         {
           "name": "balance_identity",
@@ -7310,12 +7310,12 @@
       ]
     },
     {
-      "runId": "d4ab98a4-58dd-4ddb-8101-8c7c961b8810",
+      "runId": "c467bf1d-11ec-4bb7-be75-aab377b30155",
       "accessionNumber": "0001652044-26-000018",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.000602,
-      "latencyMs": 2423,
+      "costUsd": 0.0006455,
+      "latencyMs": 3214,
       "checks": [
         {
           "name": "balance_identity",
@@ -7382,12 +7382,12 @@
       ]
     },
     {
-      "runId": "81130f43-fe51-4ec0-8fd9-d010ac8fbe00",
+      "runId": "393f18f5-d009-4dea-8dc6-c74b596966a7",
       "accessionNumber": "0001045810-26-000021",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0005969,
-      "latencyMs": 2522,
+      "costUsd": 0.0006249000000000001,
+      "latencyMs": 2918,
       "checks": [
         {
           "name": "balance_identity",
@@ -7454,12 +7454,12 @@
       ]
     },
     {
-      "runId": "34b9de22-0783-4dd6-86ec-6eb988214535",
+      "runId": "b57d5e85-0c82-47ab-a40a-da74075ba357",
       "accessionNumber": "0001193125-26-277521",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0006407,
-      "latencyMs": 2458,
+      "costUsd": 0.0006997,
+      "latencyMs": 3422,
       "checks": [
         {
           "name": "balance_identity",
@@ -7526,12 +7526,12 @@
       ]
     },
     {
-      "runId": "7dce5346-a328-4715-b918-ec1f3651bb8c",
+      "runId": "14be3d87-88b9-45e5-aa29-87ffc818013b",
       "accessionNumber": "0000796343-26-000003",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0006453,
-      "latencyMs": 2329,
+      "costUsd": 0.0007113,
+      "latencyMs": 3171,
       "checks": [
         {
           "name": "balance_identity",
@@ -7598,12 +7598,12 @@
       ]
     },
     {
-      "runId": "eeccac25-6b6a-4696-aa2c-262717010631",
+      "runId": "d9549990-c3f3-4d4d-9b22-22f75dae75f0",
       "accessionNumber": "0000858877-26-000132",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0006331,
-      "latencyMs": 2556,
+      "costUsd": 0.0006811,
+      "latencyMs": 2970,
       "checks": [
         {
           "name": "balance_identity",
@@ -7670,12 +7670,12 @@
       ]
     },
     {
-      "runId": "1745f7f0-d509-439d-a4ad-6c868e56315b",
+      "runId": "5c8691b0-bc1c-4cac-87df-1d2b3899947e",
       "accessionNumber": "0000050863-26-000011",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0006317,
-      "latencyMs": 2210,
+      "costUsd": 0.0006797000000000001,
+      "latencyMs": 3401,
       "checks": [
         {
           "name": "balance_identity",
@@ -7742,12 +7742,12 @@
       ]
     },
     {
-      "runId": "0e45418c-68b4-4bc9-b6b0-8346235680f6",
+      "runId": "700a8481-9629-4923-ba4d-64a327e22aae",
       "accessionNumber": "0000051143-26-000010",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0006776,
-      "latencyMs": 2452,
+      "costUsd": 0.0007286,
+      "latencyMs": 3525,
       "checks": [
         {
           "name": "balance_identity",
@@ -7814,12 +7814,12 @@
       ]
     },
     {
-      "runId": "e8643453-69bc-4a01-b746-a6117766b7b3",
+      "runId": "b440b8af-8f4b-4ccf-91a5-ba34dd32e2fc",
       "accessionNumber": "0001108524-26-000060",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0006097,
-      "latencyMs": 2210,
+      "costUsd": 0.0006537,
+      "latencyMs": 2932,
       "checks": [
         {
           "name": "balance_identity",
@@ -7886,12 +7886,12 @@
       ]
     },
     {
-      "runId": "c4d10916-9d25-44c1-8d1f-14e5e862b4b3",
+      "runId": "c77ce666-c965-4cd9-a8a3-6efbf8fe035f",
       "accessionNumber": "0001628280-26-008131",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0007117,
-      "latencyMs": 2817,
+      "costUsd": 0.0007652,
+      "latencyMs": 3342,
       "checks": [
         {
           "name": "balance_identity",
@@ -7958,12 +7958,12 @@
       ]
     },
     {
-      "runId": "58c8bd2f-04f9-4dd0-979d-1cdfe34c7de3",
+      "runId": "a8d386ec-175a-4481-b46c-a9546c35e35a",
       "accessionNumber": "0000070858-26-000157",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0006952,
-      "latencyMs": 3039,
+      "costUsd": 0.0007592,
+      "latencyMs": 3842,
       "checks": [
         {
           "name": "balance_identity",
@@ -8030,12 +8030,12 @@
       ]
     },
     {
-      "runId": "843a2b5d-cbae-4aa2-94bc-c101865576b9",
+      "runId": "071bab2c-de7c-4a5d-a059-648e34f79f55",
       "accessionNumber": "0000072971-26-000133",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0007445,
-      "latencyMs": 2726,
+      "costUsd": 0.0007870000000000002,
+      "latencyMs": 3118,
       "checks": [
         {
           "name": "balance_identity",
@@ -8102,12 +8102,12 @@
       ]
     },
     {
-      "runId": "bb0718f9-fb48-4fdc-812d-32be747e2ab3",
+      "runId": "c73377d1-53af-4f8c-823a-1f0ee6c9e381",
       "accessionNumber": "0000886982-26-000091",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0006983,
-      "latencyMs": 2822,
+      "costUsd": 0.0007568,
+      "latencyMs": 3465,
       "checks": [
         {
           "name": "balance_identity",
@@ -8174,12 +8174,12 @@
       ]
     },
     {
-      "runId": "73e208ef-21ba-44c8-b918-7deb1432913e",
+      "runId": "ed4bd6f2-db67-4c4f-b4e0-64d3dc893d50",
       "accessionNumber": "0000895421-26-000086",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0006823,
-      "latencyMs": 2687,
+      "costUsd": 0.0007413,
+      "latencyMs": 3408,
       "checks": [
         {
           "name": "balance_identity",
@@ -8246,12 +8246,12 @@
       ]
     },
     {
-      "runId": "35a9cb6e-bf3b-48c9-af37-34eb6761bfbf",
+      "runId": "60dbfabf-74b3-4e5d-ac9c-8c0be3926d2d",
       "accessionNumber": "0000831001-26-000011",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0008439999999999999,
-      "latencyMs": 2887,
+      "costUsd": 0.000902,
+      "latencyMs": 3521,
       "checks": [
         {
           "name": "balance_identity",
@@ -8318,12 +8318,12 @@
       ]
     },
     {
-      "runId": "91654424-92ae-4f83-aace-b72694ce488a",
+      "runId": "20144065-82b4-4f87-8b00-a826639d263e",
       "accessionNumber": "0000004962-26-000080",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0006491000000000001,
-      "latencyMs": 3168,
+      "costUsd": 0.0007221,
+      "latencyMs": 3183,
       "checks": [
         {
           "name": "balance_identity",
@@ -8390,12 +8390,12 @@
       ]
     },
     {
-      "runId": "c9242cd1-99ec-41a3-b534-48987c4ae094",
+      "runId": "15ac3f34-81ac-4606-9265-3204ce4d77ca",
       "accessionNumber": "0001193125-26-071966",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0006875,
-      "latencyMs": 2988,
+      "costUsd": 0.0007305,
+      "latencyMs": 3317,
       "checks": [
         {
           "name": "balance_identity",
@@ -8462,12 +8462,12 @@
       ]
     },
     {
-      "runId": "286e618d-b6f3-4cd9-8a03-0ddb49b29013",
+      "runId": "83c49a7a-1ea3-42cb-9449-45016e08147a",
       "accessionNumber": "0000316709-26-000009",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0006656,
-      "latencyMs": 2650,
+      "costUsd": 0.0007191000000000001,
+      "latencyMs": 3152,
       "checks": [
         {
           "name": "balance_identity",
@@ -8534,12 +8534,12 @@
       ]
     },
     {
-      "runId": "d5680045-010c-4fc3-8376-540ffd22c2e3",
+      "runId": "96d4d2c0-1d2f-4bb4-843f-bf137f0766c5",
       "accessionNumber": "0000036104-26-000011",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0006944,
-      "latencyMs": 2569,
+      "costUsd": 0.0007764,
+      "latencyMs": 3541,
       "checks": [
         {
           "name": "balance_identity",
@@ -8606,12 +8606,12 @@
       ]
     },
     {
-      "runId": "973d2962-c97f-4a08-9903-3db81265fa47",
+      "runId": "f08d0bf4-f34d-49de-bc59-22c2f49f6e5c",
       "accessionNumber": "0000200406-26-000016",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0006888,
-      "latencyMs": 2389,
+      "costUsd": 0.0007352999999999999,
+      "latencyMs": 3451,
       "checks": [
         {
           "name": "balance_identity",
@@ -8678,12 +8678,12 @@
       ]
     },
     {
-      "runId": "482b47ce-4240-4dc3-93bd-5a65b0e800f5",
+      "runId": "cafc9c01-d660-4851-ae89-d8d1d9b94fab",
       "accessionNumber": "0000078003-26-000026",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0006715,
-      "latencyMs": 2662,
+      "costUsd": 0.000711,
+      "latencyMs": 2960,
       "checks": [
         {
           "name": "balance_identity",
@@ -8750,12 +8750,12 @@
       ]
     },
     {
-      "runId": "ab368e1d-7e24-42d3-b3e2-51ad90ebd7fc",
+      "runId": "0f6c0ed3-0c11-45e9-a866-7603064d2f60",
       "accessionNumber": "0000310158-26-000063",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0006326,
-      "latencyMs": 2554,
+      "costUsd": 0.0007181,
+      "latencyMs": 3548,
       "checks": [
         {
           "name": "balance_identity",
@@ -8822,12 +8822,12 @@
       ]
     },
     {
-      "runId": "c3d83fe3-02bc-4b14-9c27-3b0eb1e872f6",
+      "runId": "cbf6c5ed-b4c0-498b-8ce3-7f524d0c93d6",
       "accessionNumber": "0001551152-26-000008",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0006183,
-      "latencyMs": 2671,
+      "costUsd": 0.0006788,
+      "latencyMs": 2798,
       "checks": [
         {
           "name": "balance_identity",
@@ -8894,12 +8894,12 @@
       ]
     },
     {
-      "runId": "cff927eb-0d05-48ca-a681-3643b6478eda",
+      "runId": "5fb9a27b-2629-46b0-bce5-f30b0e5eb19f",
       "accessionNumber": "0000731766-26-000062",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0006487000000000001,
-      "latencyMs": 2382,
+      "costUsd": 0.0007637000000000001,
+      "latencyMs": 3833,
       "checks": [
         {
           "name": "balance_identity",
@@ -8918,8 +8918,8 @@
             "totalEquity"
           ],
           "passed": true,
-          "skipped": false,
-          "detail": "totalEquity excludes noncontrolling interests"
+          "skipped": true,
+          "detail": "no noncontrolling interest line printed"
         },
         {
           "name": "netIncome_before_preferred",
@@ -8966,12 +8966,12 @@
       ]
     },
     {
-      "runId": "b7373645-ee9d-4ee8-9842-2d68ff89ca96",
+      "runId": "53797dbc-8ac9-462f-8f76-192d8aae60ae",
       "accessionNumber": "0000059478-26-000013",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0005885,
-      "latencyMs": 2238,
+      "costUsd": 0.0006565000000000001,
+      "latencyMs": 3161,
       "checks": [
         {
           "name": "balance_identity",
@@ -9038,12 +9038,12 @@
       ]
     },
     {
-      "runId": "a7da8c10-13ed-47ff-822e-42223d91ac4e",
+      "runId": "c6b40604-7f24-4c9e-b53c-b6a714e39356",
       "accessionNumber": "0000318154-26-000010",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0005765,
-      "latencyMs": 2475,
+      "costUsd": 0.0006085,
+      "latencyMs": 2944,
       "checks": [
         {
           "name": "balance_identity",
@@ -9110,12 +9110,12 @@
       ]
     },
     {
-      "runId": "4358df9a-d445-42b0-88b7-e87b3a7bc3a6",
+      "runId": "3f9e2610-4dc5-4a39-b36c-7346fa5a46e5",
       "accessionNumber": "0000064803-26-000010",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.000619,
-      "latencyMs": 2503,
+      "costUsd": 0.000671,
+      "latencyMs": 2953,
       "checks": [
         {
           "name": "balance_identity",
@@ -9182,12 +9182,12 @@
       ]
     },
     {
-      "runId": "914c5a06-ea8b-46cf-9ee2-57e0aa5c19b8",
+      "runId": "66ab6bc0-3f48-4a2d-b704-37df7e680f9c",
       "accessionNumber": "0000014272-26-000004",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0006092000000000001,
-      "latencyMs": 2474,
+      "costUsd": 0.0006522,
+      "latencyMs": 3012,
       "checks": [
         {
           "name": "balance_identity",
@@ -9254,12 +9254,12 @@
       ]
     },
     {
-      "runId": "6071e6b5-2d84-44c9-81f6-9d818cf15a87",
+      "runId": "5bc5c830-7638-4d48-bf55-3788ce498dd3",
       "accessionNumber": "0000097745-26-000018",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.000619,
-      "latencyMs": 2321,
+      "costUsd": 0.0006545,
+      "latencyMs": 3060,
       "checks": [
         {
           "name": "balance_identity",
@@ -9326,12 +9326,12 @@
       ]
     },
     {
-      "runId": "ceeae5c5-f74a-4676-9914-5b66ce3d1069",
+      "runId": "06eb9f03-980c-4845-99aa-59f5e98581d5",
       "accessionNumber": "0000104169-26-000055",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0006148,
-      "latencyMs": 2347,
+      "costUsd": 0.0007018,
+      "latencyMs": 3843,
       "checks": [
         {
           "name": "balance_identity",
@@ -9398,12 +9398,12 @@
       ]
     },
     {
-      "runId": "d6696853-b4f5-416d-988b-20f90a38b7b8",
+      "runId": "11972b8e-4250-476e-bb6e-7612ac79ccf0",
       "accessionNumber": "0001628280-26-010047",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0006154000000000001,
-      "latencyMs": 2197,
+      "costUsd": 0.0006654,
+      "latencyMs": 2996,
       "checks": [
         {
           "name": "balance_identity",
@@ -9470,12 +9470,12 @@
       ]
     },
     {
-      "runId": "0a35cc81-000d-4b41-8a42-8246115205df",
+      "runId": "8392c96f-75a8-4e38-8016-a8618e488769",
       "accessionNumber": "0000077476-26-000007",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0006304,
-      "latencyMs": 2380,
+      "costUsd": 0.0006789000000000001,
+      "latencyMs": 3263,
       "checks": [
         {
           "name": "balance_identity",
@@ -9542,12 +9542,12 @@
       ]
     },
     {
-      "runId": "066a7ddc-459a-4af0-a3fb-f7128778100a",
+      "runId": "923ddeef-b607-4fb7-896e-c96f077f10b4",
       "accessionNumber": "0000080424-26-000103",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0005923,
-      "latencyMs": 2537,
+      "costUsd": 0.0006513000000000001,
+      "latencyMs": 3272,
       "checks": [
         {
           "name": "balance_identity",
@@ -9614,12 +9614,12 @@
       ]
     },
     {
-      "runId": "3dd67a73-4800-4073-9cdb-2881bcd83940",
+      "runId": "6801d24f-388c-4f91-96e1-014a854775af",
       "accessionNumber": "0000063908-26-000035",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0006143,
-      "latencyMs": 2511,
+      "costUsd": 0.0006658,
+      "latencyMs": 2933,
       "checks": [
         {
           "name": "balance_identity",
@@ -9686,12 +9686,12 @@
       ]
     },
     {
-      "runId": "0908b0e6-a3dd-46a5-8f75-bc1a748956a7",
+      "runId": "2be6bdc1-4be9-4950-b234-adc9a2d31fbf",
       "accessionNumber": "0000320187-26-000088",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0005818,
-      "latencyMs": 2965,
+      "costUsd": 0.0006303,
+      "latencyMs": 3147,
       "checks": [
         {
           "name": "balance_identity",
@@ -9758,12 +9758,12 @@
       ]
     },
     {
-      "runId": "f4b27467-4089-442a-96d9-c6093f1b23e5",
+      "runId": "3fbf8ca1-1f2b-43bb-9fef-c18274417789",
       "accessionNumber": "0000909832-25-000101",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0005847000000000001,
-      "latencyMs": 2325,
+      "costUsd": 0.0006341999999999999,
+      "latencyMs": 2733,
       "checks": [
         {
           "name": "balance_identity",
@@ -9830,12 +9830,84 @@
       ]
     },
     {
-      "runId": "c32167c5-bf05-49aa-bed4-9c0b25ca8a1f",
+      "runId": "5299d887-646c-489d-9c97-c6b7187821a9",
+      "accessionNumber": "0000027419-26-000016",
+      "status": "completed",
+      "retryCount": 0,
+      "costUsd": 0.0006013,
+      "latencyMs": 3143,
+      "checks": [
+        {
+          "name": "balance_identity",
+          "statement": "balance",
+          "fields": [
+            "totalAssets"
+          ],
+          "passed": true,
+          "skipped": false,
+          "detail": "total assets equals total liabilities and equity"
+        },
+        {
+          "name": "totalEquity_attribution",
+          "statement": "balance",
+          "fields": [
+            "totalEquity"
+          ],
+          "passed": true,
+          "skipped": true,
+          "detail": "no noncontrolling interest line printed"
+        },
+        {
+          "name": "netIncome_before_preferred",
+          "statement": "income",
+          "fields": [
+            "netIncome"
+          ],
+          "passed": true,
+          "skipped": false,
+          "detail": "net income is not the after-preferred-dividends line"
+        },
+        {
+          "name": "epsDiluted_total",
+          "statement": "income",
+          "fields": [
+            "epsDiluted"
+          ],
+          "passed": true,
+          "skipped": false,
+          "detail": "diluted EPS is for total net income"
+        },
+        {
+          "name": "netIncome_attribution",
+          "statement": "income",
+          "fields": [
+            "netIncome"
+          ],
+          "passed": true,
+          "skipped": true,
+          "detail": "no noncontrolling interest line printed"
+        },
+        {
+          "name": "cash_flow_tie",
+          "statement": "cashflow",
+          "fields": [
+            "operatingCashFlow",
+            "investingCashFlow",
+            "financingCashFlow"
+          ],
+          "passed": true,
+          "skipped": false,
+          "detail": "operating + investing + financing (+ FX) equals the net change in cash"
+        }
+      ]
+    },
+    {
+      "runId": "a4dc8d9b-6513-4ab5-b585-456b87e869bc",
       "accessionNumber": "0001628280-26-019436",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.00059,
-      "latencyMs": 2557,
+      "costUsd": 0.0006690000000000001,
+      "latencyMs": 9912,
       "checks": [
         {
           "name": "balance_identity",
@@ -9902,84 +9974,12 @@
       ]
     },
     {
-      "runId": "4433912d-da35-48b4-add2-72f2f1bf4aed",
-      "accessionNumber": "0000027419-26-000016",
-      "status": "completed",
-      "retryCount": 0,
-      "costUsd": 0.0005403000000000001,
-      "latencyMs": 2803,
-      "checks": [
-        {
-          "name": "balance_identity",
-          "statement": "balance",
-          "fields": [
-            "totalAssets"
-          ],
-          "passed": true,
-          "skipped": false,
-          "detail": "total assets equals total liabilities and equity"
-        },
-        {
-          "name": "totalEquity_attribution",
-          "statement": "balance",
-          "fields": [
-            "totalEquity"
-          ],
-          "passed": true,
-          "skipped": true,
-          "detail": "no noncontrolling interest line printed"
-        },
-        {
-          "name": "netIncome_before_preferred",
-          "statement": "income",
-          "fields": [
-            "netIncome"
-          ],
-          "passed": true,
-          "skipped": false,
-          "detail": "net income is not the after-preferred-dividends line"
-        },
-        {
-          "name": "epsDiluted_total",
-          "statement": "income",
-          "fields": [
-            "epsDiluted"
-          ],
-          "passed": true,
-          "skipped": false,
-          "detail": "diluted EPS is for total net income"
-        },
-        {
-          "name": "netIncome_attribution",
-          "statement": "income",
-          "fields": [
-            "netIncome"
-          ],
-          "passed": true,
-          "skipped": true,
-          "detail": "no noncontrolling interest line printed"
-        },
-        {
-          "name": "cash_flow_tie",
-          "statement": "cashflow",
-          "fields": [
-            "operatingCashFlow",
-            "investingCashFlow",
-            "financingCashFlow"
-          ],
-          "passed": true,
-          "skipped": false,
-          "detail": "operating + investing + financing (+ FX) equals the net change in cash"
-        }
-      ]
-    },
-    {
-      "runId": "a2eb5d48-1408-4fbe-8b2e-d510c9fb614e",
+      "runId": "61e9abec-1e3c-4f1e-a117-27c38e0d5ed2",
       "accessionNumber": "0000829224-25-000114",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.000688,
-      "latencyMs": 3201,
+      "costUsd": 0.0007315,
+      "latencyMs": 3115,
       "checks": [
         {
           "name": "balance_identity",
@@ -10046,12 +10046,12 @@
       ]
     },
     {
-      "runId": "e3fcbef1-d027-4e3e-a2a7-d5ac2cfcdaa7",
+      "runId": "b47cce05-2301-44d2-843e-b6b6ce97c234",
       "accessionNumber": "0000093410-26-000078",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0006571999999999999,
-      "latencyMs": 2901,
+      "costUsd": 0.0007027,
+      "latencyMs": 3118,
       "checks": [
         {
           "name": "balance_identity",
@@ -10118,12 +10118,12 @@
       ]
     },
     {
-      "runId": "3a6cff0a-d8ce-4a9e-8e92-1b9b59b7cd89",
+      "runId": "4226fe26-d592-4f7f-91c0-47d9ac6655ad",
       "accessionNumber": "0001163165-26-000009",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0006105,
-      "latencyMs": 2663,
+      "costUsd": 0.0006805,
+      "latencyMs": 3127,
       "checks": [
         {
           "name": "balance_identity",
@@ -10190,12 +10190,12 @@
       ]
     },
     {
-      "runId": "012d3ab4-e4ff-419a-bb8f-a5c04cdd8783",
+      "runId": "3624703a-2cdf-4512-aa31-1fba3bb455d9",
       "accessionNumber": "0000040545-26-000008",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0007345,
-      "latencyMs": 2604,
+      "costUsd": 0.0008010000000000001,
+      "latencyMs": 3136,
       "checks": [
         {
           "name": "balance_identity",
@@ -10262,12 +10262,12 @@
       ]
     },
     {
-      "runId": "3dc93c9a-030e-4aed-9e64-9467c99f2f31",
+      "runId": "894c1676-e218-4156-9619-5b8e74a3ee00",
       "accessionNumber": "0000018230-26-000008",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0006601,
-      "latencyMs": 2587,
+      "costUsd": 0.0007266,
+      "latencyMs": 3454,
       "checks": [
         {
           "name": "balance_identity",
@@ -10334,12 +10334,12 @@
       ]
     },
     {
-      "runId": "47e238ab-fbf2-431d-9772-a4fd47f89dc6",
+      "runId": "0f5c329e-31fd-4fa1-ba94-0ba9425373b2",
       "accessionNumber": "0001628280-26-004357",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0006513000000000001,
-      "latencyMs": 2775,
+      "costUsd": 0.0007058,
+      "latencyMs": 3241,
       "checks": [
         {
           "name": "balance_identity",
@@ -10406,12 +10406,12 @@
       ]
     },
     {
-      "runId": "4e4a4162-ce60-4bf2-829b-6b3dd30abfe7",
+      "runId": "fa675a99-a3ab-4eaa-933a-c90016403327",
       "accessionNumber": "0000773840-26-000013",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0006798,
-      "latencyMs": 4937,
+      "costUsd": 0.0007343,
+      "latencyMs": 3079,
       "checks": [
         {
           "name": "balance_identity",
@@ -10478,12 +10478,12 @@
       ]
     },
     {
-      "runId": "867b390a-1660-4d71-9b54-300b1fe6e56b",
+      "runId": "a5bf120f-653f-4085-b6de-216bc20ac4cd",
       "accessionNumber": "0001628280-26-008432",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0005993999999999999,
-      "latencyMs": 2668,
+      "costUsd": 0.0006504,
+      "latencyMs": 3148,
       "checks": [
         {
           "name": "balance_identity",
@@ -10550,12 +10550,12 @@
       ]
     },
     {
-      "runId": "756e0d59-7904-4592-a4c5-1a572b2568c5",
+      "runId": "fee20472-ce7a-480b-95c1-da0969b83353",
       "accessionNumber": "0001628280-26-004195",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0005664,
-      "latencyMs": 2660,
+      "costUsd": 0.0005994,
+      "latencyMs": 2910,
       "checks": [
         {
           "name": "balance_identity",
@@ -10622,12 +10622,12 @@
       ]
     },
     {
-      "runId": "1fd7bc25-6649-4a35-9595-431311566801",
+      "runId": "514d5b12-5508-44c2-ac29-018fa2fcc3c2",
       "accessionNumber": "0001104659-25-122321",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0006462,
-      "latencyMs": 2895,
+      "costUsd": 0.0007132,
+      "latencyMs": 4947,
       "checks": [
         {
           "name": "balance_identity",
@@ -10694,12 +10694,12 @@
       ]
     },
     {
-      "runId": "6186d86b-bb87-440a-a678-fd26999acb63",
+      "runId": "3f244ea6-dffb-411e-823a-62ea762e1817",
       "accessionNumber": "0000066740-26-000014",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0006419,
-      "latencyMs": 2967,
+      "costUsd": 0.0006879,
+      "latencyMs": 3724,
       "checks": [
         {
           "name": "balance_identity",
@@ -10766,12 +10766,12 @@
       ]
     },
     {
-      "runId": "1e87f071-c8cf-44b5-877d-e53bbbc5a01a",
+      "runId": "8f2ab073-e10d-457e-9bae-654e22b54dbd",
       "accessionNumber": "0000732712-26-000007",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0006234000000000001,
-      "latencyMs": 2973,
+      "costUsd": 0.0006894000000000001,
+      "latencyMs": 3397,
       "checks": [
         {
           "name": "balance_identity",
@@ -10838,12 +10838,12 @@
       ]
     },
     {
-      "runId": "c6d55459-25b7-4896-90b1-027d1400c814",
+      "runId": "64924b66-2bdd-4803-a38b-79aefbc41152",
       "accessionNumber": "0000732717-26-000120",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0006649,
-      "latencyMs": 2938,
+      "costUsd": 0.0007409000000000001,
+      "latencyMs": 3436,
       "checks": [
         {
           "name": "balance_identity",
@@ -10862,8 +10862,8 @@
             "totalEquity"
           ],
           "passed": true,
-          "skipped": false,
-          "detail": "totalEquity excludes noncontrolling interests"
+          "skipped": true,
+          "detail": "no noncontrolling interest line printed"
         },
         {
           "name": "netIncome_before_preferred",
@@ -10910,12 +10910,12 @@
       ]
     },
     {
-      "runId": "bbb11ad4-5313-461c-af17-9749c2a6fa8c",
+      "runId": "ec4d390c-2180-47a1-9b7d-3678bc639c69",
       "accessionNumber": "0000753308-26-000015",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0006897000000000001,
-      "latencyMs": 2772,
+      "costUsd": 0.0007392000000000001,
+      "latencyMs": 2958,
       "checks": [
         {
           "name": "balance_identity",
@@ -10982,12 +10982,12 @@
       ]
     },
     {
-      "runId": "1a77a62a-64aa-480c-9fb4-d236ee5d3df9",
+      "runId": "a93422b9-ac33-45d2-828f-6b899db038ec",
       "accessionNumber": "0001326160-26-000014",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0007237000000000001,
-      "latencyMs": 3100,
+      "costUsd": 0.0007907000000000001,
+      "latencyMs": 3615,
       "checks": [
         {
           "name": "balance_identity",

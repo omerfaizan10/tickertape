@@ -2,6 +2,7 @@ import type { FieldKey } from "../fields";
 import type { Revision } from "../revisions";
 import type { StatementKind } from "../sec/locate-statements";
 import type { RevisionExplanation } from "./explain-revisions";
+import type { NarrativeClaim } from "./narrative";
 
 export interface ToolCallRecord {
   name: string;
@@ -94,6 +95,8 @@ export interface AnalysisResult {
   statements: StatementExtraction[];
   checks: ReconciliationCheck[];
   priorYear: PriorYearCheck | null;
+  // Management's year-over-year claims, each checked against the figures.
+  narrative: NarrativeClaim[] | null;
   retryCount: number;
   totalCostUsd: number;
   totalLatencyMs: number;

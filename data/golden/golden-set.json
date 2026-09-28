@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-09-27T19:05:18.732Z",
+  "builtAt": "2026-09-28T07:40:47.875Z",
   "filings": [
     {
       "ticker": "AAPL",
@@ -2268,10 +2268,12 @@
           "alternates": []
         },
         "cash": {
-          "value": 28595000000,
-          "concept": "CashAndDueFromBanks",
-          "onStatement": false,
-          "rowLabels": [],
+          "value": 231845000000,
+          "concept": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+          "onStatement": true,
+          "rowLabels": [
+            "Cash and cash equivalents"
+          ],
           "alternates": []
         },
         "totalAssets": {
@@ -2356,9 +2358,9 @@
           "revised": true
         },
         "cash": {
-          "original": 26003000000,
-          "reprinted": 26003000000,
-          "concept": "CashAndDueFromBanks",
+          "original": 290114000000,
+          "reprinted": 290114000000,
+          "concept": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
           "revised": false
         },
         "totalAssets": {
@@ -3229,13 +3231,15 @@
           "alternates": []
         },
         "cash": {
-          "value": 3559000000,
-          "concept": "CashAndDueFromBanks",
+          "value": 47792000000,
+          "concept": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
           "onStatement": true,
           "rowLabels": [
-            "Cash and due from banks (includes restricted cash of consolidated variable interest entities: 2025, nil; 2024, $6)"
+            "Total cash and cash equivalents (includes restricted cash: 2025, $169; 2024, $427)"
           ],
-          "alternates": []
+          "alternates": [
+            3559000000
+          ]
         },
         "totalAssets": {
           "value": 300052000000,
@@ -3319,9 +3323,9 @@
           "revised": false
         },
         "cash": {
-          "original": 3413000000,
-          "reprinted": 3413000000,
-          "concept": "CashAndDueFromBanks",
+          "original": 40640000000,
+          "reprinted": 40640000000,
+          "concept": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
           "revised": false
         },
         "totalAssets": {
@@ -3822,7 +3826,7 @@
         },
         "cash": {
           "value": 46890000000,
-          "concept": "CashAndDueFromBanks",
+          "concept": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
           "onStatement": true,
           "rowLabels": [
             "Cash and due from banks"
@@ -3913,7 +3917,7 @@
         "cash": {
           "original": 56502000000,
           "reprinted": 56502000000,
-          "concept": "CashAndDueFromBanks",
+          "concept": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
           "revised": false
         },
         "totalAssets": {
@@ -6501,6 +6505,15 @@
           ],
           "alternates": []
         },
+        "cash": {
+          "value": 9942000000,
+          "concept": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+          "onStatement": true,
+          "rowLabels": [
+            "Cash and cash equivalents"
+          ],
+          "alternates": []
+        },
         "totalAssets": {
           "value": 126521000000,
           "concept": "Assets",
@@ -6577,6 +6590,12 @@
           "original": 6.51,
           "reprinted": 6.51,
           "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 9556000000,
+          "reprinted": 9556000000,
+          "concept": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
           "revised": false
         },
         "totalAssets": {
@@ -7462,6 +7481,15 @@
           ],
           "alternates": []
         },
+        "cash": {
+          "value": 5488000000,
+          "concept": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+          "onStatement": true,
+          "rowLabels": [
+            "Cash and cash equivalents"
+          ],
+          "alternates": []
+        },
         "totalAssets": {
           "value": 59490000000,
           "concept": "Assets",
@@ -7538,6 +7566,12 @@
           "original": 8.86,
           "reprinted": 8.86,
           "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 4762000000,
+          "reprinted": 4762000000,
+          "concept": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
           "revised": false
         },
         "totalAssets": {
@@ -7641,6 +7675,15 @@
           ],
           "alternates": []
         },
+        "cash": {
+          "value": 3219800000,
+          "concept": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+          "onStatement": true,
+          "rowLabels": [
+            "Cash and cash equivalents"
+          ],
+          "alternates": []
+        },
         "totalAssets": {
           "value": 32019700000,
           "concept": "Assets",
@@ -7726,6 +7769,12 @@
           "original": 3.31,
           "reprinted": 3.31,
           "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 3286200000,
+          "reprinted": 3286200000,
+          "concept": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
           "revised": false
         },
         "totalAssets": {
@@ -7826,6 +7875,13 @@
           ],
           "alternates": []
         },
+        "cash": {
+          "value": 7285000000,
+          "concept": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+          "onStatement": false,
+          "rowLabels": [],
+          "alternates": []
+        },
         "totalAssets": {
           "value": 324012000000,
           "concept": "Assets",
@@ -7905,6 +7961,12 @@
           "original": 9.72,
           "reprinted": 9.72,
           "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 8262000000,
+          "reprinted": 8262000000,
+          "concept": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
           "revised": false
         },
         "totalAssets": {
@@ -8197,6 +8259,15 @@
           ],
           "alternates": []
         },
+        "cash": {
+          "value": 12392000000,
+          "concept": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+          "onStatement": true,
+          "rowLabels": [
+            "Cash, cash equivalents and restricted cash"
+          ],
+          "alternates": []
+        },
         "totalAssets": {
           "value": 130169000000,
           "concept": "Assets",
@@ -8277,6 +8348,12 @@
           "original": 5.99,
           "reprinted": 5.99,
           "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 13619000000,
+          "reprinted": 13619000000,
+          "concept": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
           "revised": false
         },
         "totalAssets": {
@@ -9553,6 +9630,15 @@
           ],
           "alternates": []
         },
+        "cash": {
+          "value": 5235000000,
+          "concept": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+          "onStatement": true,
+          "rowLabels": [
+            "Cash and cash equivalents"
+          ],
+          "alternates": []
+        },
         "totalAssets": {
           "value": 37733000000,
           "concept": "Assets",
@@ -9638,6 +9724,12 @@
           "original": 7.55,
           "reprinted": 7.55,
           "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 5600000000,
+          "reprinted": 5600000000,
+          "concept": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
           "revised": false
         },
         "totalAssets": {

@@ -86,6 +86,7 @@ export async function POST(request: Request) {
           source: "live",
           onEvent: (event) => send({ type: "event", event }),
           priorYear: body.priorYear !== false,
+          narrative: true,
         });
         send({ type: "done", result: { ...result, events: undefined } });
       } catch (err) {

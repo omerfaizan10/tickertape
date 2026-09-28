@@ -1,6 +1,6 @@
 # Tickertape evaluation
 
-Run on 2026-09-28T07:42:43.624Z. Model: `gpt-6-luna@none` (mode: live). Prompt version: `v4`.
+Run on 2026-09-28T07:46:51.844Z. Model: `gpt-6-sol` (mode: live). Prompt version: `v4`.
 
 Every figure is graded against the SEC's XBRL value for the same filing and period. Only figures printed on the statement the agents read are graded (539 of 542 in the golden set; see the golden set page for the 3 that aren't).
 
@@ -11,7 +11,7 @@ Every figure is graded against the SEC's XBRL value for the same filing and peri
 - **Missing (agent said not printed):** 0  |  **wrong row:** 1  |  **wrong sign:** 0
 - **Grounding mismatches** (agent misreported a printed figure; the cell was used instead): 0
 - **Retries:** 0/54 filings needed one
-- **Cost:** $0.0348 total, $0.0006 per filing; avg latency 2.7s per filing
+- **Cost:** $0.6939 total, $0.0128 per filing; avg latency 4.1s per filing
 
 ## Accuracy by field
 

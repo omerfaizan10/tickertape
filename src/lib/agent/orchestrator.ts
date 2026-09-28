@@ -1,15 +1,16 @@
-import { CHAT_MODEL, isMockMode } from "../llm/client";
+import { isMockMode, MODEL_LABEL } from "../llm/client";
 import { listFilings, type FilingRef } from "../sec/client";
 import { parseFiling, type FilingTable } from "../sec/filing-text";
 import { loadFilingDocuments } from "../sec/filing-source";
 import { locateStatement, type StatementKind } from "../sec/locate-statements";
-import { detectScale } from "../sec/units";
+import { detectScale, parseAmount } from "../sec/units";
 import { AGENT_NAME, runExtraction } from "./extract";
 import { PROMPT_VERSION } from "./prompts";
 import { reconcile, RETRYABLE_CHECKS } from "./reconcile";
 import { createRun, finalizeRun, upsertFiling, writeTraceEvent } from "./trace";
 import { compareWithPriorFiling } from "../revisions";
 import { explainRevisions } from "./explain-revisions";
+import { checkNarrative, type NarrativeClaim } from "./narrative";
 import type {
   AgentStepResult,
   AnalysisResult,
@@ -40,6 +41,8 @@ export interface RunOptions {
   // does this filing reprint differently from how they were first
   // reported? Pass the prior filing to skip looking it up.
   priorYear?: boolean | FilingRef;
+  // Check management's year-over-year claims (MD&A) against the figures.
+  narrative?: boolean;
 }
 
 export async function analyzeFiling(
@@ -48,7 +51,7 @@ export async function analyzeFiling(
   options: RunOptions = {},
 ): Promise<AnalysisResult> {
   const started = Date.now();
-  const model = isMockMode() ? "mock" : CHAT_MODEL;
+  const model = isMockMode() ? "mock" : MODEL_LABEL;
   await upsertFiling({ ...filing, ticker }, options.source ?? "live");
   const runId = await createRun(filing.accessionNumber, model, PROMPT_VERSION);
 
@@ -89,6 +92,7 @@ export async function analyzeFiling(
       statements: [],
       checks: [],
       priorYear: null,
+      narrative: null,
       retryCount: 0,
       totalCostUsd: totalCost,
       totalLatencyMs: Date.now() - started,
@@ -267,6 +271,50 @@ export async function analyzeFiling(
 
     // 4. Optionally, last year's 10-K: its own full run, then a code
     //    comparison, then an explainer only if something was revised.
+    const narrativeStep = async (): Promise<NarrativeClaim[] | null> => {
+      if (!options.narrative || statements.length === 0) return null;
+      try {
+        const step = await checkNarrative(
+          paragraphs,
+          figures,
+          Object.fromEntries(
+            statements
+              .filter((x) => located[x.statement])
+              .map((x) => [
+                x.statement,
+                {
+                  table: located[x.statement]!,
+                  current: x.currentColumn,
+                  prior: x.priorColumn,
+                },
+              ]),
+          ),
+          filing.reportDate,
+          printedFigures(
+            tables.filter(
+              (t) => !Object.values(located).some((l) => l?.index === t.index),
+            ),
+          ),
+        );
+        await record(
+          stepEvent("narrative_checker", locatorIndex, null, step),
+        );
+        return step.output;
+      } catch (err) {
+        await record(
+          stepEvent(
+            "narrative_checker",
+            locatorIndex,
+            null,
+            { output: null, toolCalls: [], tokensIn: 0, tokensOut: 0, costUsd: 0, latencyMs: 0 },
+            err instanceof Error ? err.message : String(err),
+          ),
+        );
+        return null;
+      }
+    };
+    const narrativePromise = narrativeStep();
+
     let priorYear: PriorYearCheck | null = null;
     if (options.priorYear && statements.length > 0) {
       priorYear = await checkPriorYear(
@@ -294,6 +342,7 @@ export async function analyzeFiling(
       statements,
       checks,
       priorYear,
+      narrative: await narrativePromise,
       retryCount,
       totalCostUsd: totalCost,
       totalLatencyMs: Date.now() - started,
@@ -302,7 +351,13 @@ export async function analyzeFiling(
     };
     await finalizeRun(runId, {
       status: result.status,
-      result: { figures, statements, checks, priorYear },
+      result: {
+        figures,
+        statements,
+        checks,
+        priorYear,
+        narrative: result.narrative,
+      },
       checksPassed: scored.filter((c) => c.passed).length,
       checksTotal: scored.length,
       retryCount,
@@ -314,6 +369,22 @@ export async function analyzeFiling(
   } catch (err) {
     return fail(err instanceof Error ? err.message : String(err));
   }
+}
+
+// Every figure printed in the given tables, scaled to dollars, for the
+// narrative check to recognize segment and supplemental figures.
+function printedFigures(tables: FilingTable[]): Set<number> {
+  const out = new Set<number>();
+  for (const t of tables) {
+    const scale = detectScale(t);
+    for (const row of t.rows) {
+      for (const cell of row.slice(1)) {
+        const n = parseAmount(cell);
+        if (n !== null && Math.abs(n) >= 1) out.add(n * scale);
+      }
+    }
+  }
+  return out;
 }
 
 type StepEventFn = <T>(

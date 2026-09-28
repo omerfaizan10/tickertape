@@ -1,4 +1,5 @@
 import { getPool } from "../db";
+import type { NarrativeClaim } from "../agent/narrative";
 import type {
   ExtractedFigure,
   PriorYearCheck,
@@ -69,6 +70,7 @@ export interface RunDetail extends RunListItem {
   statements: StatementExtraction[];
   checks: ReconciliationCheck[];
   priorYear: PriorYearCheck | null;
+  narrative: NarrativeClaim[] | null;
   events: TraceEvent[];
 }
 
@@ -120,6 +122,7 @@ export async function getRun(id: string): Promise<RunDetail | null> {
     statements: result.statements,
     checks: result.checks,
     priorYear: result.priorYear ?? null,
+    narrative: result.narrative ?? null,
     events: events.rows.map((e) => ({
       agentName: e.agent_name,
       stepIndex: e.step_index,

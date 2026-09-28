@@ -1,6 +1,6 @@
 # Tickertape evaluation
 
-Run on 2026-09-28T07:42:43.624Z. Model: `gpt-6-luna@none` (mode: live). Prompt version: `v4`.
+Run on 2026-09-28T07:44:38.619Z. Model: `gpt-6-luna` (mode: live). Prompt version: `v4`.
 
 Every figure is graded against the SEC's XBRL value for the same filing and period. Only figures printed on the statement the agents read are graded (539 of 542 in the golden set; see the golden set page for the 3 that aren't).
 
@@ -11,7 +11,7 @@ Every figure is graded against the SEC's XBRL value for the same filing and peri
 - **Missing (agent said not printed):** 0  |  **wrong row:** 1  |  **wrong sign:** 0
 - **Grounding mismatches** (agent misreported a printed figure; the cell was used instead): 0
 - **Retries:** 0/54 filings needed one
-- **Cost:** $0.0348 total, $0.0006 per filing; avg latency 2.7s per filing
+- **Cost:** $0.0378 total, $0.0007 per filing; avg latency 3.4s per filing
 
 ## Accuracy by field
 
@@ -49,7 +49,7 @@ Every figure is graded against the SEC's XBRL value for the same filing and peri
 | netIncome_before_preferred | 54 | 54 | 100.0% |
 | epsDiluted_total | 54 | 54 | 100.0% |
 | cash_flow_tie | 39 | 44 | 88.6% |
-| totalEquity_attribution | 31 | 31 | 100.0% |
+| totalEquity_attribution | 29 | 29 | 100.0% |
 | netIncome_attribution | 28 | 28 | 100.0% |
 
 ## Misses

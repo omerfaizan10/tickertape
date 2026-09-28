@@ -4,6 +4,8 @@ import { FIELDS } from "@/lib/fields";
 import {
   isCorrect,
   loadEvalReport,
+  loadModelComparison,
+  loadNarrativeReport,
   loadRevisionEval,
 } from "@/lib/eval-report";
 import { compactUsd, pct } from "@/lib/format";
@@ -57,6 +59,11 @@ export default function EvalPage() {
   const checks = runs.flatMap((r) => r.checks).filter((c) => !c.skipped);
   const sectors = [...new Set(graded.map((g) => g.sector))];
   const rev = loadRevisionEval();
+  const models = loadModelComparison();
+  const narrative = loadNarrativeReport();
+  const nClaims = narrative?.claims ?? [];
+  const nChecked = nClaims.filter((c) => c.claim.verdict !== "not_checked");
+  const nFlagged = nChecked.filter((c) => c.claim.verdict === "inconsistent");
   const revCount = (o: string) =>
     rev ? rev.graded.filter((g) => g.outcome === o).length : 0;
   const tp = revCount("true_positive");
@@ -235,6 +242,84 @@ export default function EvalPage() {
                 )),
               )}
           </ul>
+        </section>
+      ) : null}
+
+      {models.length > 1 ? (
+        <section>
+          <h2 className="mb-3 text-xs uppercase tracking-wide text-text-faint">
+            models, same pipeline and checks
+          </h2>
+          <div className="overflow-x-auto rounded-lg border border-border">
+            <table className="w-full text-sm">
+              <thead className="bg-surface text-left text-xs text-text-faint">
+                <tr>
+                  <th className="px-4 py-2 font-normal">model</th>
+                  <th className="px-4 py-2 text-right font-normal">accuracy</th>
+                  <th className="px-4 py-2 text-right font-normal">cost / filing</th>
+                  <th className="px-4 py-2 text-right font-normal">time / filing</th>
+                  <th className="px-4 py-2 text-right font-normal">retried</th>
+                </tr>
+              </thead>
+              <tbody>
+                {models.map((m) => (
+                  <tr key={m.model} className="border-t border-border-soft">
+                    <td className="px-4 py-2 font-mono text-xs text-text">{m.model}</td>
+                    <td className="px-4 py-2 text-right font-mono text-text">
+                      {pct(m.correct, m.graded)}
+                      <span className="text-text-faint"> {m.correct}/{m.graded}</span>
+                    </td>
+                    <td className="px-4 py-2 text-right font-mono text-xs text-text-muted">
+                      ${m.costPerFiling.toFixed(4)}
+                    </td>
+                    <td className="px-4 py-2 text-right font-mono text-xs text-text-muted">
+                      {m.secondsPerFiling.toFixed(1)}s
+                    </td>
+                    <td className="px-4 py-2 text-right font-mono text-xs text-text-muted">
+                      {m.retried}/{m.filings}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-2 max-w-3xl text-xs text-text-faint">
+            Once code does everything except choosing the row, a model 13 times
+            the price doesn&apos;t choose rows any better. Filings made after a
+            model&apos;s training cutoff score as well as those before it, so
+            the figures are being read, not recalled. Full table with the
+            cutoff split: <span className="font-mono">eval/models.md</span>.
+          </p>
+        </section>
+      ) : null}
+
+      {narrative ? (
+        <section>
+          <h2 className="mb-3 text-xs uppercase tracking-wide text-text-faint">
+            management&apos;s claims vs the statements
+          </h2>
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+            <StatCard
+              label="claims found"
+              value={String(nClaims.length)}
+              sub={`${nClaims.filter((c) => c.claim.quoteVerified).length} quotes verified in the filing`}
+            />
+            <StatCard
+              label="checkable"
+              value={String(nChecked.length)}
+              sub="company-wide GAAP figures only"
+            />
+            <StatCard
+              label="consistent"
+              value={pct(nChecked.length - nFlagged.length, nChecked.length)}
+              sub={`${nChecked.length - nFlagged.length} of ${nChecked.length}`}
+            />
+            <StatCard
+              label="flagged"
+              value={String(nFlagged.length)}
+              sub="each reviewed by hand, see eval/narrative.md"
+            />
+          </div>
         </section>
       ) : null}
 

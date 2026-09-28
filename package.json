@@ -10,7 +10,10 @@
     "db:migrate": "tsx scripts/migrate.ts",
     "golden:build": "tsx scripts/build-golden-set.ts",
     "eval": "tsx scripts/eval.ts",
-    "eval:revisions": "tsx scripts/eval-revisions.ts"
+    "eval:revisions": "tsx scripts/eval-revisions.ts",
+    "eval:narrative": "tsx scripts/eval-narrative.ts",
+    "eval:models": "tsx scripts/compare-models.ts",
+    "test:narrative": "tsx scripts/test-narrative.ts"
   },
   "dependencies": {
     "cheerio": "^1.2.0",

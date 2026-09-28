@@ -5,6 +5,7 @@ import Link from "next/link";
 import { FiguresTable } from "@/components/figures-table";
 import { ChecksList } from "@/components/checks-list";
 import { RevisionsPanel } from "@/components/revisions-panel";
+import { NarrativePanel } from "@/components/narrative-panel";
 import type { AnalysisResult, TraceEvent } from "@/lib/agent/types";
 
 const SUGGESTIONS = ["AAPL", "NVDA", "JPM", "KO", "TSLA", "COST"];
@@ -36,6 +37,11 @@ const STEPS: { agent: string; label: string; detail: string }[] = [
     agent: "reconciler",
     label: "reconcile",
     detail: "checks the picks against the statements' own totals (code)",
+  },
+  {
+    agent: "narrative_checker",
+    label: "MD&A claims agent",
+    detail: "lists management's year-over-year claims; code checks each one",
   },
 ];
 
@@ -275,6 +281,14 @@ export function AnalyzeForm() {
             </h2>
             <ChecksList checks={result.checks} />
           </section>
+          {result.narrative ? (
+            <section>
+              <h2 className="mb-3 text-xs uppercase tracking-wide text-text-faint">
+                management&apos;s claims
+              </h2>
+              <NarrativePanel claims={result.narrative} />
+            </section>
+          ) : null}
           {result.priorYear ? (
             <section>
               <h2 className="mb-3 text-xs uppercase tracking-wide text-text-faint">

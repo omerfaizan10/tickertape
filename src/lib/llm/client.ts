@@ -2,12 +2,58 @@ import OpenAI from "openai";
 import { z } from "zod";
 import type { AgentStepResult, ToolCallRecord } from "../agent/types";
 
-export const CHAT_MODEL = "gpt-4o-mini";
+// The model every agent uses, chosen by the model comparison in
+// eval/models.md: gpt-6-luna with reasoning off was the most accurate
+// (544/545), the cheapest and the fastest of the four tried, so it's the
+// default. Overridable to rerun the comparison (CHAT_MODEL=gpt-6-sol).
+export const DEFAULT_MODEL = "gpt-6-luna";
+export const DEFAULT_REASONING_EFFORT = "none";
+export const CHAT_MODEL = process.env.CHAT_MODEL || DEFAULT_MODEL;
 
-// Per-1K-token pricing for gpt-4o-mini, used to compute cost_usd on every
-// step so the eval layer can report real dollar figures instead of vibes.
-const PRICE_PER_1K_INPUT = 0.00015;
-const PRICE_PER_1K_OUTPUT = 0.0006;
+// Reasoning models take an effort setting; others ignore it. Unset means
+// the model's own default.
+export const REASONING_EFFORT = (process.env.REASONING_EFFORT ||
+  (CHAT_MODEL === DEFAULT_MODEL ? DEFAULT_REASONING_EFFORT : undefined)) as
+  | "none"
+  | "minimal"
+  | "low"
+  | "medium"
+  | "high"
+  | "xhigh"
+  | "max"
+  | undefined;
+
+const REASONING_MODELS = /^(o\d|gpt-5|gpt-6)/;
+
+export const DEFAULT_LABEL = `${DEFAULT_MODEL}@${DEFAULT_REASONING_EFFORT}`;
+
+// How a run's model is recorded: the model, plus the effort when one was
+// set, so eval runs at different efforts stay distinguishable.
+export const MODEL_LABEL = `${CHAT_MODEL}${
+  REASONING_MODELS.test(CHAT_MODEL) && REASONING_EFFORT
+    ? `@${REASONING_EFFORT}`
+    : ""
+}`;
+
+// Standard-tier prices per 1M tokens, from developers.openai.com/api/docs
+// (pricing page and each model's page), checked 2026-09-28. Used to put a
+// real dollar figure on every step. Reasoning tokens are billed as output.
+const PRICES_PER_1M: Record<string, { input: number; output: number }> = {
+  "gpt-4o-mini": { input: 0.15, output: 0.6 },
+  "gpt-6-luna": { input: 0.1, output: 0.5 },
+  "gpt-6-sol": { input: 2.0, output: 10.0 },
+  "gpt-6-astra": { input: 10.0, output: 50.0 },
+};
+
+function priceFor(model: string): { input: number; output: number } {
+  const p = PRICES_PER_1M[model];
+  if (!p) {
+    throw new Error(
+      `No verified price for ${model}. Add it to PRICES_PER_1M from OpenAI's pricing page before running it, so cost figures stay real.`,
+    );
+  }
+  return p;
+}
 
 let client: OpenAI | null = null;
 
@@ -82,10 +128,14 @@ async function withRateLimitRetry<T>(call: () => Promise<T>): Promise<T> {
 }
 
 function costUsd(tokensIn: number, tokensOut: number): number {
-  return (
-    (tokensIn / 1000) * PRICE_PER_1K_INPUT +
-    (tokensOut / 1000) * PRICE_PER_1K_OUTPUT
-  );
+  const p = priceFor(CHAT_MODEL);
+  return (tokensIn / 1e6) * p.input + (tokensOut / 1e6) * p.output;
+}
+
+function modelParams() {
+  return REASONING_MODELS.test(CHAT_MODEL) && REASONING_EFFORT
+    ? { model: CHAT_MODEL, reasoning_effort: REASONING_EFFORT }
+    : { model: CHAT_MODEL };
 }
 
 export async function runAgentStep<T>(
@@ -148,7 +198,7 @@ export async function runAgentStep<T>(
   for (let round = 0; toolDefs.length > 0 && round < maxToolRounds; round++) {
     const response = await withRateLimitRetry(() =>
       openai.chat.completions.create({
-        model: CHAT_MODEL,
+        ...modelParams(),
         messages,
         tools: toolDefs.length > 0 ? toolDefs : undefined,
         tool_choice: toolDefs.length > 0 ? "auto" : undefined,
@@ -199,7 +249,7 @@ export async function runAgentStep<T>(
 
   const finalResponse = await withRateLimitRetry(() =>
     openai.chat.completions.create({
-      model: CHAT_MODEL,
+      ...modelParams(),
       messages,
       response_format: {
         type: "json_schema",

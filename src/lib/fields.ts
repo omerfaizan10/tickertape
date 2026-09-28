@@ -72,7 +72,16 @@ export const FIELDS: FieldSpec[] = [
     key: "cash",
     label: "Cash and cash equivalents",
     statement: "balance",
-    concepts: ["CashAndCashEquivalentsAtCarryingValue", "CashAndDueFromBanks"],
+    // Some filers tag their printed cash total only under the concept that
+    // includes restricted cash (American Express's "Total cash and cash
+    // equivalents (includes restricted cash)"); banks also tag "cash and
+    // due from banks". When more than one of these is printed, the answer
+    // key accepts either.
+    concepts: [
+      "CashAndCashEquivalentsAtCarryingValue",
+      "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+      "CashAndDueFromBanks",
+    ],
     unit: "USD",
     duration: false,
   },

@@ -10,7 +10,11 @@ import type { AnalysisResult, ExtractedFigure } from "../src/lib/agent/types";
 import { getPool } from "../src/lib/db";
 import { FIELDS, type FieldKey } from "../src/lib/fields";
 import { loadGoldenSet, type GoldenFiling } from "../src/lib/golden";
-import { CHAT_MODEL, isMockMode } from "../src/lib/llm/client";
+import {
+  DEFAULT_LABEL,
+  isMockMode,
+  MODEL_LABEL,
+} from "../src/lib/llm/client";
 
 // Runs the full pipeline on every golden-set filing and grades each
 // extracted figure against the SEC's XBRL value for that filing. Only
@@ -193,7 +197,7 @@ async function main() {
   const md = [
     "# Tickertape evaluation",
     "",
-    `Run on ${new Date().toISOString()}. Model: \`${CHAT_MODEL}\` (mode: ${mode}). Prompt version: \`${PROMPT_VERSION}\`.`,
+    `Run on ${new Date().toISOString()}. Model: \`${MODEL_LABEL}\` (mode: ${mode}). Prompt version: \`${PROMPT_VERSION}\`.`,
     "",
     "Every figure is graded against the SEC's XBRL value for the same filing and period. Only figures printed on the statement the agents read are graded (539 of 542 in the golden set; see the golden set page for the 3 that aren't).",
     "",
@@ -245,14 +249,21 @@ async function main() {
     "",
   ].join("\n");
 
-  mkdirSync(join(process.cwd(), "eval"), { recursive: true });
-  writeFileSync(join(process.cwd(), "eval", "results.md"), md);
+  // The headline report is the default model's; other models and efforts
+  // go to eval/models/ for the comparison, without overwriting it.
+  const isDefault = MODEL_LABEL === DEFAULT_LABEL && only.length === 0;
+  const dir = isDefault
+    ? join(process.cwd(), "eval")
+    : join(process.cwd(), "eval", "models");
+  const base = isDefault ? "results" : MODEL_LABEL.replace(/[^a-z0-9.@-]/gi, "_");
+  mkdirSync(dir, { recursive: true });
+  writeFileSync(join(dir, `${base}.md`), md);
   writeFileSync(
-    join(process.cwd(), "eval", "results.json"),
+    join(dir, `${base}.json`),
     JSON.stringify(
       {
         runAt: new Date().toISOString(),
-        model: CHAT_MODEL,
+        model: MODEL_LABEL,
         mode,
         promptVersion: PROMPT_VERSION,
         graded,

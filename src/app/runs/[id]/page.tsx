@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { ChecksList } from "@/components/checks-list";
 import { FiguresTable } from "@/components/figures-table";
 import { RevisionsPanel } from "@/components/revisions-panel";
+import { NarrativePanel } from "@/components/narrative-panel";
 import { StatementView } from "@/components/statement-view";
 import { getRun } from "@/lib/dashboard/queries";
 import { FIELDS } from "@/lib/fields";
@@ -30,6 +31,7 @@ const AGENT_LABEL: Record<string, string> = {
   reconciler: "reconciler (code)",
   restatement_check: "restatement check (code)",
   revision_explainer: "restatement explainer",
+  narrative_checker: "MD&A claims agent",
 };
 
 // Re-derives the statements the run read. Parsing and locating are
@@ -134,6 +136,15 @@ export default async function RunPage({
             checks{run.retryCount > 0 ? " (after retry)" : ""}
           </h2>
           <ChecksList checks={run.checks} />
+        </section>
+      ) : null}
+
+      {run.narrative ? (
+        <section>
+          <h2 className="mb-3 text-xs uppercase tracking-wide text-text-faint">
+            management&apos;s claims
+          </h2>
+          <NarrativePanel claims={run.narrative} />
         </section>
       ) : null}
 
