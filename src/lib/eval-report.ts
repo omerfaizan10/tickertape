@@ -97,19 +97,26 @@ export interface ModelRow {
 
 // Full-golden-set runs only: the headline report plus eval/models/*.json.
 export function loadModelComparison(): ModelRow[] {
-  const files = [join(process.cwd(), "eval", "results.json")];
-  const dir = join(process.cwd(), "eval", "models");
-  if (existsSync(dir)) {
-    files.push(
-      ...readdirSync(dir)
-        .filter((f) => f.endsWith(".json"))
-        .map((f) => join(dir, f)),
-    );
+  // Paths are built from fixed folders ("eval", "eval/models") so the
+  // bundler can see exactly which files a deployment needs.
+  const reports: EvalReport[] = [];
+  const headline = join(process.cwd(), "eval", "results.json");
+  if (existsSync(headline)) {
+    reports.push(JSON.parse(readFileSync(headline, "utf-8")));
+  }
+  const modelsDir = join(process.cwd(), "eval", "models");
+  if (existsSync(modelsDir)) {
+    for (const name of readdirSync(modelsDir)) {
+      if (!name.endsWith(".json")) continue;
+      reports.push(
+        JSON.parse(
+          readFileSync(join(process.cwd(), "eval", "models", name), "utf-8"),
+        ),
+      );
+    }
   }
   const rows: ModelRow[] = [];
-  for (const f of files) {
-    if (!existsSync(f)) continue;
-    const r: EvalReport = JSON.parse(readFileSync(f, "utf-8"));
+  for (const r of reports) {
     if (r.mode !== "live") continue;
     rows.push({
       model: r.model,

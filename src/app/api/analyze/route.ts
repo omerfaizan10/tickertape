@@ -4,6 +4,9 @@ import { analyzeFiling } from "@/lib/agent/orchestrator";
 import { listFilings, lookupTicker } from "@/lib/sec/client";
 
 export const runtime = "nodejs";
+// A live analysis with the prior-year check reads two 10-Ks and runs up to
+// eight agent steps: typically 10 to 20 seconds, so a minute of headroom.
+export const maxDuration = 60;
 
 // Each live analysis is three model calls plus up to three SEC downloads,
 // and checking last year's 10-K doubles that, so a public page needs a hard
