@@ -284,8 +284,8 @@ export default function EvalPage() {
             </table>
           </div>
           <p className="mt-2 max-w-3xl text-xs text-text-faint">
-            Once code does everything except choosing the row, a model 13 times
-            the price doesn&apos;t choose rows any better. Filings made after a
+            Once code does everything except choosing the row, a model about 20
+            times the price doesn&apos;t choose rows any better. Filings made after a
             model&apos;s training cutoff score as well as those before it, so
             the figures are being read, not recalled. Full table with the
             cutoff split: <span className="font-mono">eval/models.md</span>.
@@ -317,7 +317,7 @@ export default function EvalPage() {
             <StatCard
               label="flagged"
               value={String(nFlagged.length)}
-              sub="each reviewed by hand, see eval/narrative.md"
+              sub={nFlagged.length === 0 ? "the checker catches 966 of 968 planted false claims" : "each reviewed by hand in eval/narrative.md"}
             />
           </div>
         </section>

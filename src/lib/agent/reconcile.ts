@@ -244,22 +244,46 @@ function netIncomeBeforePreferred({
       detail: "net income is not the after-preferred-dividends line",
     });
   }
-  const plainAbove = table.rows
-    .slice(0, picked.rowIndex)
-    .some(
-      (r) =>
-        /^(.*\b)?net (income|earnings)\b/i.test(r[0]) &&
-        !toCommon.test(r[0]) &&
-        !/per share|noncontrolling|minority|continuing|discontinued/i.test(
-          r[0],
-        ) &&
-        figureAt(r, e.currentColumn) !== null,
+  // The nearest plain net income line above the pick, and what's printed
+  // between the two, decide it. A preferred dividends line in between
+  // means the pick is after preferred dividends (Goldman Sachs, Wells
+  // Fargo). A noncontrolling-interest line in between means the plain line
+  // is consolidated and the pick is the company's own share - Tesla, with
+  // no preferred stock, calls that "attributable to common stockholders".
+  const isPlain = (r: string[]) =>
+    /^(.*\b)?net (income|earnings)\b/i.test(r[0]) &&
+    !toCommon.test(r[0]) &&
+    !/per share|noncontrolling|minority|continuing|discontinued/i.test(r[0]) &&
+    figureAt(r, e.currentColumn) !== null;
+  let plain = -1;
+  for (let i = picked.rowIndex - 1; i >= 0; i--) {
+    if (isPlain(table.rows[i])) {
+      plain = i;
+      break;
+    }
+  }
+  const between = plain === -1 ? [] : table.rows.slice(plain + 1, picked.rowIndex);
+  const preferredBetween = between.some((r) => /preferred/i.test(r[0]));
+  const nciBetween = between.some((r) =>
+    /noncontrolling|non-controlling|minority/i.test(r[0]),
+  );
+  // When the two lines print the same figure (GE: preferred dividends were
+  // "-" this year), the pick is the net income figure either way.
+  const same =
+    plain !== -1 &&
+    sameFigure(
+      figureAt(table.rows[plain], e.currentColumn) ?? "",
+      picked.printed ?? "",
     );
+  const afterPreferred =
+    plain !== -1 && !same && (preferredBetween || !nciBetween);
   return check("netIncome_before_preferred", "income", ["netIncome"], {
-    passed: !plainAbove,
-    detail: plainAbove
+    passed: !afterPreferred,
+    detail: afterPreferred
       ? `netIncome was read from "${picked.rowLabel}", which is after preferred dividends. Net income is the line before preferred dividends, printed above it.`
-      : "no net income line before preferred dividends is printed",
+      : nciBetween
+        ? "the line attributable to common stockholders is the company's own share after minority interests, with no preferred dividends between"
+        : "no net income line before preferred dividends is printed",
   });
 }
 

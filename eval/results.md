@@ -1,6 +1,6 @@
 # Tickertape evaluation
 
-Run on 2026-09-28T07:42:43.624Z. Model: `gpt-6-luna@none` (mode: live). Prompt version: `v4`.
+Run on 2026-09-28T08:14:38.243Z. Model: `gpt-6-luna@none` (mode: live). Prompt version: `v4`.
 
 Every figure is graded against the SEC's XBRL value for the same filing and period. Only figures printed on the statement the agents read are graded (539 of 542 in the golden set; see the golden set page for the 3 that aren't).
 

@@ -15,7 +15,7 @@ const PIPELINE: { name: string; kind: "code" | "agent"; what: string }[] = [
   {
     name: "Three statement agents",
     kind: "agent",
-    what: "Run in parallel, one per statement. Each reads its statement as numbered rows and names the row holding each figure. That's the only judgment in the pipeline.",
+    what: "Run in parallel, one per statement. Each reads its statement as numbered rows and names the row holding each figure. That's the only judgment in reading the figures.",
   },
   {
     name: "Reader",
@@ -26,6 +26,16 @@ const PIPELINE: { name: string; kind: "code" | "agent"; what: string }[] = [
     name: "Reconciler",
     kind: "code",
     what: "Checks the picks against the statements' own printed totals. A failed check re-runs only the agent it implicates, once, told exactly what failed.",
+  },
+  {
+    name: "Restatement check",
+    kind: "code",
+    what: "Reads last year's 10-K the same way and compares last year's figures as reprinted now against as first reported, line for line.",
+  },
+  {
+    name: "Explainer and MD&A agents",
+    kind: "agent",
+    what: "Explain any restatement, and list management's year-over-year claims. Quotes are checked word for word and every claim is checked in code.",
   },
 ];
 
@@ -97,7 +107,7 @@ export default function OverviewPage() {
         <h2 className="mb-4 text-xs uppercase tracking-wide text-text-faint">
           the pipeline
         </h2>
-        <ol className="grid gap-3 md:grid-cols-4">
+        <ol className="grid gap-3 md:grid-cols-3">
           {PIPELINE.map((step, i) => (
             <li
               key={step.name}

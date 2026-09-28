@@ -16,13 +16,13 @@ export function NarrativePanel({ claims }: { claims: NarrativeClaim[] }) {
           : checked.length === 0
             ? `Found ${claims.length} claims, none about a company-wide figure the statements can confirm.`
             : inconsistent.length === 0
-              ? `All ${checked.length} checkable claims in management's discussion match the statements.`
+              ? `${checked.length === 1 ? "The one checkable claim" : `All ${checked.length} checkable claims`} in management's discussion ${checked.length === 1 ? "matches" : "match"} the statements.`
               : `${inconsistent.length} of ${checked.length} checkable claims don't match the statements.`}
         {skipped > 0 && checked.length > 0 ? (
           <span className="text-text-faint">
             {" "}
-            {skipped} more were about segments, regions or adjusted measures and
-            weren&apos;t checked.
+            {skipped === 1 ? "1 more was" : `${skipped} more were`} about segments,
+            regions or adjusted measures and {skipped === 1 ? "wasn't" : "weren't"} checked.
           </span>
         ) : null}
       </p>
