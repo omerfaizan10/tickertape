@@ -4,6 +4,7 @@ import type { AnswerKey } from "./eval/answer-key";
 import type { RevisionTruth } from "./eval/revisions-truth";
 import type { FieldKey } from "./fields";
 import { parseFiling, type FilingTable } from "./sec/filing-text";
+import { loadFilingDocuments } from "./sec/filing-source";
 import { locateStatement, type StatementKind } from "./sec/locate-statements";
 
 export interface LocatedStatement {
@@ -82,4 +83,35 @@ export function loadStatementTables(
     if (located) out[kind] = located.table;
   }
   return out;
+}
+
+// For pages: the local cache when there is one, otherwise the filing
+// straight from EDGAR (a deployment has no cache). Null only if the SEC
+// can't be reached.
+export async function fetchStatementTables(
+  filing: GoldenFiling,
+): Promise<Partial<Record<StatementKind, FilingTable>> | null> {
+  const cached = loadStatementTables(filing);
+  if (cached) return cached;
+  try {
+    const { documents } = await loadFilingDocuments(filing.ticker, {
+      cik: filing.cik,
+      companyName: filing.companyName,
+      accessionNumber: filing.accessionNumber,
+      form: "10-K",
+      filingDate: filing.filingDate,
+      reportDate: filing.periodEnd,
+      primaryDocument: filing.url.split("/").pop()!,
+      url: filing.url,
+    });
+    const { tables } = parseFiling(documents);
+    const out: Partial<Record<StatementKind, FilingTable>> = {};
+    for (const kind of STATEMENT_KINDS) {
+      const located = locateStatement(tables, kind);
+      if (located) out[kind] = located.table;
+    }
+    return out;
+  } catch {
+    return null;
+  }
 }

@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { FIELDS, type FieldSpec } from "@/lib/fields";
 import {
   loadGoldenSet,
-  loadStatementTables,
+  fetchStatementTables,
   STATEMENT_KINDS,
 } from "@/lib/golden";
 import type { AnswerKey } from "@/lib/eval/answer-key";
@@ -69,7 +69,7 @@ export default async function FilingPage({
   );
   if (!filing) notFound();
 
-  const tables = loadStatementTables(filing);
+  const tables = await fetchStatementTables(filing);
 
   return (
     <div className="flex flex-col gap-8">
@@ -216,8 +216,7 @@ export default async function FilingPage({
               </div>
             ) : located ? (
               <p className="text-xs text-text-faint">
-                Statement preview needs the local filing cache (run{" "}
-                <span className="font-mono">npm run golden:build</span>).
+                Couldn&apos;t load this filing from the SEC right now. Try again in a moment.
               </p>
             ) : null}
           </section>
