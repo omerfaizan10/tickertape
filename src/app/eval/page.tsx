@@ -1,7 +1,11 @@
 import Link from "next/link";
 import { StatCard } from "@/components/stat-card";
 import { FIELDS } from "@/lib/fields";
-import { isCorrect, loadEvalReport } from "@/lib/eval-report";
+import {
+  isCorrect,
+  loadEvalReport,
+  loadRevisionEval,
+} from "@/lib/eval-report";
 import { compactUsd, pct } from "@/lib/format";
 
 export const dynamic = "force-dynamic";
@@ -52,6 +56,13 @@ export default function EvalPage() {
   const misses = graded.filter((g) => !isCorrect(g));
   const checks = runs.flatMap((r) => r.checks).filter((c) => !c.skipped);
   const sectors = [...new Set(graded.map((g) => g.sector))];
+  const rev = loadRevisionEval();
+  const revCount = (o: string) =>
+    rev ? rev.graded.filter((g) => g.outcome === o).length : 0;
+  const tp = revCount("true_positive");
+  const fp = revCount("false_positive");
+  const fn = revCount("false_negative");
+  const tn = revCount("true_negative");
 
   return (
     <div className="flex flex-col gap-8">
@@ -167,6 +178,65 @@ export default function EvalPage() {
           </p>
         </section>
       </div>
+
+      {rev ? (
+        <section>
+          <h2 className="mb-3 text-xs uppercase tracking-wide text-text-faint">
+            restatement detection
+          </h2>
+          <p className="mb-4 max-w-3xl text-sm text-text-muted">
+            For each filing the pipeline also reads last year&apos;s 10-K, and
+            code compares last year&apos;s figures as reprinted now against as
+            first reported. Graded against the SEC&apos;s XBRL for both filings.
+          </p>
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+            <StatCard
+              label="precision"
+              value={pct(tp, tp + fp)}
+              sub={`${tp} of ${tp + fp} flags were real`}
+            />
+            <StatCard
+              label="recall"
+              value={pct(tp, tp + fn)}
+              sub={`${tp} of ${tp + fn} revisions caught`}
+            />
+            <StatCard
+              label="false alarms"
+              value={String(fp)}
+              sub={`of ${fp + tn} unrevised figures`}
+            />
+            <StatCard
+              label="amounts exact"
+              value={`${rev.graded.filter((g) => g.amountsRight).length}/${tp}`}
+              sub="both sides of each caught revision"
+            />
+          </div>
+          <ul className="mt-4 flex flex-col gap-2">
+            {rev.explanations
+              .filter((e) => e.explanations.length > 0)
+              .flatMap((e) =>
+                e.explanations.map((x, i) => (
+                  <li key={`${e.ticker}-${i}`} className="text-sm text-text-muted">
+                    <Link
+                      href={`/filings/${e.ticker}`}
+                      className="font-mono text-accent hover:underline"
+                    >
+                      {e.ticker}
+                    </Link>{" "}
+                    <span className="text-text">{x.cause.replace(/_/g, " ")}</span>
+                    {": "}
+                    {x.summary}
+                    {x.verified ? (
+                      <span className="text-approve"> quote verified</span>
+                    ) : (
+                      <span className="text-text-faint"> no verified quote</span>
+                    )}
+                  </li>
+                )),
+              )}
+          </ul>
+        </section>
+      ) : null}
 
       <section>
         <h2 className="mb-3 text-xs uppercase tracking-wide text-text-faint">

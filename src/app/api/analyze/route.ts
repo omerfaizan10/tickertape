@@ -6,9 +6,10 @@ import { listFilings, lookupTicker } from "@/lib/sec/client";
 export const runtime = "nodejs";
 
 // Each live analysis is three model calls plus up to three SEC downloads,
-// so a public page needs a hard ceiling. 20 an hour keeps worst-case model
-// spend around a few cents an hour and SEC traffic far under its limits.
-const MAX_LIVE_PER_HOUR = 20;
+// and checking last year's 10-K doubles that, so a public page needs a hard
+// ceiling. 30 runs an hour keeps worst-case model spend at a few cents an
+// hour and SEC traffic far under its limits.
+const MAX_LIVE_PER_HOUR = 30;
 
 async function withinRateLimit(): Promise<boolean> {
   const { rows } = await getPool().query(
@@ -30,7 +31,7 @@ export async function POST(request: Request) {
     );
   }
 
-  let body: { ticker?: unknown };
+  let body: { ticker?: unknown; priorYear?: unknown };
   try {
     body = await request.json();
   } catch {
@@ -65,7 +66,7 @@ export async function POST(request: Request) {
   if (!(await withinRateLimit())) {
     return Response.json(
       {
-        error: `Live analysis is limited to ${MAX_LIVE_PER_HOUR} filings an hour to keep costs bounded. Try again later, or browse the golden set runs.`,
+        error: `Live analysis is limited to ${MAX_LIVE_PER_HOUR} filing reads an hour to keep costs bounded. Try again later, or browse the golden set runs.`,
       },
       { status: 429 },
     );
@@ -84,6 +85,7 @@ export async function POST(request: Request) {
         const result = await analyzeFiling(ticker, filing, {
           source: "live",
           onEvent: (event) => send({ type: "event", event }),
+          priorYear: body.priorYear !== false,
         });
         send({ type: "done", result: { ...result, events: undefined } });
       } catch (err) {

@@ -23,6 +23,7 @@ import {
   type CompanyFacts,
 } from "../src/lib/eval/answer-key";
 import type { GoldenFiling } from "../src/lib/golden";
+import { revisionTruth } from "../src/lib/eval/revisions-truth";
 
 config({ path: ".env.local", quiet: true });
 
@@ -97,7 +98,7 @@ async function buildOne(
 ): Promise<GoldenFiling | { ticker: string; skipped: string }> {
   const co = await lookupTicker(ticker);
   if (!co) return { ticker, skipped: "ticker not in SEC's ticker map" };
-  const [filing] = await listFilings(co.cik, "10-K", 1);
+  const [filing, priorFiling] = await listFilings(co.cik, "10-K", 2);
   if (!filing) {
     return { ticker, skipped: `${co.name} has no 10-K on file` };
   }
@@ -127,6 +128,39 @@ async function buildOne(
     statementTables[kind] = table;
   }
 
+  const answerKey = buildAnswerKey(
+    facts,
+    FIELDS,
+    statementTables,
+    filing.accessionNumber,
+    filing.reportDate,
+  );
+
+  // Restatement ground truth: for each field's answer-key concept, last
+  // year's original figure vs this year's reprint of it. Rounding tolerance
+  // is half a unit of the coarser of this statement's unit and $1M, so a
+  // switch from thousands to millions doesn't count as a restatement.
+  const revisions: GoldenFiling["revisions"] = {};
+  if (priorFiling) {
+    for (const spec of FIELDS) {
+      const concept = answerKey[spec.key]?.concept;
+      if (!concept) continue;
+      const scale = statements[spec.statement]?.scale ?? 1e6;
+      const tolerance =
+        spec.unit === "USD/shares" ? 0.005 : Math.max(scale, 1e6) / 2;
+      const truth = revisionTruth(
+        facts,
+        spec,
+        concept,
+        filing.accessionNumber,
+        priorFiling.accessionNumber,
+        priorFiling.reportDate,
+        tolerance,
+      );
+      if (truth) revisions[spec.key] = truth;
+    }
+  }
+
   return {
     ticker,
     sector,
@@ -138,13 +172,16 @@ async function buildOne(
     url: filing.url,
     exhibits: exhibitUrls,
     statements,
-    answerKey: buildAnswerKey(
-      facts,
-      FIELDS,
-      statementTables,
-      filing.accessionNumber,
-      filing.reportDate,
-    ),
+    answerKey,
+    priorFiling: priorFiling
+      ? {
+          accessionNumber: priorFiling.accessionNumber,
+          periodEnd: priorFiling.reportDate,
+          filingDate: priorFiling.filingDate,
+          url: priorFiling.url,
+        }
+      : null,
+    revisions,
   };
 }
 
@@ -192,6 +229,15 @@ async function main() {
   console.log(
     `\n${filings.length} filings, ${skipped.length} skipped. ` +
       `Answer key: ${all.length} figures from XBRL, ${onStatement} found on the located statement (${((onStatement / all.length) * 100).toFixed(1)}%).`,
+  );
+  const truths = filings.flatMap((f) => Object.values(f.revisions));
+  const revised = filings.flatMap((f) =>
+    Object.entries(f.revisions)
+      .filter(([, t]) => t.revised)
+      .map(([k, t]) => `${f.ticker} ${k} ${(((t.reprinted - t.original) / Math.abs(t.original)) * 100).toFixed(2)}%`),
+  );
+  console.log(
+    `Restatement truth: ${truths.length} prior-year figures compared, ${revised.length} revised: ${revised.join(", ")}`,
   );
   for (const spec of FIELDS) {
     const entries = filings

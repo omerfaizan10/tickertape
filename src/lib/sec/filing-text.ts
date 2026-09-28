@@ -25,6 +25,9 @@ export interface FilingTable {
 
 export interface ParsedFiling {
   tables: FilingTable[];
+  // The filing's prose, one entry per block of text (a paragraph, a list
+  // item), in document order. Tables are excluded; they're in `tables`.
+  paragraphs: string[];
 }
 
 const HEADING_LOOKBACK_CHARS = 300;
@@ -64,16 +67,26 @@ function mergeCells(cells: string[]): string[] {
 // numbered continuously across documents.
 export function parseFiling(documents: string | string[]): ParsedFiling {
   const tables: FilingTable[] = [];
+  const paragraphs: string[] = [];
   for (const html of Array.isArray(documents) ? documents : [documents]) {
-    collectTables(html, tables);
+    collectTables(html, tables, paragraphs);
   }
-  return { tables };
+  return { tables, paragraphs };
 }
 
 const DOCUMENT_UNIT =
   /\ball (dollar )?amounts (are |have been )?(presented|stated|expressed|reported|shown) in (thousands|millions|billions)\b/i;
 
-function collectTables(html: string, tables: FilingTable[]): void {
+// Tags that end a block of prose. Inline XBRL wraps text in spans and
+// ix: tags, which stay part of the paragraph they sit in.
+const BLOCK_TAGS = new Set(["p", "div", "li", "h1", "h2", "h3", "h4", "h5", "h6", "br"]);
+const MIN_PARAGRAPH_CHARS = 40;
+
+function collectTables(
+  html: string,
+  tables: FilingTable[],
+  paragraphs: string[],
+): void {
   const $ = cheerio.load(html);
 
   $("ix\\:header, script, style").remove();
@@ -86,14 +99,23 @@ function collectTables(html: string, tables: FilingTable[]): void {
   // so far, so each table can be labeled with whatever came right before it.
   let recentText = "";
 
+  let paragraph = "";
+  const flush = () => {
+    const text = clean(paragraph);
+    if (text.length >= MIN_PARAGRAPH_CHARS) paragraphs.push(text);
+    paragraph = "";
+  };
+
   const visit = (node: AnyNode) => {
     if (node.type === "text") {
       const t = clean(node.data);
       if (t) recentText = (recentText + " " + t).slice(-HEADING_LOOKBACK_CHARS);
+      if (t) paragraph += " " + t;
       return;
     }
     if (node.type !== "tag") return;
     if (node.name === "table") {
+      flush();
       const rows: string[][] = [];
       $(node)
         .find("tr")
@@ -129,12 +151,16 @@ function collectTables(html: string, tables: FilingTable[]): void {
         : "";
       return;
     }
+    const block = BLOCK_TAGS.has(node.name);
+    if (block) flush();
     for (const child of node.children) visit(child);
+    if (block) flush();
   };
 
   const firstOwnTable = tables.length;
   const root = $.root()[0];
   for (const child of root.children) visit(child);
+  flush();
 
   const documentUnit =
     clean($.root().text()).match(DOCUMENT_UNIT)?.[4]?.toLowerCase() ?? null;

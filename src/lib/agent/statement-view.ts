@@ -16,28 +16,59 @@ export function renderForAgent(table: FilingTable): string {
   return table.rows.map((r, i) => `R${i}: ${r.join(" | ")}`).join("\n");
 }
 
-function isYear(cell: string): boolean {
-  return /^(fiscal\s*)?(19|20)\d{2}$/i.test(cell.trim());
+// Column headers name the period as a bare year ("2025"), a fiscal year
+// ("Fiscal 2026"), or a phrase ending in the period-end date ("September
+// 27, 2025", "Years ended December 31, 2025", "AtDecember 31, 2025"). Each
+// is words, maybe a day of the month, then the year - and the year is what
+// identifies the column.
+const PERIOD_HEADER =
+  /^[a-z][a-z .,]*?(?:\d{1,2},?\s*)?((?:19|20)\d{2})$|^((?:19|20)\d{2})$/i;
+
+function headerYear(cell: string): string | null {
+  const m = cell.trim().match(PERIOD_HEADER);
+  return m ? (m[1] ?? m[2]) : null;
 }
 
-// The column holding the current period. Statements label their columns
-// by year, current year first in almost every 10-K, but not all - so the
-// header row is read rather than assumed. A fiscal year is labeled with the
-// calendar year it ends in (Walmart's year ending January 2026 is "2026"),
-// so the period end's year identifies the column.
+// The current- and prior-period columns. Statements label columns by year,
+// current year first in almost every 10-K but not all, so the header row
+// is read rather than assumed. Two labeling conventions exist for fiscal
+// years that end early in a calendar year: Walmart calls its year ending
+// January 2026 "2026", while Home Depot and Target call theirs "Fiscal
+// 2025". So the header decides: if the period-end year appears, labels
+// follow the end year; if only earlier years do, labels run one behind.
+export function periodColumns(
+  table: FilingTable,
+  periodEnd: string,
+): { current: number; prior: number | null } {
+  const endYear = Number(periodEnd.slice(0, 4));
+  for (const row of table.rows.slice(0, 12)) {
+    const years = row.map(headerYear).filter((y): y is string => y !== null);
+    if (years.length < 2) continue;
+    const label = years.includes(String(endYear))
+      ? endYear
+      : years.includes(String(endYear - 1))
+        ? endYear - 1
+        : null;
+    if (label === null) continue;
+    const current = years.indexOf(String(label));
+    const prior = years.indexOf(String(label - 1));
+    return { current, prior: prior === -1 ? null : prior };
+  }
+  return { current: 0, prior: null };
+}
+
 export function currentPeriodColumn(
   table: FilingTable,
   periodEnd: string,
 ): number {
-  const year = periodEnd.slice(0, 4);
-  for (const row of table.rows.slice(0, 12)) {
-    const years = row.filter(isYear);
-    if (years.length >= 2) {
-      const idx = years.findIndex((c) => c.includes(year));
-      if (idx !== -1) return idx;
-    }
-  }
-  return 0;
+  return periodColumns(table, periodEnd).current;
+}
+
+export function priorPeriodColumn(
+  table: FilingTable,
+  periodEnd: string,
+): number | null {
+  return periodColumns(table, periodEnd).prior;
 }
 
 // The printed figure in a row's current-period column. Data rows list their
@@ -56,4 +87,46 @@ export function sameFigure(a: string, b: string): boolean {
   const x = parseAmount(a);
   const y = parseAmount(b);
   return x !== null && y !== null && Math.abs(Math.abs(x) - Math.abs(y)) < 1e-9;
+}
+
+// Rows that print no figure in the current column are section headers
+// ("Net earnings (loss) per share:"). A figure row belongs to the nearest
+// header above it.
+export function headerAbove(
+  table: FilingTable,
+  row: number,
+  column: number,
+): string {
+  for (let i = row - 1; i >= 0; i--) {
+    if (figureAt(table.rows[i], column) === null) return table.rows[i][0];
+  }
+  return "";
+}
+
+function normalizeLabel(s: string): string {
+  return s
+    .toLowerCase()
+    .replace(/\((?:[a-z]|\d{1,2}|note \d+[^)]*)\)/g, "") // footnote markers
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
+
+// What identifies "the same line" in two different years' statements: its
+// label, qualified by its section header, since labels repeat (Duke prints
+// "Basic and Diluted" under both continuing operations and net income).
+// Unlabeled total rows are identified by their position among unlabeled
+// rows instead, since they have no label to match.
+export function rowKey(
+  table: FilingTable,
+  row: number,
+  column: number,
+): string {
+  const label = table.rows[row][0];
+  if (parseAmount(label) !== null) {
+    const nth = table.rows
+      .slice(0, row + 1)
+      .filter((r) => parseAmount(r[0]) !== null).length;
+    return `unlabeled#${nth}`;
+  }
+  return `${normalizeLabel(headerAbove(table, row, column))} | ${normalizeLabel(label)}`;
 }

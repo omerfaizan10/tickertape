@@ -2,7 +2,7 @@ import type { FieldKey } from "../fields";
 import type { FilingTable } from "../sec/filing-text";
 import type { StatementKind } from "../sec/locate-statements";
 import { detectScale, parseAmount } from "../sec/units";
-import { figureAt, sameFigure } from "./statement-view";
+import { figureAt, headerAbove, sameFigure } from "./statement-view";
 import type {
   ExtractedFigure,
   ReconciliationCheck,
@@ -82,11 +82,24 @@ function balanceIdentity({
 }: Located): ReconciliationCheck {
   const assets = fig(e, "totalAssets")?.value;
   const scale = detectScale(table);
-  const totals = rowValues(
+  const labeled = rowValues(
     table,
     e.currentColumn,
     /^total liabilities[,]?( and| &)?.*(equity|capital|investment)/i,
   );
+  // Merck prints its totals with no labels at all, so the line can't be
+  // found by name. A balance sheet always ends on total liabilities and
+  // equity, so the last row with a figure is it.
+  const lastFigure = [...table.rows]
+    .reverse()
+    .map((r) => figureAt(r, e.currentColumn))
+    .find((c) => c !== null && parseAmount(c) !== null);
+  const totals =
+    labeled.length > 0
+      ? labeled
+      : lastFigure
+        ? [parseAmount(lastFigure)! * scale]
+        : [];
   if (assets == null || totals.length === 0) {
     return check("balance_identity", "balance", ["totalAssets"], {
       passed: true,
@@ -130,12 +143,18 @@ function attribution(
   };
   const nciRows = table.rows
     .map((r, i) => i)
-    .filter((i) => /noncontrolling|non-controlling|minority/i.test(table.rows[i][0]))
+    .filter((i) =>
+      /noncontrolling|non-controlling|minority/i.test(table.rows[i][0]),
+    )
     .filter((i) => {
       const v = valueAt(i);
       return v !== null && v !== 0;
     });
-  if (picked?.value == null || picked.rowIndex === null || nciRows.length === 0) {
+  if (
+    picked?.value == null ||
+    picked.rowIndex === null ||
+    nciRows.length === 0
+  ) {
     return check(`${field}_attribution`, statement, [field], {
       passed: true,
       skipped: true,
@@ -207,16 +226,6 @@ function cashFlowTie({ table, extraction: e }: Located): ReconciliationCheck {
   });
 }
 
-// Rows that print no figure in the current column are section headers
-// ("Net earnings (loss) per share:"). A figure row belongs to the nearest
-// header above it.
-function headerAbove(table: FilingTable, row: number, column: number): string {
-  for (let i = row - 1; i >= 0; i--) {
-    if (figureAt(table.rows[i], column) === null) return table.rows[i][0];
-  }
-  return "";
-}
-
 // Net income is the figure before preferred dividends. Banks also print
 // "net income applicable to common stockholders" below it, and the agent
 // took that line in 4 of 54 filings despite being told not to. When the
@@ -241,7 +250,9 @@ function netIncomeBeforePreferred({
       (r) =>
         /^(.*\b)?net (income|earnings)\b/i.test(r[0]) &&
         !toCommon.test(r[0]) &&
-        !/per share|noncontrolling|minority|continuing|discontinued/i.test(r[0]) &&
+        !/per share|noncontrolling|minority|continuing|discontinued/i.test(
+          r[0],
+        ) &&
         figureAt(r, e.currentColumn) !== null,
     );
   return check("netIncome_before_preferred", "income", ["netIncome"], {
@@ -289,7 +300,9 @@ function epsTotal({ table, extraction: e }: Located): ReconciliationCheck {
         // either row is right.
         !sameFigure(figureAt(r, e.currentColumn)!, picked.printed ?? "") &&
         !underContinuing(i) &&
-        !/discontinued/i.test(`${r[0]} ${headerAbove(table, i, e.currentColumn)}`),
+        !/discontinued/i.test(
+          `${r[0]} ${headerAbove(table, i, e.currentColumn)}`,
+        ),
     );
   return check("epsDiluted_total", "income", ["epsDiluted"], {
     passed: !otherTotal,

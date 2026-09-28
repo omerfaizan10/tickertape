@@ -1,5 +1,5 @@
 {
-  "runAt": "2026-09-27T18:58:29.512Z",
+  "runAt": "2026-09-28T06:59:20.937Z",
   "model": "gpt-4o-mini",
   "mode": "live",
   "promptVersion": "v3",
@@ -581,137 +581,6 @@
       "groundingMismatch": false
     },
     {
-      "ticker": "ORCL",
-      "sector": "Technology",
-      "field": "revenue",
-      "expected": 67357000000,
-      "actual": 67357000000,
-      "outcome": "correct",
-      "rowLabel": "Total revenues",
-      "expectedRows": [
-        "Total revenues"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "ORCL",
-      "sector": "Technology",
-      "field": "operatingIncome",
-      "expected": 20606000000,
-      "actual": 20606000000,
-      "outcome": "correct",
-      "rowLabel": "Operating income",
-      "expectedRows": [
-        "Operating income"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "ORCL",
-      "sector": "Technology",
-      "field": "netIncome",
-      "expected": 17087000000,
-      "actual": 17087000000,
-      "outcome": "correct",
-      "rowLabel": "Net income",
-      "expectedRows": [
-        "Net income"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "ORCL",
-      "sector": "Technology",
-      "field": "epsDiluted",
-      "expected": 5.83,
-      "actual": 5.83,
-      "outcome": "correct",
-      "rowLabel": "Diluted",
-      "expectedRows": [
-        "Diluted"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "ORCL",
-      "sector": "Technology",
-      "field": "cash",
-      "expected": 31289000000,
-      "actual": 31289000000,
-      "outcome": "correct",
-      "rowLabel": "Cash and cash equivalents",
-      "expectedRows": [
-        "Cash and cash equivalents"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "ORCL",
-      "sector": "Technology",
-      "field": "totalAssets",
-      "expected": 261759000000,
-      "actual": 261759000000,
-      "outcome": "correct",
-      "rowLabel": "Total assets",
-      "expectedRows": [
-        "Total assets",
-        "Total liabilities and stockholders’ equity"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "ORCL",
-      "sector": "Technology",
-      "field": "totalEquity",
-      "expected": 42508000000,
-      "actual": 42508000000,
-      "outcome": "correct",
-      "rowLabel": "Total Oracle Corporation stockholders’ equity",
-      "expectedRows": [
-        "Total Oracle Corporation stockholders’ equity"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "ORCL",
-      "sector": "Technology",
-      "field": "operatingCashFlow",
-      "expected": 31977000000,
-      "actual": 31977000000,
-      "outcome": "correct",
-      "rowLabel": "Net cash provided by operating activities",
-      "expectedRows": [
-        "Net cash provided by operating activities"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "ORCL",
-      "sector": "Technology",
-      "field": "investingCashFlow",
-      "expected": -51854000000,
-      "actual": -51854000000,
-      "outcome": "correct",
-      "rowLabel": "Net cash used for investing activities",
-      "expectedRows": [
-        "Net cash used for investing activities"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "ORCL",
-      "sector": "Technology",
-      "field": "financingCashFlow",
-      "expected": 40284000000,
-      "actual": 40284000000,
-      "outcome": "correct",
-      "rowLabel": "Net cash provided by (used for) financing activities",
-      "expectedRows": [
-        "Net cash provided by (used for) financing activities"
-      ],
-      "groundingMismatch": false
-    },
-    {
       "ticker": "ADBE",
       "sector": "Technology",
       "field": "revenue",
@@ -852,6 +721,137 @@
       "rowLabel": "Net cash used for financing activities",
       "expectedRows": [
         "Net cash used for financing activities"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "ORCL",
+      "sector": "Technology",
+      "field": "revenue",
+      "expected": 67357000000,
+      "actual": 67357000000,
+      "outcome": "correct",
+      "rowLabel": "Total revenues",
+      "expectedRows": [
+        "Total revenues"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "ORCL",
+      "sector": "Technology",
+      "field": "operatingIncome",
+      "expected": 20606000000,
+      "actual": 20606000000,
+      "outcome": "correct",
+      "rowLabel": "Operating income",
+      "expectedRows": [
+        "Operating income"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "ORCL",
+      "sector": "Technology",
+      "field": "netIncome",
+      "expected": 17087000000,
+      "actual": 17087000000,
+      "outcome": "correct",
+      "rowLabel": "Net income",
+      "expectedRows": [
+        "Net income"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "ORCL",
+      "sector": "Technology",
+      "field": "epsDiluted",
+      "expected": 5.83,
+      "actual": 5.83,
+      "outcome": "correct",
+      "rowLabel": "Diluted",
+      "expectedRows": [
+        "Diluted"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "ORCL",
+      "sector": "Technology",
+      "field": "cash",
+      "expected": 31289000000,
+      "actual": 31289000000,
+      "outcome": "correct",
+      "rowLabel": "Cash and cash equivalents",
+      "expectedRows": [
+        "Cash and cash equivalents"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "ORCL",
+      "sector": "Technology",
+      "field": "totalAssets",
+      "expected": 261759000000,
+      "actual": 261759000000,
+      "outcome": "correct",
+      "rowLabel": "Total assets",
+      "expectedRows": [
+        "Total assets",
+        "Total liabilities and stockholders’ equity"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "ORCL",
+      "sector": "Technology",
+      "field": "totalEquity",
+      "expected": 42508000000,
+      "actual": 42508000000,
+      "outcome": "correct",
+      "rowLabel": "Total Oracle Corporation stockholders’ equity",
+      "expectedRows": [
+        "Total Oracle Corporation stockholders’ equity"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "ORCL",
+      "sector": "Technology",
+      "field": "operatingCashFlow",
+      "expected": 31977000000,
+      "actual": 31977000000,
+      "outcome": "correct",
+      "rowLabel": "Net cash provided by operating activities",
+      "expectedRows": [
+        "Net cash provided by operating activities"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "ORCL",
+      "sector": "Technology",
+      "field": "investingCashFlow",
+      "expected": -51854000000,
+      "actual": -51854000000,
+      "outcome": "correct",
+      "rowLabel": "Net cash used for investing activities",
+      "expectedRows": [
+        "Net cash used for investing activities"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "ORCL",
+      "sector": "Technology",
+      "field": "financingCashFlow",
+      "expected": 40284000000,
+      "actual": 40284000000,
+      "outcome": "correct",
+      "rowLabel": "Net cash provided by (used for) financing activities",
+      "expectedRows": [
+        "Net cash provided by (used for) financing activities"
       ],
       "groundingMismatch": false
     },
@@ -1673,9 +1673,9 @@
       "sector": "Financials",
       "field": "netIncome",
       "expected": 21338000000,
-      "actual": 21358000000,
-      "outcome": "wrong_value",
-      "rowLabel": "Net income before noncontrolling interests",
+      "actual": 21338000000,
+      "outcome": "correct",
+      "rowLabel": "Wells Fargo net income",
       "expectedRows": [
         "Wells Fargo net income"
       ],
@@ -1804,9 +1804,9 @@
       "sector": "Financials",
       "field": "netIncome",
       "expected": 17176000000,
-      "actual": 16300000000,
-      "outcome": "wrong_value",
-      "rowLabel": "Net earnings applicable to common shareholders",
+      "actual": 17176000000,
+      "outcome": "correct",
+      "rowLabel": "Net earnings",
       "expectedRows": [
         "Net earnings"
       ],
@@ -2049,6 +2049,137 @@
       "groundingMismatch": false
     },
     {
+      "ticker": "AXP",
+      "sector": "Financials",
+      "field": "revenue",
+      "expected": 72229000000,
+      "actual": 72229000000,
+      "outcome": "correct",
+      "rowLabel": "Total revenues net of interest expense",
+      "expectedRows": [
+        "Total revenues net of interest expense"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "AXP",
+      "sector": "Financials",
+      "field": "netIncome",
+      "expected": 10833000000,
+      "actual": 10833000000,
+      "outcome": "correct",
+      "rowLabel": "Net income",
+      "expectedRows": [
+        "Net income"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "AXP",
+      "sector": "Financials",
+      "field": "epsDiluted",
+      "expected": 15.38,
+      "actual": 15.38,
+      "outcome": "correct",
+      "rowLabel": "Diluted",
+      "expectedRows": [
+        "Diluted"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "AXP",
+      "sector": "Financials",
+      "field": "cash",
+      "expected": 3559000000,
+      "actual": 3559000000,
+      "outcome": "correct",
+      "rowLabel": "Cash and due from banks (includes restricted cash of consolidated variable interest entities: 2025, nil; 2024, $6)",
+      "expectedRows": [
+        "Cash and due from banks (includes restricted cash of consolidated variable interest entities: 2025, nil; 2024, $6)"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "AXP",
+      "sector": "Financials",
+      "field": "totalAssets",
+      "expected": 300052000000,
+      "actual": 300052000000,
+      "outcome": "correct",
+      "rowLabel": "Total assets",
+      "expectedRows": [
+        "Total assets",
+        "Total liabilities and shareholders’ equity"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "AXP",
+      "sector": "Financials",
+      "field": "totalLiabilities",
+      "expected": 266578000000,
+      "actual": 266578000000,
+      "outcome": "correct",
+      "rowLabel": "Total liabilities",
+      "expectedRows": [
+        "Total liabilities"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "AXP",
+      "sector": "Financials",
+      "field": "totalEquity",
+      "expected": 33474000000,
+      "actual": 33474000000,
+      "outcome": "correct",
+      "rowLabel": "Total shareholders’ equity",
+      "expectedRows": [
+        "Total shareholders’ equity"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "AXP",
+      "sector": "Financials",
+      "field": "operatingCashFlow",
+      "expected": 18428000000,
+      "actual": 18428000000,
+      "outcome": "correct",
+      "rowLabel": "Net cash provided by operating activities",
+      "expectedRows": [
+        "Net cash provided by operating activities"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "AXP",
+      "sector": "Financials",
+      "field": "investingCashFlow",
+      "expected": -22891000000,
+      "actual": -22891000000,
+      "outcome": "correct",
+      "rowLabel": "Net cash used in investing activities",
+      "expectedRows": [
+        "Net cash used in investing activities"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "AXP",
+      "sector": "Financials",
+      "field": "financingCashFlow",
+      "expected": 11210000000,
+      "actual": 11210000000,
+      "outcome": "correct",
+      "rowLabel": "Net cash provided by financing activities",
+      "expectedRows": [
+        "Net cash provided by financing activities"
+      ],
+      "groundingMismatch": false
+    },
+    {
       "ticker": "C",
       "sector": "Financials",
       "field": "revenue",
@@ -2177,137 +2308,6 @@
       "rowLabel": "Net cash provided by (used in) financing activities of continuing operations",
       "expectedRows": [
         "Net cash provided by (used in) financing activities of continuing operations"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "AXP",
-      "sector": "Financials",
-      "field": "revenue",
-      "expected": 72229000000,
-      "actual": 72229000000,
-      "outcome": "correct",
-      "rowLabel": "Total revenues net of interest expense",
-      "expectedRows": [
-        "Total revenues net of interest expense"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "AXP",
-      "sector": "Financials",
-      "field": "netIncome",
-      "expected": 10833000000,
-      "actual": 10833000000,
-      "outcome": "correct",
-      "rowLabel": "Net income",
-      "expectedRows": [
-        "Net income"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "AXP",
-      "sector": "Financials",
-      "field": "epsDiluted",
-      "expected": 15.38,
-      "actual": 15.38,
-      "outcome": "correct",
-      "rowLabel": "Diluted",
-      "expectedRows": [
-        "Diluted"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "AXP",
-      "sector": "Financials",
-      "field": "cash",
-      "expected": 3559000000,
-      "actual": 3559000000,
-      "outcome": "correct",
-      "rowLabel": "Cash and due from banks (includes restricted cash of consolidated variable interest entities: 2025, nil; 2024, $6)",
-      "expectedRows": [
-        "Cash and due from banks (includes restricted cash of consolidated variable interest entities: 2025, nil; 2024, $6)"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "AXP",
-      "sector": "Financials",
-      "field": "totalAssets",
-      "expected": 300052000000,
-      "actual": 300052000000,
-      "outcome": "correct",
-      "rowLabel": "Total assets",
-      "expectedRows": [
-        "Total assets",
-        "Total liabilities and shareholders’ equity"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "AXP",
-      "sector": "Financials",
-      "field": "totalLiabilities",
-      "expected": 266578000000,
-      "actual": 266578000000,
-      "outcome": "correct",
-      "rowLabel": "Total liabilities",
-      "expectedRows": [
-        "Total liabilities"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "AXP",
-      "sector": "Financials",
-      "field": "totalEquity",
-      "expected": 33474000000,
-      "actual": 33474000000,
-      "outcome": "correct",
-      "rowLabel": "Total shareholders’ equity",
-      "expectedRows": [
-        "Total shareholders’ equity"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "AXP",
-      "sector": "Financials",
-      "field": "operatingCashFlow",
-      "expected": 18428000000,
-      "actual": 18428000000,
-      "outcome": "correct",
-      "rowLabel": "Net cash provided by operating activities",
-      "expectedRows": [
-        "Net cash provided by operating activities"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "AXP",
-      "sector": "Financials",
-      "field": "investingCashFlow",
-      "expected": -22891000000,
-      "actual": -22891000000,
-      "outcome": "correct",
-      "rowLabel": "Net cash used in investing activities",
-      "expectedRows": [
-        "Net cash used in investing activities"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "AXP",
-      "sector": "Financials",
-      "field": "financingCashFlow",
-      "expected": 11210000000,
-      "actual": 11210000000,
-      "outcome": "correct",
-      "rowLabel": "Net cash provided by financing activities",
-      "expectedRows": [
-        "Net cash provided by financing activities"
       ],
       "groundingMismatch": false
     },
@@ -2587,125 +2587,6 @@
       "groundingMismatch": false
     },
     {
-      "ticker": "USB",
-      "sector": "Financials",
-      "field": "netIncome",
-      "expected": 7570000000,
-      "actual": 7570000000,
-      "outcome": "correct",
-      "rowLabel": "Net income attributable to U.S. Bancorp",
-      "expectedRows": [
-        "Net income attributable to U.S. Bancorp"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "USB",
-      "sector": "Financials",
-      "field": "epsDiluted",
-      "expected": 4.62,
-      "actual": 4.62,
-      "outcome": "correct",
-      "rowLabel": "Diluted earnings per common share",
-      "expectedRows": [
-        "Earnings per common share",
-        "Diluted earnings per common share"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "USB",
-      "sector": "Financials",
-      "field": "cash",
-      "expected": 46890000000,
-      "actual": 46890000000,
-      "outcome": "correct",
-      "rowLabel": "Cash and due from banks",
-      "expectedRows": [
-        "Cash and due from banks"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "USB",
-      "sector": "Financials",
-      "field": "totalAssets",
-      "expected": 692345000000,
-      "actual": 692345000000,
-      "outcome": "correct",
-      "rowLabel": "Total assets",
-      "expectedRows": [
-        "Total assets",
-        "Total liabilities and equity"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "USB",
-      "sector": "Financials",
-      "field": "totalLiabilities",
-      "expected": 626694000000,
-      "actual": 626694000000,
-      "outcome": "correct",
-      "rowLabel": "Total liabilities",
-      "expectedRows": [
-        "Total liabilities"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "USB",
-      "sector": "Financials",
-      "field": "totalEquity",
-      "expected": 65193000000,
-      "actual": 65193000000,
-      "outcome": "correct",
-      "rowLabel": "Total U.S. Bancorp shareholders’ equity",
-      "expectedRows": [
-        "Total U.S. Bancorp shareholders’ equity"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "USB",
-      "sector": "Financials",
-      "field": "operatingCashFlow",
-      "expected": 7970000000,
-      "actual": 7970000000,
-      "outcome": "correct",
-      "rowLabel": "Net cash provided by operating activities",
-      "expectedRows": [
-        "Net cash provided by operating activities"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "USB",
-      "sector": "Financials",
-      "field": "investingCashFlow",
-      "expected": -20538000000,
-      "actual": -20538000000,
-      "outcome": "correct",
-      "rowLabel": "Net cash (used in) provided by investing activities",
-      "expectedRows": [
-        "Net cash (used in) provided by investing activities"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "USB",
-      "sector": "Financials",
-      "field": "financingCashFlow",
-      "expected": 2250000000,
-      "actual": 2250000000,
-      "outcome": "correct",
-      "rowLabel": "Net cash provided by (used in) financing activities",
-      "expectedRows": [
-        "Net cash provided by (used in) financing activities"
-      ],
-      "groundingMismatch": false
-    },
-    {
       "ticker": "JNJ",
       "sector": "Healthcare",
       "field": "revenue",
@@ -2822,6 +2703,125 @@
       "rowLabel": "Net cash used by financing activities",
       "expectedRows": [
         "Net cash used by financing activities"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "USB",
+      "sector": "Financials",
+      "field": "netIncome",
+      "expected": 7570000000,
+      "actual": 7570000000,
+      "outcome": "correct",
+      "rowLabel": "Net income attributable to U.S. Bancorp",
+      "expectedRows": [
+        "Net income attributable to U.S. Bancorp"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "USB",
+      "sector": "Financials",
+      "field": "epsDiluted",
+      "expected": 4.62,
+      "actual": 4.62,
+      "outcome": "correct",
+      "rowLabel": "Diluted earnings per common share",
+      "expectedRows": [
+        "Earnings per common share",
+        "Diluted earnings per common share"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "USB",
+      "sector": "Financials",
+      "field": "cash",
+      "expected": 46890000000,
+      "actual": 46890000000,
+      "outcome": "correct",
+      "rowLabel": "Cash and due from banks",
+      "expectedRows": [
+        "Cash and due from banks"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "USB",
+      "sector": "Financials",
+      "field": "totalAssets",
+      "expected": 692345000000,
+      "actual": 692345000000,
+      "outcome": "correct",
+      "rowLabel": "Total assets",
+      "expectedRows": [
+        "Total assets",
+        "Total liabilities and equity"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "USB",
+      "sector": "Financials",
+      "field": "totalLiabilities",
+      "expected": 626694000000,
+      "actual": 626694000000,
+      "outcome": "correct",
+      "rowLabel": "Total liabilities",
+      "expectedRows": [
+        "Total liabilities"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "USB",
+      "sector": "Financials",
+      "field": "totalEquity",
+      "expected": 65193000000,
+      "actual": 65193000000,
+      "outcome": "correct",
+      "rowLabel": "Total U.S. Bancorp shareholders’ equity",
+      "expectedRows": [
+        "Total U.S. Bancorp shareholders’ equity"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "USB",
+      "sector": "Financials",
+      "field": "operatingCashFlow",
+      "expected": 7970000000,
+      "actual": 7970000000,
+      "outcome": "correct",
+      "rowLabel": "Net cash provided by operating activities",
+      "expectedRows": [
+        "Net cash provided by operating activities"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "USB",
+      "sector": "Financials",
+      "field": "investingCashFlow",
+      "expected": -20538000000,
+      "actual": -20538000000,
+      "outcome": "correct",
+      "rowLabel": "Net cash (used in) provided by investing activities",
+      "expectedRows": [
+        "Net cash (used in) provided by investing activities"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "USB",
+      "sector": "Financials",
+      "field": "financingCashFlow",
+      "expected": 2250000000,
+      "actual": 2250000000,
+      "outcome": "correct",
+      "rowLabel": "Net cash provided by (used in) financing activities",
+      "expectedRows": [
+        "Net cash provided by (used in) financing activities"
       ],
       "groundingMismatch": false
     },
@@ -5705,8 +5705,8 @@
       "sector": "Industrials",
       "field": "epsDiluted",
       "expected": 8.14,
-      "actual": 8.14,
-      "outcome": "correct",
+      "actual": 8.05,
+      "outcome": "wrong_value",
       "rowLabel": "Diluted earnings (loss) per share",
       "expectedRows": [
         "Diluted earnings (loss) per share"
@@ -6057,6 +6057,138 @@
       "groundingMismatch": false
     },
     {
+      "ticker": "UPS",
+      "sector": "Industrials",
+      "field": "revenue",
+      "expected": 88661000000,
+      "actual": 88661000000,
+      "outcome": "correct",
+      "rowLabel": "Revenue",
+      "expectedRows": [
+        "Revenue"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "UPS",
+      "sector": "Industrials",
+      "field": "operatingIncome",
+      "expected": 7867000000,
+      "actual": 7867000000,
+      "outcome": "correct",
+      "rowLabel": "Operating Profit",
+      "expectedRows": [
+        "Operating Profit"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "UPS",
+      "sector": "Industrials",
+      "field": "netIncome",
+      "expected": 5572000000,
+      "actual": 5572000000,
+      "outcome": "correct",
+      "rowLabel": "Net Income",
+      "expectedRows": [
+        "Net Income"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "UPS",
+      "sector": "Industrials",
+      "field": "epsDiluted",
+      "expected": 6.56,
+      "actual": 6.56,
+      "outcome": "correct",
+      "rowLabel": "Diluted Earnings Per Share",
+      "expectedRows": [
+        "Basic Earnings Per Share",
+        "Diluted Earnings Per Share"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "UPS",
+      "sector": "Industrials",
+      "field": "cash",
+      "expected": 5887000000,
+      "actual": 5887000000,
+      "outcome": "correct",
+      "rowLabel": "Cash and cash equivalents",
+      "expectedRows": [
+        "Cash and cash equivalents"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "UPS",
+      "sector": "Industrials",
+      "field": "totalAssets",
+      "expected": 73090000000,
+      "actual": 73090000000,
+      "outcome": "correct",
+      "rowLabel": "Total Assets",
+      "expectedRows": [
+        "Total Assets",
+        "Total Liabilities and Shareowners’ Equity"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "UPS",
+      "sector": "Industrials",
+      "field": "totalEquity",
+      "expected": 16227000000,
+      "actual": 16227000000,
+      "outcome": "correct",
+      "rowLabel": "Total Equity for Controlling Interests",
+      "expectedRows": [
+        "Total Equity for Controlling Interests"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "UPS",
+      "sector": "Industrials",
+      "field": "operatingCashFlow",
+      "expected": 8450000000,
+      "actual": 8450000000,
+      "outcome": "correct",
+      "rowLabel": "Net cash from operating activities",
+      "expectedRows": [
+        "Net cash from operating activities"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "UPS",
+      "sector": "Industrials",
+      "field": "investingCashFlow",
+      "expected": -4735000000,
+      "actual": -4735000000,
+      "outcome": "correct",
+      "rowLabel": "Net cash used in investing activities",
+      "expectedRows": [
+        "Net cash used in investing activities"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "UPS",
+      "sector": "Industrials",
+      "field": "financingCashFlow",
+      "expected": -4141000000,
+      "actual": -4141000000,
+      "outcome": "correct",
+      "rowLabel": "Net cash used in financing activities",
+      "expectedRows": [
+        "Net cash used in financing activities"
+      ],
+      "groundingMismatch": false
+    },
+    {
       "ticker": "LMT",
       "sector": "Industrials",
       "field": "revenue",
@@ -6201,138 +6333,6 @@
       "groundingMismatch": false
     },
     {
-      "ticker": "UPS",
-      "sector": "Industrials",
-      "field": "revenue",
-      "expected": 88661000000,
-      "actual": 88661000000,
-      "outcome": "correct",
-      "rowLabel": "Revenue",
-      "expectedRows": [
-        "Revenue"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "UPS",
-      "sector": "Industrials",
-      "field": "operatingIncome",
-      "expected": 7867000000,
-      "actual": 7867000000,
-      "outcome": "correct",
-      "rowLabel": "Operating Profit",
-      "expectedRows": [
-        "Operating Profit"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "UPS",
-      "sector": "Industrials",
-      "field": "netIncome",
-      "expected": 5572000000,
-      "actual": 5572000000,
-      "outcome": "correct",
-      "rowLabel": "Net Income",
-      "expectedRows": [
-        "Net Income"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "UPS",
-      "sector": "Industrials",
-      "field": "epsDiluted",
-      "expected": 6.56,
-      "actual": 6.56,
-      "outcome": "correct",
-      "rowLabel": "Diluted Earnings Per Share",
-      "expectedRows": [
-        "Basic Earnings Per Share",
-        "Diluted Earnings Per Share"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "UPS",
-      "sector": "Industrials",
-      "field": "cash",
-      "expected": 5887000000,
-      "actual": 5887000000,
-      "outcome": "correct",
-      "rowLabel": "Cash and cash equivalents",
-      "expectedRows": [
-        "Cash and cash equivalents"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "UPS",
-      "sector": "Industrials",
-      "field": "totalAssets",
-      "expected": 73090000000,
-      "actual": 73090000000,
-      "outcome": "correct",
-      "rowLabel": "Total Assets",
-      "expectedRows": [
-        "Total Assets",
-        "Total Liabilities and Shareowners’ Equity"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "UPS",
-      "sector": "Industrials",
-      "field": "totalEquity",
-      "expected": 16227000000,
-      "actual": 16227000000,
-      "outcome": "correct",
-      "rowLabel": "Total Equity for Controlling Interests",
-      "expectedRows": [
-        "Total Equity for Controlling Interests"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "UPS",
-      "sector": "Industrials",
-      "field": "operatingCashFlow",
-      "expected": 8450000000,
-      "actual": 8450000000,
-      "outcome": "correct",
-      "rowLabel": "Net cash from operating activities",
-      "expectedRows": [
-        "Net cash from operating activities"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "UPS",
-      "sector": "Industrials",
-      "field": "investingCashFlow",
-      "expected": -4735000000,
-      "actual": -4735000000,
-      "outcome": "correct",
-      "rowLabel": "Net cash used in investing activities",
-      "expectedRows": [
-        "Net cash used in investing activities"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "UPS",
-      "sector": "Industrials",
-      "field": "financingCashFlow",
-      "expected": -4141000000,
-      "actual": -4141000000,
-      "outcome": "correct",
-      "rowLabel": "Net cash used in financing activities",
-      "expectedRows": [
-        "Net cash used in financing activities"
-      ],
-      "groundingMismatch": false
-    },
-    {
       "ticker": "DE",
       "sector": "Industrials",
       "field": "revenue",
@@ -6460,6 +6460,125 @@
       "rowLabel": "Net cash provided by (used for) financing activities",
       "expectedRows": [
         "Net cash provided by (used for) financing activities"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "VZ",
+      "sector": "Telecom & Utilities",
+      "field": "revenue",
+      "expected": 138191000000,
+      "actual": 138191000000,
+      "outcome": "correct",
+      "rowLabel": "Total Operating Revenues",
+      "expectedRows": [
+        "Total Operating Revenues"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "VZ",
+      "sector": "Telecom & Utilities",
+      "field": "operatingIncome",
+      "expected": 29259000000,
+      "actual": 29259000000,
+      "outcome": "correct",
+      "rowLabel": "Operating Income",
+      "expectedRows": [
+        "Operating Income"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "VZ",
+      "sector": "Telecom & Utilities",
+      "field": "netIncome",
+      "expected": 17174000000,
+      "actual": 17174000000,
+      "outcome": "correct",
+      "rowLabel": "Net income attributable to Verizon",
+      "expectedRows": [
+        "Net income attributable to Verizon"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "VZ",
+      "sector": "Telecom & Utilities",
+      "field": "epsDiluted",
+      "expected": 4.06,
+      "actual": 4.06,
+      "outcome": "correct",
+      "rowLabel": "Net income attributable to Verizon",
+      "expectedRows": [
+        "Net income attributable to Verizon",
+        "Net income attributable to Verizon"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "VZ",
+      "sector": "Telecom & Utilities",
+      "field": "cash",
+      "expected": 19048000000,
+      "actual": 19048000000,
+      "outcome": "correct",
+      "rowLabel": "Cash and cash equivalents",
+      "expectedRows": [
+        "Cash and cash equivalents"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "VZ",
+      "sector": "Telecom & Utilities",
+      "field": "totalAssets",
+      "expected": 404258000000,
+      "actual": 404258000000,
+      "outcome": "correct",
+      "rowLabel": "Total assets",
+      "expectedRows": [
+        "Total assets",
+        "Total liabilities and equity"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "VZ",
+      "sector": "Telecom & Utilities",
+      "field": "operatingCashFlow",
+      "expected": 37137000000,
+      "actual": 37137000000,
+      "outcome": "correct",
+      "rowLabel": "Net cash provided by operating activities",
+      "expectedRows": [
+        "Net cash provided by operating activities"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "VZ",
+      "sector": "Telecom & Utilities",
+      "field": "investingCashFlow",
+      "expected": -16660000000,
+      "actual": -16660000000,
+      "outcome": "correct",
+      "rowLabel": "Net cash used in investing activities",
+      "expectedRows": [
+        "Net cash used in investing activities"
+      ],
+      "groundingMismatch": false
+    },
+    {
+      "ticker": "VZ",
+      "sector": "Telecom & Utilities",
+      "field": "financingCashFlow",
+      "expected": -5613000000,
+      "actual": -5613000000,
+      "outcome": "correct",
+      "rowLabel": "Net cash used in financing activities",
+      "expectedRows": [
+        "Net cash used in financing activities"
       ],
       "groundingMismatch": false
     },
@@ -6593,125 +6712,6 @@
       "rowLabel": "Net cash provided by (used in) financing activities",
       "expectedRows": [
         "Net cash provided by (used in) financing activities"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "VZ",
-      "sector": "Telecom & Utilities",
-      "field": "revenue",
-      "expected": 138191000000,
-      "actual": 138191000000,
-      "outcome": "correct",
-      "rowLabel": "Total Operating Revenues",
-      "expectedRows": [
-        "Total Operating Revenues"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "VZ",
-      "sector": "Telecom & Utilities",
-      "field": "operatingIncome",
-      "expected": 29259000000,
-      "actual": 29259000000,
-      "outcome": "correct",
-      "rowLabel": "Operating Income",
-      "expectedRows": [
-        "Operating Income"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "VZ",
-      "sector": "Telecom & Utilities",
-      "field": "netIncome",
-      "expected": 17174000000,
-      "actual": 17174000000,
-      "outcome": "correct",
-      "rowLabel": "Net income attributable to Verizon",
-      "expectedRows": [
-        "Net income attributable to Verizon"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "VZ",
-      "sector": "Telecom & Utilities",
-      "field": "epsDiluted",
-      "expected": 4.06,
-      "actual": 4.06,
-      "outcome": "correct",
-      "rowLabel": "Net income attributable to Verizon",
-      "expectedRows": [
-        "Net income attributable to Verizon",
-        "Net income attributable to Verizon"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "VZ",
-      "sector": "Telecom & Utilities",
-      "field": "cash",
-      "expected": 19048000000,
-      "actual": 19048000000,
-      "outcome": "correct",
-      "rowLabel": "Cash and cash equivalents",
-      "expectedRows": [
-        "Cash and cash equivalents"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "VZ",
-      "sector": "Telecom & Utilities",
-      "field": "totalAssets",
-      "expected": 404258000000,
-      "actual": 404258000000,
-      "outcome": "correct",
-      "rowLabel": "Total assets",
-      "expectedRows": [
-        "Total assets",
-        "Total liabilities and equity"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "VZ",
-      "sector": "Telecom & Utilities",
-      "field": "operatingCashFlow",
-      "expected": 37137000000,
-      "actual": 37137000000,
-      "outcome": "correct",
-      "rowLabel": "Net cash provided by operating activities",
-      "expectedRows": [
-        "Net cash provided by operating activities"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "VZ",
-      "sector": "Telecom & Utilities",
-      "field": "investingCashFlow",
-      "expected": -16660000000,
-      "actual": -16660000000,
-      "outcome": "correct",
-      "rowLabel": "Net cash used in investing activities",
-      "expectedRows": [
-        "Net cash used in investing activities"
-      ],
-      "groundingMismatch": false
-    },
-    {
-      "ticker": "VZ",
-      "sector": "Telecom & Utilities",
-      "field": "financingCashFlow",
-      "expected": -5613000000,
-      "actual": -5613000000,
-      "outcome": "correct",
-      "rowLabel": "Net cash used in financing activities",
-      "expectedRows": [
-        "Net cash used in financing activities"
       ],
       "groundingMismatch": false
     },
@@ -7088,12 +7088,12 @@
   ],
   "runs": [
     {
-      "runId": "d83125a4-5441-4d43-8701-d3a4f76c7912",
+      "runId": "383cc1b4-c145-4dc5-9791-b43bed27c538",
       "accessionNumber": "0000320193-25-000079",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0008186999999999999,
-      "latencyMs": 2524,
+      "costUsd": 0.0008102999999999999,
+      "latencyMs": 3735,
       "checks": [
         {
           "name": "balance_identity",
@@ -7160,12 +7160,12 @@
       ]
     },
     {
-      "runId": "033b44c4-3b72-4b21-a210-522fee9ecf29",
+      "runId": "f98aca44-2a31-49d3-81e2-e2d504c07b9b",
       "accessionNumber": "0001193125-26-323660",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.00085845,
-      "latencyMs": 2579,
+      "costUsd": 0.00086025,
+      "latencyMs": 4307,
       "checks": [
         {
           "name": "balance_identity",
@@ -7232,12 +7232,12 @@
       ]
     },
     {
-      "runId": "8cfdfaa5-f047-4f35-a856-b4cf00c01d0e",
+      "runId": "a4a2d507-0a26-4293-bc8d-3145f8d5399e",
       "accessionNumber": "0001652044-26-000018",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0008330999999999999,
-      "latencyMs": 1854,
+      "costUsd": 0.0008372999999999999,
+      "latencyMs": 2396,
       "checks": [
         {
           "name": "balance_identity",
@@ -7304,12 +7304,12 @@
       ]
     },
     {
-      "runId": "046331cc-1ecf-4c40-8a3b-565097c40810",
+      "runId": "a688c040-5645-4007-bad6-7c3690e0fa0e",
       "accessionNumber": "0001045810-26-000021",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0008405999999999999,
-      "latencyMs": 1702,
+      "costUsd": 0.0008447999999999999,
+      "latencyMs": 2315,
       "checks": [
         {
           "name": "balance_identity",
@@ -7376,84 +7376,12 @@
       ]
     },
     {
-      "runId": "62dd87ce-3bb9-4393-9904-43013512727a",
-      "accessionNumber": "0001193125-26-277521",
-      "status": "completed",
-      "retryCount": 0,
-      "costUsd": 0.0008958,
-      "latencyMs": 2188,
-      "checks": [
-        {
-          "name": "balance_identity",
-          "statement": "balance",
-          "fields": [
-            "totalAssets"
-          ],
-          "passed": true,
-          "skipped": false,
-          "detail": "total assets equals total liabilities and equity"
-        },
-        {
-          "name": "totalEquity_attribution",
-          "statement": "balance",
-          "fields": [
-            "totalEquity"
-          ],
-          "passed": true,
-          "skipped": false,
-          "detail": "totalEquity excludes noncontrolling interests"
-        },
-        {
-          "name": "netIncome_before_preferred",
-          "statement": "income",
-          "fields": [
-            "netIncome"
-          ],
-          "passed": true,
-          "skipped": false,
-          "detail": "net income is not the after-preferred-dividends line"
-        },
-        {
-          "name": "epsDiluted_total",
-          "statement": "income",
-          "fields": [
-            "epsDiluted"
-          ],
-          "passed": true,
-          "skipped": false,
-          "detail": "diluted EPS is for total net income"
-        },
-        {
-          "name": "netIncome_attribution",
-          "statement": "income",
-          "fields": [
-            "netIncome"
-          ],
-          "passed": true,
-          "skipped": true,
-          "detail": "no noncontrolling interest line printed"
-        },
-        {
-          "name": "cash_flow_tie",
-          "statement": "cashflow",
-          "fields": [
-            "operatingCashFlow",
-            "investingCashFlow",
-            "financingCashFlow"
-          ],
-          "passed": true,
-          "skipped": false,
-          "detail": "operating + investing + financing (+ FX) equals the net change in cash"
-        }
-      ]
-    },
-    {
-      "runId": "6c2e325e-7523-49b0-876a-cdd8eee3fa46",
+      "runId": "13470995-dee2-4df4-b5a9-0836eadf83ee",
       "accessionNumber": "0000796343-26-000003",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0009029999999999999,
-      "latencyMs": 2255,
+      "costUsd": 0.0009203999999999999,
+      "latencyMs": 2130,
       "checks": [
         {
           "name": "balance_identity",
@@ -7520,12 +7448,84 @@
       ]
     },
     {
-      "runId": "e70e0c30-9b4f-4149-bcc8-a90cedd7dbdd",
+      "runId": "45ac77c4-0c3c-46c5-b624-bdb352245771",
+      "accessionNumber": "0001193125-26-277521",
+      "status": "completed",
+      "retryCount": 0,
+      "costUsd": 0.0009041999999999999,
+      "latencyMs": 3621,
+      "checks": [
+        {
+          "name": "balance_identity",
+          "statement": "balance",
+          "fields": [
+            "totalAssets"
+          ],
+          "passed": true,
+          "skipped": false,
+          "detail": "total assets equals total liabilities and equity"
+        },
+        {
+          "name": "totalEquity_attribution",
+          "statement": "balance",
+          "fields": [
+            "totalEquity"
+          ],
+          "passed": true,
+          "skipped": false,
+          "detail": "totalEquity excludes noncontrolling interests"
+        },
+        {
+          "name": "netIncome_before_preferred",
+          "statement": "income",
+          "fields": [
+            "netIncome"
+          ],
+          "passed": true,
+          "skipped": false,
+          "detail": "net income is not the after-preferred-dividends line"
+        },
+        {
+          "name": "epsDiluted_total",
+          "statement": "income",
+          "fields": [
+            "epsDiluted"
+          ],
+          "passed": true,
+          "skipped": false,
+          "detail": "diluted EPS is for total net income"
+        },
+        {
+          "name": "netIncome_attribution",
+          "statement": "income",
+          "fields": [
+            "netIncome"
+          ],
+          "passed": true,
+          "skipped": true,
+          "detail": "no noncontrolling interest line printed"
+        },
+        {
+          "name": "cash_flow_tie",
+          "statement": "cashflow",
+          "fields": [
+            "operatingCashFlow",
+            "investingCashFlow",
+            "financingCashFlow"
+          ],
+          "passed": true,
+          "skipped": false,
+          "detail": "operating + investing + financing (+ FX) equals the net change in cash"
+        }
+      ]
+    },
+    {
+      "runId": "929ca45f-50f4-499d-8fe1-ad06764ef0e0",
       "accessionNumber": "0000858877-26-000132",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0008746499999999998,
-      "latencyMs": 1651,
+      "costUsd": 0.0009058499999999999,
+      "latencyMs": 2564,
       "checks": [
         {
           "name": "balance_identity",
@@ -7592,12 +7592,12 @@
       ]
     },
     {
-      "runId": "b5443d30-e75d-432e-bbf4-2f93223db1ec",
+      "runId": "6c06ed96-5918-42e4-82be-e43051fe5442",
       "accessionNumber": "0000050863-26-000011",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0008815499999999998,
-      "latencyMs": 1853,
+      "costUsd": 0.0008989499999999999,
+      "latencyMs": 2645,
       "checks": [
         {
           "name": "balance_identity",
@@ -7664,12 +7664,12 @@
       ]
     },
     {
-      "runId": "7f0e5d07-1255-40c1-8e98-dd0953ccd22c",
+      "runId": "19844cda-86cf-491d-8000-6d45743aea9b",
       "accessionNumber": "0001108524-26-000060",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.00084585,
-      "latencyMs": 1649,
+      "costUsd": 0.00086265,
+      "latencyMs": 2277,
       "checks": [
         {
           "name": "balance_identity",
@@ -7736,12 +7736,12 @@
       ]
     },
     {
-      "runId": "7f64bfed-3584-49e4-8d97-04cb2448cd4d",
+      "runId": "6a9b8b97-3dee-4ba1-950f-41c08b9fb54d",
       "accessionNumber": "0000051143-26-000010",
       "status": "completed",
       "retryCount": 1,
-      "costUsd": 0.0012934499999999998,
-      "latencyMs": 3411,
+      "costUsd": 0.00129405,
+      "latencyMs": 4801,
       "checks": [
         {
           "name": "balance_identity",
@@ -7808,12 +7808,12 @@
       ]
     },
     {
-      "runId": "788ea498-fefb-49c1-82dc-9623afd9f24c",
+      "runId": "4d1d859d-7f26-4711-959d-597e13e77aa1",
       "accessionNumber": "0001628280-26-008131",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0009807,
-      "latencyMs": 2009,
+      "costUsd": 0.0010083,
+      "latencyMs": 3806,
       "checks": [
         {
           "name": "balance_identity",
@@ -7880,12 +7880,12 @@
       ]
     },
     {
-      "runId": "60ed935f-7839-4ccb-ad93-6085d2d15a66",
+      "runId": "20ac7e3c-5ae3-4f48-9562-401c5761940e",
       "accessionNumber": "0000070858-26-000157",
       "status": "completed",
       "retryCount": 1,
-      "costUsd": 0.0013714499999999998,
-      "latencyMs": 3545,
+      "costUsd": 0.00137025,
+      "latencyMs": 3905,
       "checks": [
         {
           "name": "balance_identity",
@@ -7952,156 +7952,12 @@
       ]
     },
     {
-      "runId": "7c8ee345-031b-4c9e-b473-2575795ce7fa",
+      "runId": "45c48ee5-8688-4e65-af1f-7e4846351ceb",
       "accessionNumber": "0000072971-26-000133",
       "status": "completed",
       "retryCount": 1,
-      "costUsd": 0.0014397,
-      "latencyMs": 3581,
-      "checks": [
-        {
-          "name": "balance_identity",
-          "statement": "balance",
-          "fields": [
-            "totalAssets"
-          ],
-          "passed": true,
-          "skipped": false,
-          "detail": "total assets equals total liabilities and equity"
-        },
-        {
-          "name": "totalEquity_attribution",
-          "statement": "balance",
-          "fields": [
-            "totalEquity"
-          ],
-          "passed": true,
-          "skipped": false,
-          "detail": "totalEquity excludes noncontrolling interests"
-        },
-        {
-          "name": "netIncome_before_preferred",
-          "statement": "income",
-          "fields": [
-            "netIncome"
-          ],
-          "passed": true,
-          "skipped": false,
-          "detail": "net income is not the after-preferred-dividends line"
-        },
-        {
-          "name": "epsDiluted_total",
-          "statement": "income",
-          "fields": [
-            "epsDiluted"
-          ],
-          "passed": true,
-          "skipped": false,
-          "detail": "diluted EPS is for total net income"
-        },
-        {
-          "name": "netIncome_attribution",
-          "statement": "income",
-          "fields": [
-            "netIncome"
-          ],
-          "passed": false,
-          "skipped": false,
-          "detail": "netIncome 21358000000 is the total including noncontrolling interests: the net income line attributable to the company is printed separately and differs by the noncontrolling interest line. Pick the row attributable to the company."
-        },
-        {
-          "name": "cash_flow_tie",
-          "statement": "cashflow",
-          "fields": [
-            "operatingCashFlow",
-            "investingCashFlow",
-            "financingCashFlow"
-          ],
-          "passed": true,
-          "skipped": false,
-          "detail": "operating + investing + financing (+ FX) equals the net change in cash"
-        }
-      ]
-    },
-    {
-      "runId": "f7c41160-1d9f-4342-9f21-a905de81a894",
-      "accessionNumber": "0000886982-26-000091",
-      "status": "completed",
-      "retryCount": 1,
-      "costUsd": 0.0012828,
-      "latencyMs": 3454,
-      "checks": [
-        {
-          "name": "balance_identity",
-          "statement": "balance",
-          "fields": [
-            "totalAssets"
-          ],
-          "passed": true,
-          "skipped": false,
-          "detail": "total assets equals total liabilities and equity"
-        },
-        {
-          "name": "totalEquity_attribution",
-          "statement": "balance",
-          "fields": [
-            "totalEquity"
-          ],
-          "passed": true,
-          "skipped": true,
-          "detail": "no noncontrolling interest line printed"
-        },
-        {
-          "name": "netIncome_before_preferred",
-          "statement": "income",
-          "fields": [
-            "netIncome"
-          ],
-          "passed": false,
-          "skipped": false,
-          "detail": "netIncome was read from \"Net earnings applicable to common shareholders\", which is after preferred dividends. Net income is the line before preferred dividends, printed above it."
-        },
-        {
-          "name": "epsDiluted_total",
-          "statement": "income",
-          "fields": [
-            "epsDiluted"
-          ],
-          "passed": true,
-          "skipped": false,
-          "detail": "diluted EPS is for total net income"
-        },
-        {
-          "name": "netIncome_attribution",
-          "statement": "income",
-          "fields": [
-            "netIncome"
-          ],
-          "passed": true,
-          "skipped": true,
-          "detail": "no noncontrolling interest line printed"
-        },
-        {
-          "name": "cash_flow_tie",
-          "statement": "cashflow",
-          "fields": [
-            "operatingCashFlow",
-            "investingCashFlow",
-            "financingCashFlow"
-          ],
-          "passed": true,
-          "skipped": false,
-          "detail": "operating + investing + financing (+ FX) equals the net change in cash"
-        }
-      ]
-    },
-    {
-      "runId": "d188cd05-4b22-454e-b6b3-4851767614b1",
-      "accessionNumber": "0000895421-26-000086",
-      "status": "completed",
-      "retryCount": 1,
-      "costUsd": 0.0012858,
-      "latencyMs": 3257,
+      "costUsd": 0.0014150999999999999,
+      "latencyMs": 4604,
       "checks": [
         {
           "name": "balance_identity",
@@ -8168,12 +8024,228 @@
       ]
     },
     {
-      "runId": "237ba734-8880-43b7-ba99-2eb78affaa7d",
-      "accessionNumber": "0000831001-26-000011",
+      "runId": "cce91f1b-e2b3-4348-a931-da885ffac389",
+      "accessionNumber": "0000886982-26-000091",
+      "status": "completed",
+      "retryCount": 1,
+      "costUsd": 0.0012905999999999998,
+      "latencyMs": 4121,
+      "checks": [
+        {
+          "name": "balance_identity",
+          "statement": "balance",
+          "fields": [
+            "totalAssets"
+          ],
+          "passed": true,
+          "skipped": false,
+          "detail": "total assets equals total liabilities and equity"
+        },
+        {
+          "name": "totalEquity_attribution",
+          "statement": "balance",
+          "fields": [
+            "totalEquity"
+          ],
+          "passed": true,
+          "skipped": true,
+          "detail": "no noncontrolling interest line printed"
+        },
+        {
+          "name": "netIncome_before_preferred",
+          "statement": "income",
+          "fields": [
+            "netIncome"
+          ],
+          "passed": true,
+          "skipped": false,
+          "detail": "net income is not the after-preferred-dividends line"
+        },
+        {
+          "name": "epsDiluted_total",
+          "statement": "income",
+          "fields": [
+            "epsDiluted"
+          ],
+          "passed": true,
+          "skipped": false,
+          "detail": "diluted EPS is for total net income"
+        },
+        {
+          "name": "netIncome_attribution",
+          "statement": "income",
+          "fields": [
+            "netIncome"
+          ],
+          "passed": true,
+          "skipped": true,
+          "detail": "no noncontrolling interest line printed"
+        },
+        {
+          "name": "cash_flow_tie",
+          "statement": "cashflow",
+          "fields": [
+            "operatingCashFlow",
+            "investingCashFlow",
+            "financingCashFlow"
+          ],
+          "passed": true,
+          "skipped": false,
+          "detail": "operating + investing + financing (+ FX) equals the net change in cash"
+        }
+      ]
+    },
+    {
+      "runId": "1c0deac3-1358-4df1-a688-cfc3a720d7f2",
+      "accessionNumber": "0000895421-26-000086",
+      "status": "completed",
+      "retryCount": 1,
+      "costUsd": 0.0012653999999999999,
+      "latencyMs": 4267,
+      "checks": [
+        {
+          "name": "balance_identity",
+          "statement": "balance",
+          "fields": [
+            "totalAssets"
+          ],
+          "passed": true,
+          "skipped": false,
+          "detail": "total assets equals total liabilities and equity"
+        },
+        {
+          "name": "totalEquity_attribution",
+          "statement": "balance",
+          "fields": [
+            "totalEquity"
+          ],
+          "passed": true,
+          "skipped": false,
+          "detail": "totalEquity excludes noncontrolling interests"
+        },
+        {
+          "name": "netIncome_before_preferred",
+          "statement": "income",
+          "fields": [
+            "netIncome"
+          ],
+          "passed": true,
+          "skipped": false,
+          "detail": "net income is not the after-preferred-dividends line"
+        },
+        {
+          "name": "epsDiluted_total",
+          "statement": "income",
+          "fields": [
+            "epsDiluted"
+          ],
+          "passed": true,
+          "skipped": false,
+          "detail": "diluted EPS is for total net income"
+        },
+        {
+          "name": "netIncome_attribution",
+          "statement": "income",
+          "fields": [
+            "netIncome"
+          ],
+          "passed": true,
+          "skipped": false,
+          "detail": "netIncome excludes noncontrolling interests"
+        },
+        {
+          "name": "cash_flow_tie",
+          "statement": "cashflow",
+          "fields": [
+            "operatingCashFlow",
+            "investingCashFlow",
+            "financingCashFlow"
+          ],
+          "passed": true,
+          "skipped": false,
+          "detail": "operating + investing + financing (+ FX) equals the net change in cash"
+        }
+      ]
+    },
+    {
+      "runId": "16cff7ee-e7c4-465a-bdda-f59de8a14bbd",
+      "accessionNumber": "0000004962-26-000080",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.00118335,
-      "latencyMs": 2455,
+      "costUsd": 0.0009251999999999998,
+      "latencyMs": 2238,
+      "checks": [
+        {
+          "name": "balance_identity",
+          "statement": "balance",
+          "fields": [
+            "totalAssets"
+          ],
+          "passed": true,
+          "skipped": false,
+          "detail": "total assets equals total liabilities and equity"
+        },
+        {
+          "name": "totalEquity_attribution",
+          "statement": "balance",
+          "fields": [
+            "totalEquity"
+          ],
+          "passed": true,
+          "skipped": true,
+          "detail": "no noncontrolling interest line printed"
+        },
+        {
+          "name": "netIncome_before_preferred",
+          "statement": "income",
+          "fields": [
+            "netIncome"
+          ],
+          "passed": true,
+          "skipped": false,
+          "detail": "net income is not the after-preferred-dividends line"
+        },
+        {
+          "name": "epsDiluted_total",
+          "statement": "income",
+          "fields": [
+            "epsDiluted"
+          ],
+          "passed": true,
+          "skipped": false,
+          "detail": "diluted EPS is for total net income"
+        },
+        {
+          "name": "netIncome_attribution",
+          "statement": "income",
+          "fields": [
+            "netIncome"
+          ],
+          "passed": true,
+          "skipped": true,
+          "detail": "no noncontrolling interest line printed"
+        },
+        {
+          "name": "cash_flow_tie",
+          "statement": "cashflow",
+          "fields": [
+            "operatingCashFlow",
+            "investingCashFlow",
+            "financingCashFlow"
+          ],
+          "passed": true,
+          "skipped": false,
+          "detail": "operating + investing + financing (+ FX) equals the net change in cash"
+        }
+      ]
+    },
+    {
+      "runId": "c074b60d-7dd0-42cb-933d-f0f973eea88f",
+      "accessionNumber": "0000831001-26-000011",
+      "status": "completed",
+      "retryCount": 1,
+      "costUsd": 0.0015768,
+      "latencyMs": 4807,
       "checks": [
         {
           "name": "balance_identity",
@@ -8240,84 +8312,12 @@
       ]
     },
     {
-      "runId": "429bff1b-bfc2-4947-ab04-5d43ae7e2b89",
-      "accessionNumber": "0000004962-26-000080",
-      "status": "completed",
-      "retryCount": 0,
-      "costUsd": 0.0009054,
-      "latencyMs": 1731,
-      "checks": [
-        {
-          "name": "balance_identity",
-          "statement": "balance",
-          "fields": [
-            "totalAssets"
-          ],
-          "passed": true,
-          "skipped": false,
-          "detail": "total assets equals total liabilities and equity"
-        },
-        {
-          "name": "totalEquity_attribution",
-          "statement": "balance",
-          "fields": [
-            "totalEquity"
-          ],
-          "passed": true,
-          "skipped": true,
-          "detail": "no noncontrolling interest line printed"
-        },
-        {
-          "name": "netIncome_before_preferred",
-          "statement": "income",
-          "fields": [
-            "netIncome"
-          ],
-          "passed": true,
-          "skipped": false,
-          "detail": "net income is not the after-preferred-dividends line"
-        },
-        {
-          "name": "epsDiluted_total",
-          "statement": "income",
-          "fields": [
-            "epsDiluted"
-          ],
-          "passed": true,
-          "skipped": false,
-          "detail": "diluted EPS is for total net income"
-        },
-        {
-          "name": "netIncome_attribution",
-          "statement": "income",
-          "fields": [
-            "netIncome"
-          ],
-          "passed": true,
-          "skipped": true,
-          "detail": "no noncontrolling interest line printed"
-        },
-        {
-          "name": "cash_flow_tie",
-          "statement": "cashflow",
-          "fields": [
-            "operatingCashFlow",
-            "investingCashFlow",
-            "financingCashFlow"
-          ],
-          "passed": true,
-          "skipped": false,
-          "detail": "operating + investing + financing (+ FX) equals the net change in cash"
-        }
-      ]
-    },
-    {
-      "runId": "22e4f95b-6c9e-4cb9-a945-6a48c4f992a5",
+      "runId": "2cb13ea2-b4ab-4ddb-a4b9-a9eb9540e9d9",
       "accessionNumber": "0001193125-26-071966",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0009679499999999999,
-      "latencyMs": 1977,
+      "costUsd": 0.00094935,
+      "latencyMs": 2551,
       "checks": [
         {
           "name": "balance_identity",
@@ -8384,12 +8384,12 @@
       ]
     },
     {
-      "runId": "98d43a49-a463-4223-b7fd-2e4ffca98e88",
+      "runId": "82a6529e-79d8-4f75-9928-ec6c62e9acbe",
       "accessionNumber": "0000316709-26-000009",
       "status": "completed",
       "retryCount": 1,
-      "costUsd": 0.0012487499999999999,
-      "latencyMs": 3531,
+      "costUsd": 0.00124515,
+      "latencyMs": 4041,
       "checks": [
         {
           "name": "balance_identity",
@@ -8456,12 +8456,84 @@
       ]
     },
     {
-      "runId": "b67695ab-10d3-4095-9a27-4e46768c9991",
+      "runId": "ae26423d-2769-4f7a-96ac-c843bb2eb51a",
+      "accessionNumber": "0000200406-26-000016",
+      "status": "completed",
+      "retryCount": 0,
+      "costUsd": 0.0009649499999999999,
+      "latencyMs": 3087,
+      "checks": [
+        {
+          "name": "balance_identity",
+          "statement": "balance",
+          "fields": [
+            "totalAssets"
+          ],
+          "passed": true,
+          "skipped": false,
+          "detail": "total assets equals total liabilities and equity"
+        },
+        {
+          "name": "totalEquity_attribution",
+          "statement": "balance",
+          "fields": [
+            "totalEquity"
+          ],
+          "passed": true,
+          "skipped": true,
+          "detail": "no noncontrolling interest line printed"
+        },
+        {
+          "name": "netIncome_before_preferred",
+          "statement": "income",
+          "fields": [
+            "netIncome"
+          ],
+          "passed": true,
+          "skipped": false,
+          "detail": "net income is not the after-preferred-dividends line"
+        },
+        {
+          "name": "epsDiluted_total",
+          "statement": "income",
+          "fields": [
+            "epsDiluted"
+          ],
+          "passed": true,
+          "skipped": false,
+          "detail": "diluted EPS is for total net income"
+        },
+        {
+          "name": "netIncome_attribution",
+          "statement": "income",
+          "fields": [
+            "netIncome"
+          ],
+          "passed": true,
+          "skipped": true,
+          "detail": "no noncontrolling interest line printed"
+        },
+        {
+          "name": "cash_flow_tie",
+          "statement": "cashflow",
+          "fields": [
+            "operatingCashFlow",
+            "investingCashFlow",
+            "financingCashFlow"
+          ],
+          "passed": true,
+          "skipped": false,
+          "detail": "operating + investing + financing (+ FX) equals the net change in cash"
+        }
+      ]
+    },
+    {
+      "runId": "4ed5f699-3f3f-4925-a877-38b4a377311c",
       "accessionNumber": "0000036104-26-000011",
       "status": "completed",
       "retryCount": 1,
-      "costUsd": 0.0012811499999999998,
-      "latencyMs": 3317,
+      "costUsd": 0.0012655499999999998,
+      "latencyMs": 5817,
       "checks": [
         {
           "name": "balance_identity",
@@ -8528,84 +8600,12 @@
       ]
     },
     {
-      "runId": "46dd1270-e1c8-4f48-8692-1e49c320e47b",
-      "accessionNumber": "0000200406-26-000016",
-      "status": "completed",
-      "retryCount": 0,
-      "costUsd": 0.00095115,
-      "latencyMs": 1631,
-      "checks": [
-        {
-          "name": "balance_identity",
-          "statement": "balance",
-          "fields": [
-            "totalAssets"
-          ],
-          "passed": true,
-          "skipped": false,
-          "detail": "total assets equals total liabilities and equity"
-        },
-        {
-          "name": "totalEquity_attribution",
-          "statement": "balance",
-          "fields": [
-            "totalEquity"
-          ],
-          "passed": true,
-          "skipped": true,
-          "detail": "no noncontrolling interest line printed"
-        },
-        {
-          "name": "netIncome_before_preferred",
-          "statement": "income",
-          "fields": [
-            "netIncome"
-          ],
-          "passed": true,
-          "skipped": false,
-          "detail": "net income is not the after-preferred-dividends line"
-        },
-        {
-          "name": "epsDiluted_total",
-          "statement": "income",
-          "fields": [
-            "epsDiluted"
-          ],
-          "passed": true,
-          "skipped": false,
-          "detail": "diluted EPS is for total net income"
-        },
-        {
-          "name": "netIncome_attribution",
-          "statement": "income",
-          "fields": [
-            "netIncome"
-          ],
-          "passed": true,
-          "skipped": true,
-          "detail": "no noncontrolling interest line printed"
-        },
-        {
-          "name": "cash_flow_tie",
-          "statement": "cashflow",
-          "fields": [
-            "operatingCashFlow",
-            "investingCashFlow",
-            "financingCashFlow"
-          ],
-          "passed": true,
-          "skipped": false,
-          "detail": "operating + investing + financing (+ FX) equals the net change in cash"
-        }
-      ]
-    },
-    {
-      "runId": "2ef82d3b-fc59-421a-abbe-a9bc2bf21d4a",
+      "runId": "553b54bf-b29a-4c6f-bd29-0a764281d881",
       "accessionNumber": "0000078003-26-000026",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.00092685,
-      "latencyMs": 1750,
+      "costUsd": 0.0009262499999999999,
+      "latencyMs": 2298,
       "checks": [
         {
           "name": "balance_identity",
@@ -8672,12 +8672,12 @@
       ]
     },
     {
-      "runId": "e5feb43b-f53e-4114-91f9-9faa7aa8d443",
+      "runId": "d43f8b1e-8056-45ca-81bc-0112efc56e76",
       "accessionNumber": "0000310158-26-000063",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0008810999999999999,
-      "latencyMs": 1896,
+      "costUsd": 0.0008738999999999999,
+      "latencyMs": 2368,
       "checks": [
         {
           "name": "balance_identity",
@@ -8686,8 +8686,8 @@
             "totalAssets"
           ],
           "passed": true,
-          "skipped": true,
-          "detail": "statement prints no total liabilities and equity line"
+          "skipped": false,
+          "detail": "total assets equals total liabilities and equity"
         },
         {
           "name": "totalEquity_attribution",
@@ -8744,12 +8744,12 @@
       ]
     },
     {
-      "runId": "cfdc6aaa-b36c-4c15-b744-6a62751e453a",
+      "runId": "e2cf23cb-b4c8-46a1-83f0-1d116427818d",
       "accessionNumber": "0001551152-26-000008",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0008609999999999999,
-      "latencyMs": 1936,
+      "costUsd": 0.0008813999999999998,
+      "latencyMs": 2781,
       "checks": [
         {
           "name": "balance_identity",
@@ -8816,12 +8816,12 @@
       ]
     },
     {
-      "runId": "d09ae596-e2f0-4488-86a3-b189b87310bd",
+      "runId": "7f0b77a1-c362-42de-b644-1e542ea1ada9",
       "accessionNumber": "0000731766-26-000062",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0008967000000000001,
-      "latencyMs": 1674,
+      "costUsd": 0.0008984999999999999,
+      "latencyMs": 2252,
       "checks": [
         {
           "name": "balance_identity",
@@ -8888,12 +8888,12 @@
       ]
     },
     {
-      "runId": "48b93845-42a6-4a13-acf2-b15499eeb516",
+      "runId": "58a7e8e0-8438-4b3b-ba56-8c46998cc9e1",
       "accessionNumber": "0000059478-26-000013",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0008092499999999999,
-      "latencyMs": 1622,
+      "costUsd": 0.00083085,
+      "latencyMs": 2026,
       "checks": [
         {
           "name": "balance_identity",
@@ -8960,12 +8960,12 @@
       ]
     },
     {
-      "runId": "22469eca-41aa-4dda-97f3-6d8d3b2fe9cc",
+      "runId": "76d79bce-3479-4a44-9ae7-0d00808785cd",
       "accessionNumber": "0000318154-26-000010",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0007990499999999999,
-      "latencyMs": 2047,
+      "costUsd": 0.0008020499999999999,
+      "latencyMs": 2413,
       "checks": [
         {
           "name": "balance_identity",
@@ -9032,12 +9032,12 @@
       ]
     },
     {
-      "runId": "1a7bbb85-d384-4891-a96c-01c4a86b49e2",
+      "runId": "dc534e85-7e28-4165-861c-4dc6c3428050",
       "accessionNumber": "0000064803-26-000010",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0008683499999999998,
-      "latencyMs": 1820,
+      "costUsd": 0.0008569499999999999,
+      "latencyMs": 2513,
       "checks": [
         {
           "name": "balance_identity",
@@ -9104,12 +9104,12 @@
       ]
     },
     {
-      "runId": "51cddb2d-8bba-4913-9e27-565871ee08e8",
+      "runId": "5c43c7ec-7ef8-4c67-8226-c5ab1c9cb090",
       "accessionNumber": "0000014272-26-000004",
       "status": "completed",
       "retryCount": 1,
-      "costUsd": 0.00111495,
-      "latencyMs": 3280,
+      "costUsd": 0.0011161499999999998,
+      "latencyMs": 4056,
       "checks": [
         {
           "name": "balance_identity",
@@ -9176,12 +9176,12 @@
       ]
     },
     {
-      "runId": "bd763397-b619-4c5a-a4ac-cf3256e071ac",
+      "runId": "22a4b194-fbbf-473f-9dc7-afa1d40ef13b",
       "accessionNumber": "0000097745-26-000018",
       "status": "completed",
-      "retryCount": 1,
-      "costUsd": 0.0011618999999999998,
-      "latencyMs": 3051,
+      "retryCount": 0,
+      "costUsd": 0.0008767499999999999,
+      "latencyMs": 2685,
       "checks": [
         {
           "name": "balance_identity",
@@ -9248,12 +9248,12 @@
       ]
     },
     {
-      "runId": "0a8b6e32-3f67-45b9-972a-6dd93d412948",
+      "runId": "3254c06d-0a08-484c-8a03-c3bbe2e23cd0",
       "accessionNumber": "0000104169-26-000055",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0008356499999999998,
-      "latencyMs": 1717,
+      "costUsd": 0.0008548499999999999,
+      "latencyMs": 2238,
       "checks": [
         {
           "name": "balance_identity",
@@ -9320,12 +9320,12 @@
       ]
     },
     {
-      "runId": "f491d17a-221f-44f8-9686-907b93522a0b",
+      "runId": "d4ffe03c-60aa-4f21-8cc2-598b9c1edcc4",
       "accessionNumber": "0001628280-26-010047",
       "status": "completed",
-      "retryCount": 0,
-      "costUsd": 0.0008697,
-      "latencyMs": 2147,
+      "retryCount": 1,
+      "costUsd": 0.0011500500000000001,
+      "latencyMs": 6202,
       "checks": [
         {
           "name": "balance_identity",
@@ -9392,12 +9392,12 @@
       ]
     },
     {
-      "runId": "89a88e21-6e62-49dd-a317-3e8bebded023",
+      "runId": "12785504-aeec-4352-937e-251c74dd466e",
       "accessionNumber": "0000077476-26-000007",
       "status": "completed",
       "retryCount": 1,
-      "costUsd": 0.00115395,
-      "latencyMs": 3117,
+      "costUsd": 0.0011719499999999997,
+      "latencyMs": 4766,
       "checks": [
         {
           "name": "balance_identity",
@@ -9464,12 +9464,12 @@
       ]
     },
     {
-      "runId": "d9de7e4d-d35f-47e9-85c6-2e87ab40195d",
+      "runId": "ac80b9ac-4d52-4615-bef1-c72af6b2061a",
       "accessionNumber": "0000080424-26-000103",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0008405999999999999,
-      "latencyMs": 2536,
+      "costUsd": 0.0008477999999999999,
+      "latencyMs": 2486,
       "checks": [
         {
           "name": "balance_identity",
@@ -9536,12 +9536,12 @@
       ]
     },
     {
-      "runId": "243d76fe-cd51-4130-88dd-a4ce1786248b",
+      "runId": "19b552d3-9a03-4e9f-923e-077ed51a731d",
       "accessionNumber": "0000063908-26-000035",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.00085425,
-      "latencyMs": 1754,
+      "costUsd": 0.00086385,
+      "latencyMs": 2663,
       "checks": [
         {
           "name": "balance_identity",
@@ -9608,12 +9608,12 @@
       ]
     },
     {
-      "runId": "5bd1de16-c086-4f4b-9daf-525c895235d7",
+      "runId": "db011a90-32b7-433d-8268-3851bf4cd8e9",
       "accessionNumber": "0000320187-26-000088",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.00079335,
-      "latencyMs": 1776,
+      "costUsd": 0.0007969499999999999,
+      "latencyMs": 2888,
       "checks": [
         {
           "name": "balance_identity",
@@ -9680,12 +9680,12 @@
       ]
     },
     {
-      "runId": "0c23b780-5467-4601-8e8f-c730ace90afb",
+      "runId": "a437de2a-7fb2-4edf-8402-ee9df9d5407f",
       "accessionNumber": "0000909832-25-000101",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.00083175,
-      "latencyMs": 1620,
+      "costUsd": 0.0008311499999999999,
+      "latencyMs": 2256,
       "checks": [
         {
           "name": "balance_identity",
@@ -9752,12 +9752,12 @@
       ]
     },
     {
-      "runId": "9094daf1-c19f-4725-bb7c-47d54b4037ce",
+      "runId": "cc2a6d19-3787-4001-9994-8afce5077aaa",
       "accessionNumber": "0001628280-26-019436",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0008602500000000001,
-      "latencyMs": 1826,
+      "costUsd": 0.00082785,
+      "latencyMs": 2452,
       "checks": [
         {
           "name": "balance_identity",
@@ -9824,12 +9824,12 @@
       ]
     },
     {
-      "runId": "d23531c9-6daa-46a2-9971-5a99ccd07453",
+      "runId": "76880cc4-68dc-4c7a-b563-f65c2eeb2bd3",
       "accessionNumber": "0000027419-26-000016",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0007526999999999999,
-      "latencyMs": 1660,
+      "costUsd": 0.0007845,
+      "latencyMs": 2928,
       "checks": [
         {
           "name": "balance_identity",
@@ -9896,12 +9896,12 @@
       ]
     },
     {
-      "runId": "70ad41c7-16c5-4715-94f5-4e19becae2ec",
+      "runId": "2749666d-3359-4427-9491-f5f8481fe019",
       "accessionNumber": "0000829224-25-000114",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0009695999999999998,
-      "latencyMs": 1880,
+      "costUsd": 0.0009941999999999998,
+      "latencyMs": 2472,
       "checks": [
         {
           "name": "balance_identity",
@@ -9968,12 +9968,12 @@
       ]
     },
     {
-      "runId": "86e14a07-c462-48c8-b7a3-eb7d49590860",
+      "runId": "9998d67a-530b-4377-9bc4-c53f6d7a3ed8",
       "accessionNumber": "0000093410-26-000078",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0008975999999999999,
-      "latencyMs": 2601,
+      "costUsd": 0.0008981999999999998,
+      "latencyMs": 2949,
       "checks": [
         {
           "name": "balance_identity",
@@ -10040,12 +10040,12 @@
       ]
     },
     {
-      "runId": "749062f2-4bf7-48dc-9741-2b2debb583b1",
+      "runId": "01d3dc96-766b-4d83-8317-ad27ba7243f8",
       "accessionNumber": "0001163165-26-000009",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.000855,
-      "latencyMs": 1912,
+      "costUsd": 0.0008484,
+      "latencyMs": 2062,
       "checks": [
         {
           "name": "balance_identity",
@@ -10112,12 +10112,12 @@
       ]
     },
     {
-      "runId": "e68032ce-f846-4b85-b4d5-39471cc857fd",
+      "runId": "f6760a33-6689-487d-92f2-1651be81344b",
       "accessionNumber": "0000018230-26-000008",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0009351,
-      "latencyMs": 1702,
+      "costUsd": 0.0009459000000000001,
+      "latencyMs": 2249,
       "checks": [
         {
           "name": "balance_identity",
@@ -10184,12 +10184,12 @@
       ]
     },
     {
-      "runId": "2cfa0bf1-419d-4a04-b762-53336e402c16",
+      "runId": "2fb3c7ef-c85a-41c1-8cee-b2f8dd429fbc",
       "accessionNumber": "0000040545-26-000008",
       "status": "completed",
       "retryCount": 1,
-      "costUsd": 0.0016983,
-      "latencyMs": 3312,
+      "costUsd": 0.0016893,
+      "latencyMs": 4130,
       "checks": [
         {
           "name": "balance_identity",
@@ -10227,9 +10227,9 @@
           "fields": [
             "epsDiluted"
           ],
-          "passed": true,
+          "passed": false,
           "skipped": false,
-          "detail": "diluted EPS is for total net income"
+          "detail": "epsDiluted was read from a continuing-operations row, but a diluted EPS for total net earnings is also printed. Use the total one."
         },
         {
           "name": "netIncome_attribution",
@@ -10256,12 +10256,12 @@
       ]
     },
     {
-      "runId": "cc301c25-61eb-490e-a322-c562692efdd5",
+      "runId": "1467df19-f68f-44a1-88e6-a429278d433e",
       "accessionNumber": "0001628280-26-004357",
       "status": "completed",
-      "retryCount": 1,
-      "costUsd": 0.00122595,
-      "latencyMs": 3419,
+      "retryCount": 0,
+      "costUsd": 0.0009337499999999999,
+      "latencyMs": 2288,
       "checks": [
         {
           "name": "balance_identity",
@@ -10328,12 +10328,12 @@
       ]
     },
     {
-      "runId": "c03dcccc-84d1-4817-a31a-fb870b47f181",
+      "runId": "7e8754b8-5e85-44e3-8cda-d73c23732d07",
       "accessionNumber": "0000773840-26-000013",
       "status": "completed",
       "retryCount": 1,
-      "costUsd": 0.00125265,
-      "latencyMs": 4456,
+      "costUsd": 0.00125205,
+      "latencyMs": 4612,
       "checks": [
         {
           "name": "balance_identity",
@@ -10400,84 +10400,12 @@
       ]
     },
     {
-      "runId": "247f3432-9a2c-4246-be6e-52cb5f54da50",
-      "accessionNumber": "0001628280-26-004195",
-      "status": "completed",
-      "retryCount": 0,
-      "costUsd": 0.0007796999999999999,
-      "latencyMs": 1710,
-      "checks": [
-        {
-          "name": "balance_identity",
-          "statement": "balance",
-          "fields": [
-            "totalAssets"
-          ],
-          "passed": true,
-          "skipped": false,
-          "detail": "total assets equals total liabilities and equity"
-        },
-        {
-          "name": "totalEquity_attribution",
-          "statement": "balance",
-          "fields": [
-            "totalEquity"
-          ],
-          "passed": true,
-          "skipped": true,
-          "detail": "no noncontrolling interest line printed"
-        },
-        {
-          "name": "netIncome_before_preferred",
-          "statement": "income",
-          "fields": [
-            "netIncome"
-          ],
-          "passed": true,
-          "skipped": false,
-          "detail": "net income is not the after-preferred-dividends line"
-        },
-        {
-          "name": "epsDiluted_total",
-          "statement": "income",
-          "fields": [
-            "epsDiluted"
-          ],
-          "passed": true,
-          "skipped": false,
-          "detail": "diluted EPS is for total net income"
-        },
-        {
-          "name": "netIncome_attribution",
-          "statement": "income",
-          "fields": [
-            "netIncome"
-          ],
-          "passed": true,
-          "skipped": true,
-          "detail": "no noncontrolling interest line printed"
-        },
-        {
-          "name": "cash_flow_tie",
-          "statement": "cashflow",
-          "fields": [
-            "operatingCashFlow",
-            "investingCashFlow",
-            "financingCashFlow"
-          ],
-          "passed": true,
-          "skipped": false,
-          "detail": "operating + investing + financing (+ FX) equals the net change in cash"
-        }
-      ]
-    },
-    {
-      "runId": "d300f735-826d-425f-9158-0f1d51e84a93",
+      "runId": "2110404c-b8bc-4e25-a6b5-51324a966fa9",
       "accessionNumber": "0001628280-26-008432",
       "status": "completed",
       "retryCount": 1,
-      "costUsd": 0.0011378999999999998,
-      "latencyMs": 4407,
+      "costUsd": 0.0011277000000000001,
+      "latencyMs": 3642,
       "checks": [
         {
           "name": "balance_identity",
@@ -10544,12 +10472,84 @@
       ]
     },
     {
-      "runId": "12950475-2996-41d7-beca-40128b836198",
+      "runId": "244093c1-3f9e-4602-8ace-b641301ffd34",
+      "accessionNumber": "0001628280-26-004195",
+      "status": "completed",
+      "retryCount": 0,
+      "costUsd": 0.0007719,
+      "latencyMs": 2045,
+      "checks": [
+        {
+          "name": "balance_identity",
+          "statement": "balance",
+          "fields": [
+            "totalAssets"
+          ],
+          "passed": true,
+          "skipped": false,
+          "detail": "total assets equals total liabilities and equity"
+        },
+        {
+          "name": "totalEquity_attribution",
+          "statement": "balance",
+          "fields": [
+            "totalEquity"
+          ],
+          "passed": true,
+          "skipped": true,
+          "detail": "no noncontrolling interest line printed"
+        },
+        {
+          "name": "netIncome_before_preferred",
+          "statement": "income",
+          "fields": [
+            "netIncome"
+          ],
+          "passed": true,
+          "skipped": false,
+          "detail": "net income is not the after-preferred-dividends line"
+        },
+        {
+          "name": "epsDiluted_total",
+          "statement": "income",
+          "fields": [
+            "epsDiluted"
+          ],
+          "passed": true,
+          "skipped": false,
+          "detail": "diluted EPS is for total net income"
+        },
+        {
+          "name": "netIncome_attribution",
+          "statement": "income",
+          "fields": [
+            "netIncome"
+          ],
+          "passed": true,
+          "skipped": true,
+          "detail": "no noncontrolling interest line printed"
+        },
+        {
+          "name": "cash_flow_tie",
+          "statement": "cashflow",
+          "fields": [
+            "operatingCashFlow",
+            "investingCashFlow",
+            "financingCashFlow"
+          ],
+          "passed": true,
+          "skipped": false,
+          "detail": "operating + investing + financing (+ FX) equals the net change in cash"
+        }
+      ]
+    },
+    {
+      "runId": "586096f8-c3f3-413b-9198-14ff139236e0",
       "accessionNumber": "0001104659-25-122321",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0009044999999999999,
-      "latencyMs": 2156,
+      "costUsd": 0.0008913,
+      "latencyMs": 2491,
       "checks": [
         {
           "name": "balance_identity",
@@ -10616,84 +10616,12 @@
       ]
     },
     {
-      "runId": "2e24e45f-4061-467c-9274-d51e116324db",
-      "accessionNumber": "0000066740-26-000014",
-      "status": "completed",
-      "retryCount": 1,
-      "costUsd": 0.00120075,
-      "latencyMs": 3367,
-      "checks": [
-        {
-          "name": "balance_identity",
-          "statement": "balance",
-          "fields": [
-            "totalAssets"
-          ],
-          "passed": true,
-          "skipped": false,
-          "detail": "total assets equals total liabilities and equity"
-        },
-        {
-          "name": "totalEquity_attribution",
-          "statement": "balance",
-          "fields": [
-            "totalEquity"
-          ],
-          "passed": true,
-          "skipped": false,
-          "detail": "totalEquity excludes noncontrolling interests"
-        },
-        {
-          "name": "netIncome_before_preferred",
-          "statement": "income",
-          "fields": [
-            "netIncome"
-          ],
-          "passed": true,
-          "skipped": false,
-          "detail": "net income is not the after-preferred-dividends line"
-        },
-        {
-          "name": "epsDiluted_total",
-          "statement": "income",
-          "fields": [
-            "epsDiluted"
-          ],
-          "passed": true,
-          "skipped": false,
-          "detail": "diluted EPS is for total net income"
-        },
-        {
-          "name": "netIncome_attribution",
-          "statement": "income",
-          "fields": [
-            "netIncome"
-          ],
-          "passed": true,
-          "skipped": false,
-          "detail": "netIncome excludes noncontrolling interests"
-        },
-        {
-          "name": "cash_flow_tie",
-          "statement": "cashflow",
-          "fields": [
-            "operatingCashFlow",
-            "investingCashFlow",
-            "financingCashFlow"
-          ],
-          "passed": true,
-          "skipped": false,
-          "detail": "operating + investing + financing (+ FX) equals the net change in cash"
-        }
-      ]
-    },
-    {
-      "runId": "26675d49-de2f-4b89-8bc9-e62180497c02",
+      "runId": "3dc33e56-09f7-4d64-a03d-283d670f1805",
       "accessionNumber": "0000732712-26-000007",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0008785499999999999,
-      "latencyMs": 2064,
+      "costUsd": 0.0008911499999999998,
+      "latencyMs": 2613,
       "checks": [
         {
           "name": "balance_identity",
@@ -10760,12 +10688,84 @@
       ]
     },
     {
-      "runId": "2d86e11a-ed3c-4b73-ba72-f19027266732",
+      "runId": "49990cd5-3a75-44a9-80bd-81bc10b10cfc",
+      "accessionNumber": "0000066740-26-000014",
+      "status": "completed",
+      "retryCount": 1,
+      "costUsd": 0.0011905499999999999,
+      "latencyMs": 4446,
+      "checks": [
+        {
+          "name": "balance_identity",
+          "statement": "balance",
+          "fields": [
+            "totalAssets"
+          ],
+          "passed": true,
+          "skipped": false,
+          "detail": "total assets equals total liabilities and equity"
+        },
+        {
+          "name": "totalEquity_attribution",
+          "statement": "balance",
+          "fields": [
+            "totalEquity"
+          ],
+          "passed": true,
+          "skipped": false,
+          "detail": "totalEquity excludes noncontrolling interests"
+        },
+        {
+          "name": "netIncome_before_preferred",
+          "statement": "income",
+          "fields": [
+            "netIncome"
+          ],
+          "passed": true,
+          "skipped": false,
+          "detail": "net income is not the after-preferred-dividends line"
+        },
+        {
+          "name": "epsDiluted_total",
+          "statement": "income",
+          "fields": [
+            "epsDiluted"
+          ],
+          "passed": true,
+          "skipped": false,
+          "detail": "diluted EPS is for total net income"
+        },
+        {
+          "name": "netIncome_attribution",
+          "statement": "income",
+          "fields": [
+            "netIncome"
+          ],
+          "passed": true,
+          "skipped": false,
+          "detail": "netIncome excludes noncontrolling interests"
+        },
+        {
+          "name": "cash_flow_tie",
+          "statement": "cashflow",
+          "fields": [
+            "operatingCashFlow",
+            "investingCashFlow",
+            "financingCashFlow"
+          ],
+          "passed": true,
+          "skipped": false,
+          "detail": "operating + investing + financing (+ FX) equals the net change in cash"
+        }
+      ]
+    },
+    {
+      "runId": "7b5ea7dc-8dae-4eab-adda-2b459cdd8d76",
       "accessionNumber": "0000732717-26-000120",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0009425999999999999,
-      "latencyMs": 1630,
+      "costUsd": 0.0009264,
+      "latencyMs": 2276,
       "checks": [
         {
           "name": "balance_identity",
@@ -10832,12 +10832,12 @@
       ]
     },
     {
-      "runId": "be66880e-c4b0-4947-a298-3e78239b1518",
+      "runId": "bbbb9046-ed1a-4005-b5ab-815e53d73375",
       "accessionNumber": "0001326160-26-000014",
       "status": "completed",
       "retryCount": 0,
-      "costUsd": 0.0010133999999999998,
-      "latencyMs": 2152,
+      "costUsd": 0.001017,
+      "latencyMs": 2809,
       "checks": [
         {
           "name": "balance_identity",
@@ -10904,12 +10904,12 @@
       ]
     },
     {
-      "runId": "977f5327-bfb9-430c-ba97-6b1723a602bc",
+      "runId": "ea6200b6-7b8d-4afc-8b56-4be9807aadcb",
       "accessionNumber": "0000753308-26-000015",
       "status": "completed",
       "retryCount": 1,
-      "costUsd": 0.0013242,
-      "latencyMs": 3809,
+      "costUsd": 0.001284,
+      "latencyMs": 4735,
       "checks": [
         {
           "name": "balance_identity",

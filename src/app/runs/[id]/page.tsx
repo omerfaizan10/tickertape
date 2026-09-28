@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ChecksList } from "@/components/checks-list";
 import { FiguresTable } from "@/components/figures-table";
+import { RevisionsPanel } from "@/components/revisions-panel";
 import { StatementView } from "@/components/statement-view";
 import { getRun } from "@/lib/dashboard/queries";
 import { FIELDS } from "@/lib/fields";
@@ -27,6 +28,8 @@ const AGENT_LABEL: Record<string, string> = {
   balance_extractor: "balance sheet agent",
   cashflow_extractor: "cash flow agent",
   reconciler: "reconciler (code)",
+  restatement_check: "restatement check (code)",
+  revision_explainer: "restatement explainer",
 };
 
 // Re-derives the statements the run read. Parsing and locating are
@@ -131,6 +134,15 @@ export default async function RunPage({
             checks{run.retryCount > 0 ? " (after retry)" : ""}
           </h2>
           <ChecksList checks={run.checks} />
+        </section>
+      ) : null}
+
+      {run.priorYear ? (
+        <section>
+          <h2 className="mb-3 text-xs uppercase tracking-wide text-text-faint">
+            restatements vs the {run.priorYear.priorPeriodEnd.slice(0, 4)} 10-K
+          </h2>
+          <RevisionsPanel check={run.priorYear} />
         </section>
       ) : null}
 

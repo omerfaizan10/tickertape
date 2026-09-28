@@ -1,5 +1,5 @@
 import { CHAT_MODEL, isMockMode } from "../llm/client";
-import type { FilingRef } from "../sec/client";
+import { listFilings, type FilingRef } from "../sec/client";
 import { parseFiling, type FilingTable } from "../sec/filing-text";
 import { loadFilingDocuments } from "../sec/filing-source";
 import { locateStatement, type StatementKind } from "../sec/locate-statements";
@@ -8,9 +8,12 @@ import { AGENT_NAME, runExtraction } from "./extract";
 import { PROMPT_VERSION } from "./prompts";
 import { reconcile, RETRYABLE_CHECKS } from "./reconcile";
 import { createRun, finalizeRun, upsertFiling, writeTraceEvent } from "./trace";
+import { compareWithPriorFiling } from "../revisions";
+import { explainRevisions } from "./explain-revisions";
 import type {
   AgentStepResult,
   AnalysisResult,
+  PriorYearCheck,
   ReconciliationCheck,
   StatementExtraction,
   TraceEvent,
@@ -20,8 +23,10 @@ import type {
 //
 //   locator (code)  ->  income / balance / cash flow extractors (parallel)
 //                   ->  reconciler (code)  ->  targeted retry (once)
+//                   ->  optionally: last year's 10-K as its own run,
+//                       restatement check (code), explainer (agent)
 //
-// Only the extractors call a model. Finding the statements, reading the
+// Only the extractors and the explainer call a model. Finding the statements, reading the
 // cell, applying units and checking the results are all code, so every
 // figure is traceable to a printed cell and every check is reproducible.
 
@@ -31,6 +36,10 @@ const MAX_RETRIES = 1;
 export interface RunOptions {
   source?: "golden_set" | "live";
   onEvent?: (event: TraceEvent) => void;
+  // Also read last year's 10-K and compare: which of last year's figures
+  // does this filing reprint differently from how they were first
+  // reported? Pass the prior filing to skip looking it up.
+  priorYear?: boolean | FilingRef;
 }
 
 export async function analyzeFiling(
@@ -79,6 +88,7 @@ export async function analyzeFiling(
       figures: [],
       statements: [],
       checks: [],
+      priorYear: null,
       retryCount: 0,
       totalCostUsd: totalCost,
       totalLatencyMs: Date.now() - started,
@@ -106,7 +116,7 @@ export async function analyzeFiling(
       ticker,
       filing,
     );
-    const { tables } = parseFiling(documents);
+    const { tables, paragraphs } = parseFiling(documents);
     const located: Partial<Record<StatementKind, FilingTable>> = {};
     const locatorOutput: Record<string, unknown> = {};
     for (const kind of KINDS) {
@@ -248,6 +258,33 @@ export async function analyzeFiling(
       (e): e is StatementExtraction => !!e,
     );
     const figures = statements.flatMap((s) => s.figures);
+    for (const c of checks) {
+      if (c.passed || c.skipped || !RETRYABLE_CHECKS.has(c.name)) continue;
+      for (const f of figures) {
+        if (c.fields.includes(f.field)) f.failedChecks.push(c.name);
+      }
+    }
+
+    // 4. Optionally, last year's 10-K: its own full run, then a code
+    //    comparison, then an explainer only if something was revised.
+    let priorYear: PriorYearCheck | null = null;
+    if (options.priorYear && statements.length > 0) {
+      priorYear = await checkPriorYear(
+        ticker,
+        filing,
+        options.priorYear === true ? null : options.priorYear,
+        figures,
+        paragraphs,
+        {
+          source: options.source,
+          record,
+          stepEvent,
+          locatorIndex,
+          currentTables: located,
+          currentStatements: statements,
+        },
+      );
+    }
     const scored = checks.filter((c) => !c.skipped);
     const result: AnalysisResult = {
       runId,
@@ -256,6 +293,7 @@ export async function analyzeFiling(
       figures,
       statements,
       checks,
+      priorYear,
       retryCount,
       totalCostUsd: totalCost,
       totalLatencyMs: Date.now() - started,
@@ -264,7 +302,7 @@ export async function analyzeFiling(
     };
     await finalizeRun(runId, {
       status: result.status,
-      result: { figures, statements, checks },
+      result: { figures, statements, checks, priorYear },
       checksPassed: scored.filter((c) => c.passed).length,
       checksTotal: scored.length,
       retryCount,
@@ -276,4 +314,119 @@ export async function analyzeFiling(
   } catch (err) {
     return fail(err instanceof Error ? err.message : String(err));
   }
+}
+
+type StepEventFn = <T>(
+  agentName: string,
+  parentStepIndex: number | null,
+  input: unknown,
+  step: Omit<AgentStepResult<T>, "output"> & { output: unknown },
+  error?: string | null,
+) => TraceEvent;
+
+async function checkPriorYear(
+  ticker: string,
+  filing: FilingRef,
+  given: FilingRef | null,
+  figures: AnalysisResult["figures"],
+  paragraphs: string[],
+  ctx: {
+    source?: "golden_set" | "live";
+    record: (e: TraceEvent) => Promise<void>;
+    stepEvent: StepEventFn;
+    locatorIndex: number;
+    currentTables: Partial<Record<StatementKind, FilingTable>>;
+    currentStatements: StatementExtraction[];
+  },
+): Promise<PriorYearCheck | null> {
+  const t0 = Date.now();
+  const prior =
+    given ??
+    (await listFilings(filing.cik, "10-K", 2)).find(
+      (f) =>
+        f.accessionNumber !== filing.accessionNumber &&
+        f.reportDate < filing.reportDate,
+    ) ??
+    null;
+  if (!prior) return null;
+
+  // Last year's filing is analyzed exactly like this one, as its own run,
+  // so its figures carry the same provenance and checks.
+  const priorRun = await analyzeFiling(ticker, prior, { source: ctx.source });
+  if (priorRun.status !== "completed") return null;
+
+  // Both years' statements, to line up rows by label where the agents
+  // picked different lines in the two filings.
+  const { documents: priorDocs } = await loadFilingDocuments(ticker, prior);
+  const { tables: priorTables } = parseFiling(priorDocs);
+  const statementsFor = (
+    tables: Partial<Record<StatementKind, FilingTable>>,
+    extractions: StatementExtraction[],
+  ) =>
+    Object.fromEntries(
+      extractions
+        .filter((x) => tables[x.statement])
+        .map((x) => [x.statement, { table: tables[x.statement]!, column: x.currentColumn }]),
+    );
+  const priorLocated: Partial<Record<StatementKind, FilingTable>> = {};
+  for (const x of priorRun.statements) {
+    const hit = locateStatement(priorTables, x.statement);
+    if (hit) priorLocated[x.statement] = hit.table;
+  }
+  const revisions = compareWithPriorFiling(figures, priorRun.figures, {
+    current: statementsFor(ctx.currentTables, ctx.currentStatements),
+    prior: statementsFor(priorLocated, priorRun.statements),
+  });
+  const compare = ctx.stepEvent(
+    "restatement_check",
+    ctx.locatorIndex,
+    {
+      priorRunId: priorRun.runId,
+      priorAccessionNumber: prior.accessionNumber,
+      priorPeriodEnd: prior.reportDate,
+    },
+    {
+      output: revisions,
+      toolCalls: [],
+      tokensIn: 0,
+      tokensOut: 0,
+      costUsd: priorRun.totalCostUsd,
+      latencyMs: Date.now() - t0,
+    },
+  );
+  await ctx.record(compare);
+
+  let explanations: PriorYearCheck["explanations"] = [];
+  if (revisions.some((r) => r.revised)) {
+    try {
+      const step = await explainRevisions(revisions, paragraphs);
+      await ctx.record(
+        ctx.stepEvent(
+          "revision_explainer",
+          compare.stepIndex,
+          { revised: revisions.filter((r) => r.revised).map((r) => r.field) },
+          step,
+        ),
+      );
+      explanations = step.output;
+    } catch (err) {
+      await ctx.record(
+        ctx.stepEvent(
+          "revision_explainer",
+          compare.stepIndex,
+          null,
+          { output: null, toolCalls: [], tokensIn: 0, tokensOut: 0, costUsd: 0, latencyMs: 0 },
+          err instanceof Error ? err.message : String(err),
+        ),
+      );
+    }
+  }
+
+  return {
+    priorRunId: priorRun.runId,
+    priorAccessionNumber: prior.accessionNumber,
+    priorPeriodEnd: prior.reportDate,
+    revisions,
+    explanations,
+  };
 }

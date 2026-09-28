@@ -1,5 +1,7 @@
 import type { FieldKey } from "../fields";
+import type { Revision } from "../revisions";
 import type { StatementKind } from "../sec/locate-statements";
+import type { RevisionExplanation } from "./explain-revisions";
 
 export interface ToolCallRecord {
   name: string;
@@ -46,12 +48,21 @@ export interface ExtractedFigure {
   agentPrinted: string | null;
   groundingMismatch: boolean;
   note: string;
+  // The same row's figure for the prior year, as this filing reprints it.
+  // Compared with what last year's 10-K originally reported, it shows
+  // whether the figure was restated or recast.
+  priorValue: number | null;
+  priorPrinted: string | null;
+  // Trusted consistency checks this figure still fails after the retry.
+  // Such a figure is shown flagged and never used to claim a restatement.
+  failedChecks: string[];
 }
 
 export interface StatementExtraction {
   statement: StatementKind;
   tableIndex: number;
   currentColumn: number;
+  priorColumn: number | null;
   figures: ExtractedFigure[];
 }
 
@@ -67,6 +78,14 @@ export interface ReconciliationCheck {
   fields: FieldKey[];
 }
 
+export interface PriorYearCheck {
+  priorRunId: string;
+  priorAccessionNumber: string;
+  priorPeriodEnd: string;
+  revisions: Revision[];
+  explanations: RevisionExplanation[];
+}
+
 export interface AnalysisResult {
   runId: string;
   accessionNumber: string;
@@ -74,6 +93,7 @@ export interface AnalysisResult {
   figures: ExtractedFigure[];
   statements: StatementExtraction[];
   checks: ReconciliationCheck[];
+  priorYear: PriorYearCheck | null;
   retryCount: number;
   totalCostUsd: number;
   totalLatencyMs: number;

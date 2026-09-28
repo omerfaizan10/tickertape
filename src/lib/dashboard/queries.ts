@@ -1,6 +1,7 @@
 import { getPool } from "../db";
 import type {
   ExtractedFigure,
+  PriorYearCheck,
   ReconciliationCheck,
   StatementExtraction,
   TraceEvent,
@@ -67,6 +68,7 @@ export interface RunDetail extends RunListItem {
   figures: ExtractedFigure[];
   statements: StatementExtraction[];
   checks: ReconciliationCheck[];
+  priorYear: PriorYearCheck | null;
   events: TraceEvent[];
 }
 
@@ -117,6 +119,7 @@ export async function getRun(id: string): Promise<RunDetail | null> {
     figures: result.figures,
     statements: result.statements,
     checks: result.checks,
+    priorYear: result.priorYear ?? null,
     events: events.rows.map((e) => ({
       agentName: e.agent_name,
       stepIndex: e.step_index,

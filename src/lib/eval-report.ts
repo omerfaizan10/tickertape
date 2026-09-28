@@ -50,3 +50,37 @@ export function loadEvalReport(): EvalReport | null {
 export function isCorrect(g: GradedFigure): boolean {
   return g.outcome === "correct" || g.outcome === "correct_alternate";
 }
+
+export interface RevisionEvalReport {
+  runAt: string;
+  model: string;
+  promptVersion: string;
+  graded: {
+    ticker: string;
+    field: FieldKey;
+    outcome:
+      | "true_positive"
+      | "false_positive"
+      | "false_negative"
+      | "true_negative";
+    truth: { original: number; reprinted: number; revised: boolean };
+    detected: { original: number; reprinted: number } | null;
+    amountsRight: boolean | null;
+  }[];
+  explanations: {
+    ticker: string;
+    explanations: {
+      fields: string[];
+      cause: string;
+      summary: string;
+      quote: string | null;
+      verified: boolean;
+    }[];
+  }[];
+}
+
+export function loadRevisionEval(): RevisionEvalReport | null {
+  const path = join(process.cwd(), "eval", "revisions.json");
+  if (!existsSync(path)) return null;
+  return JSON.parse(readFileSync(path, "utf-8"));
+}

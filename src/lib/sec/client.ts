@@ -96,16 +96,22 @@ export interface FilingRef {
   url: string;
 }
 
+interface FilingColumns {
+  accessionNumber: string[];
+  form: string[];
+  filingDate: string[];
+  reportDate: string[];
+  primaryDocument: string[];
+}
+
 interface SubmissionsResponse {
   name: string;
   filings: {
-    recent: {
-      accessionNumber: string[];
-      form: string[];
-      filingDate: string[];
-      reportDate: string[];
-      primaryDocument: string[];
-    };
+    recent: FilingColumns;
+    // Older filings, in extra pages. A heavy filer's "recent" list can
+    // cover less than a year: Bank of America files thousands of
+    // documents a year, so its recent list holds only one 10-K.
+    files?: { name: string }[];
   };
 }
 
@@ -120,21 +126,32 @@ export async function listFilings(
   const sub = await secJson<SubmissionsResponse>(
     `https://data.sec.gov/submissions/CIK${padCik(cik)}.json`,
   );
-  const r = sub.filings.recent;
   const out: FilingRef[] = [];
-  for (let i = 0; i < r.form.length && out.length < limit; i++) {
-    if (r.form[i] !== form) continue;
-    const accn = r.accessionNumber[i];
-    out.push({
-      cik,
-      companyName: sub.name,
-      accessionNumber: accn,
-      form: r.form[i],
-      filingDate: r.filingDate[i],
-      reportDate: r.reportDate[i],
-      primaryDocument: r.primaryDocument[i],
-      url: `https://www.sec.gov/Archives/edgar/data/${cik}/${accn.replace(/-/g, "")}/${r.primaryDocument[i]}`,
-    });
+  const collect = (r: FilingColumns) => {
+    for (let i = 0; i < r.form.length && out.length < limit; i++) {
+      if (r.form[i] !== form) continue;
+      const accn = r.accessionNumber[i];
+      out.push({
+        cik,
+        companyName: sub.name,
+        accessionNumber: accn,
+        form: r.form[i],
+        filingDate: r.filingDate[i],
+        reportDate: r.reportDate[i],
+        primaryDocument: r.primaryDocument[i],
+        url: `https://www.sec.gov/Archives/edgar/data/${cik}/${accn.replace(/-/g, "")}/${r.primaryDocument[i]}`,
+      });
+    }
+  };
+  collect(sub.filings.recent);
+  // Pages are newest first, so stop as soon as there are enough.
+  for (const page of sub.filings.files ?? []) {
+    if (out.length >= limit) break;
+    collect(
+      await secJson<FilingColumns>(
+        `https://data.sec.gov/submissions/${page.name}`,
+      ),
+    );
   }
   return out;
 }

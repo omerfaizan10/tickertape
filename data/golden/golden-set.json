@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-09-27T18:54:59.678Z",
+  "builtAt": "2026-09-27T19:05:18.732Z",
   "filings": [
     {
       "ticker": "AAPL",
@@ -131,6 +131,80 @@
             "Cash used in financing activities"
           ],
           "alternates": []
+        }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000320193-24-000123",
+        "periodEnd": "2024-09-28",
+        "filingDate": "2024-11-01",
+        "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 391035000000,
+          "reprinted": 391035000000,
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "revised": false
+        },
+        "operatingIncome": {
+          "original": 123216000000,
+          "reprinted": 123216000000,
+          "concept": "OperatingIncomeLoss",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 93736000000,
+          "reprinted": 93736000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 6.08,
+          "reprinted": 6.08,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 29943000000,
+          "reprinted": 29943000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 364980000000,
+          "reprinted": 364980000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalLiabilities": {
+          "original": 308030000000,
+          "reprinted": 308030000000,
+          "concept": "Liabilities",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 56950000000,
+          "reprinted": 56950000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 118254000000,
+          "reprinted": 118254000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": 2935000000,
+          "reprinted": 2935000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": -121983000000,
+          "reprinted": -121983000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
         }
       }
     },
@@ -265,6 +339,80 @@
           ],
           "alternates": []
         }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000950170-25-100235",
+        "periodEnd": "2025-06-30",
+        "filingDate": "2025-07-30",
+        "url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 281724000000,
+          "reprinted": 281724000000,
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "revised": false
+        },
+        "operatingIncome": {
+          "original": 128528000000,
+          "reprinted": 128528000000,
+          "concept": "OperatingIncomeLoss",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 101832000000,
+          "reprinted": 101832000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 13.64,
+          "reprinted": 13.64,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 30242000000,
+          "reprinted": 30242000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 619003000000,
+          "reprinted": 619003000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalLiabilities": {
+          "original": 275524000000,
+          "reprinted": 275524000000,
+          "concept": "Liabilities",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 343479000000,
+          "reprinted": 343479000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 136162000000,
+          "reprinted": 136162000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -72599000000,
+          "reprinted": -72599000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": -51699000000,
+          "reprinted": -51699000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
+        }
       }
     },
     {
@@ -397,6 +545,74 @@
             "Net cash used in financing activities"
           ],
           "alternates": []
+        }
+      },
+      "priorFiling": {
+        "accessionNumber": "0001652044-25-000014",
+        "periodEnd": "2024-12-31",
+        "filingDate": "2025-02-05",
+        "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm"
+      },
+      "revisions": {
+        "operatingIncome": {
+          "original": 112390000000,
+          "reprinted": 112390000000,
+          "concept": "OperatingIncomeLoss",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 100118000000,
+          "reprinted": 100118000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 8.04,
+          "reprinted": 8.04,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 23466000000,
+          "reprinted": 23466000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 450256000000,
+          "reprinted": 450256000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalLiabilities": {
+          "original": 125172000000,
+          "reprinted": 125172000000,
+          "concept": "Liabilities",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 325084000000,
+          "reprinted": 325084000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 125299000000,
+          "reprinted": 125299000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -45536000000,
+          "reprinted": -45536000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": -79733000000,
+          "reprinted": -79733000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
         }
       }
     },
@@ -531,6 +747,80 @@
           ],
           "alternates": []
         }
+      },
+      "priorFiling": {
+        "accessionNumber": "0001045810-25-000023",
+        "periodEnd": "2025-01-26",
+        "filingDate": "2025-02-26",
+        "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000023/nvda-20250126.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 130497000000,
+          "reprinted": 130497000000,
+          "concept": "Revenues",
+          "revised": false
+        },
+        "operatingIncome": {
+          "original": 81453000000,
+          "reprinted": 81453000000,
+          "concept": "OperatingIncomeLoss",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 72880000000,
+          "reprinted": 72880000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 2.94,
+          "reprinted": 2.94,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 8589000000,
+          "reprinted": 8589000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 111601000000,
+          "reprinted": 111601000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalLiabilities": {
+          "original": 32274000000,
+          "reprinted": 32274000000,
+          "concept": "Liabilities",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 79327000000,
+          "reprinted": 79327000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 64089000000,
+          "reprinted": 64089000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -20421000000,
+          "reprinted": -20421000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": -42359000000,
+          "reprinted": -42359000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
+        }
       }
     },
     {
@@ -654,6 +944,74 @@
             "Net cash provided by (used for) financing activities"
           ],
           "alternates": []
+        }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000950170-25-087926",
+        "periodEnd": "2025-05-31",
+        "filingDate": "2025-06-18",
+        "url": "https://www.sec.gov/Archives/edgar/data/1341439/000095017025087926/orcl-20250531.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 57399000000,
+          "reprinted": 57399000000,
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "revised": false
+        },
+        "operatingIncome": {
+          "original": 17678000000,
+          "reprinted": 17678000000,
+          "concept": "OperatingIncomeLoss",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 12443000000,
+          "reprinted": 12443000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 4.34,
+          "reprinted": 4.34,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 10786000000,
+          "reprinted": 10786000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 168361000000,
+          "reprinted": 168361000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 20451000000,
+          "reprinted": 20451000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 20821000000,
+          "reprinted": 20821000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -21711000000,
+          "reprinted": -21711000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": 1098000000,
+          "reprinted": 1098000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
         }
       }
     },
@@ -788,6 +1146,80 @@
           ],
           "alternates": []
         }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000796343-25-000004",
+        "periodEnd": "2024-11-29",
+        "filingDate": "2025-01-13",
+        "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634325000004/adbe-20241129.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 21505000000,
+          "reprinted": 21505000000,
+          "concept": "Revenues",
+          "revised": false
+        },
+        "operatingIncome": {
+          "original": 6741000000,
+          "reprinted": 6741000000,
+          "concept": "OperatingIncomeLoss",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 5560000000,
+          "reprinted": 5560000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 12.36,
+          "reprinted": 12.36,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 7613000000,
+          "reprinted": 7613000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 30230000000,
+          "reprinted": 30230000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalLiabilities": {
+          "original": 16125000000,
+          "reprinted": 16125000000,
+          "concept": "Liabilities",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 14105000000,
+          "reprinted": 14105000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 8056000000,
+          "reprinted": 8056000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": 149000000,
+          "reprinted": 149000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": -7724000000,
+          "reprinted": -7724000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
+        }
       }
     },
     {
@@ -921,6 +1353,80 @@
           ],
           "alternates": []
         }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000858877-25-000111",
+        "periodEnd": "2025-07-26",
+        "filingDate": "2025-09-03",
+        "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887725000111/csco-20250726.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 56654000000,
+          "reprinted": 56654000000,
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "revised": false
+        },
+        "operatingIncome": {
+          "original": 11760000000,
+          "reprinted": 11760000000,
+          "concept": "OperatingIncomeLoss",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 10180000000,
+          "reprinted": 10180000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 2.55,
+          "reprinted": 2.55,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 8346000000,
+          "reprinted": 8346000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 122291000000,
+          "reprinted": 122291000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalLiabilities": {
+          "original": 75448000000,
+          "reprinted": 75448000000,
+          "concept": "Liabilities",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 46843000000,
+          "reprinted": 46843000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 14193000000,
+          "reprinted": 14193000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": 1733000000,
+          "reprinted": 1733000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": -15815000000,
+          "reprinted": -15815000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
+        }
       }
     },
     {
@@ -1045,6 +1551,68 @@
             "Net cash provided by (used for) financing activities"
           ],
           "alternates": []
+        }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000050863-25-000009",
+        "periodEnd": "2024-12-28",
+        "filingDate": "2025-01-31",
+        "url": "https://www.sec.gov/Archives/edgar/data/50863/000005086325000009/intc-20241228.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 53101000000,
+          "reprinted": 53101000000,
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "revised": false
+        },
+        "operatingIncome": {
+          "original": -11678000000,
+          "reprinted": -11678000000,
+          "concept": "OperatingIncomeLoss",
+          "revised": false
+        },
+        "netIncome": {
+          "original": -18756000000,
+          "reprinted": -18756000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": -4.38,
+          "reprinted": -4.38,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 196485000000,
+          "reprinted": 196485000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 99270000000,
+          "reprinted": 99270000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 8288000000,
+          "reprinted": 8288000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -18256000000,
+          "reprinted": -18256000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": 11138000000,
+          "reprinted": 11138000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
         }
       }
     },
@@ -1171,6 +1739,74 @@
             "Net cash provided by/(used in) financing activities"
           ],
           "alternates": []
+        }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000051143-25-000015",
+        "periodEnd": "2024-12-31",
+        "filingDate": "2025-02-25",
+        "url": "https://www.sec.gov/Archives/edgar/data/51143/000005114325000015/ibm-20241231.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 62753000000,
+          "reprinted": 62753000000,
+          "concept": "Revenues",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 6023000000,
+          "reprinted": 6023000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 6.43,
+          "reprinted": 6.43,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 13947000000,
+          "reprinted": 13947000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 137175000000,
+          "reprinted": 137175000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalLiabilities": {
+          "original": 109783000000,
+          "reprinted": 109783000000,
+          "concept": "Liabilities",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 27307000000,
+          "reprinted": 27307000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 13445000000,
+          "reprinted": 13445000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -4937000000,
+          "reprinted": -4937000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": -7079000000,
+          "reprinted": -7079000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
         }
       }
     },
@@ -1305,6 +1941,80 @@
           ],
           "alternates": []
         }
+      },
+      "priorFiling": {
+        "accessionNumber": "0001108524-25-000006",
+        "periodEnd": "2025-01-31",
+        "filingDate": "2025-03-05",
+        "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852425000006/crm-20250131.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 37895000000,
+          "reprinted": 37895000000,
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "revised": false
+        },
+        "operatingIncome": {
+          "original": 7205000000,
+          "reprinted": 7205000000,
+          "concept": "OperatingIncomeLoss",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 6197000000,
+          "reprinted": 6197000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 6.36,
+          "reprinted": 6.36,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 8848000000,
+          "reprinted": 8848000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 102928000000,
+          "reprinted": 102928000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalLiabilities": {
+          "original": 41755000000,
+          "reprinted": 41755000000,
+          "concept": "Liabilities",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 61173000000,
+          "reprinted": 61173000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 13092000000,
+          "reprinted": 13092000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -3163000000,
+          "reprinted": -3163000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": -9429000000,
+          "reprinted": -9429000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
+        }
       }
     },
     {
@@ -1429,6 +2139,74 @@
           ],
           "alternates": []
         }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000019617-25-000270",
+        "periodEnd": "2024-12-31",
+        "filingDate": "2025-02-14",
+        "url": "https://www.sec.gov/Archives/edgar/data/19617/000001961725000270/jpm-20241231.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 177556000000,
+          "reprinted": 177556000000,
+          "concept": "Revenues",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 58471000000,
+          "reprinted": 58471000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 19.75,
+          "reprinted": 19.75,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 23372000000,
+          "reprinted": 23372000000,
+          "concept": "CashAndDueFromBanks",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 4002814000000,
+          "reprinted": 4002814000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalLiabilities": {
+          "original": 3658056000000,
+          "reprinted": 3658056000000,
+          "concept": "Liabilities",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 344758000000,
+          "reprinted": 344758000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": -42012000000,
+          "reprinted": -42012000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -163403000000,
+          "reprinted": -163403000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": 63447000000,
+          "reprinted": 63447000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
+        }
       }
     },
     {
@@ -1550,6 +2328,74 @@
             "Net cash provided by financing activities"
           ],
           "alternates": []
+        }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000070858-25-000139",
+        "periodEnd": "2024-12-31",
+        "filingDate": "2025-02-25",
+        "url": "https://www.sec.gov/Archives/edgar/data/70858/000007085825000139/bac-20241231.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 101887000000,
+          "reprinted": 105856000000,
+          "concept": "Revenues",
+          "revised": true
+        },
+        "netIncome": {
+          "original": 27132000000,
+          "reprinted": 26973000000,
+          "concept": "NetIncomeLoss",
+          "revised": true
+        },
+        "epsDiluted": {
+          "original": 3.21,
+          "reprinted": 3.19,
+          "concept": "EarningsPerShareDiluted",
+          "revised": true
+        },
+        "cash": {
+          "original": 26003000000,
+          "reprinted": 26003000000,
+          "concept": "CashAndDueFromBanks",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 3261519000000,
+          "reprinted": 3261299000000,
+          "concept": "Assets",
+          "revised": true
+        },
+        "totalLiabilities": {
+          "original": 2965960000000,
+          "reprinted": 2967336000000,
+          "concept": "Liabilities",
+          "revised": true
+        },
+        "totalEquity": {
+          "original": 295559000000,
+          "reprinted": 293963000000,
+          "concept": "StockholdersEquity",
+          "revised": true
+        },
+        "operatingCashFlow": {
+          "original": -8805000000,
+          "reprinted": -8805000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -90693000000,
+          "reprinted": -90693000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": 60369000000,
+          "reprinted": 60369000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
         }
       }
     },
@@ -1677,6 +2523,74 @@
           ],
           "alternates": []
         }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000072971-25-000066",
+        "periodEnd": "2024-12-31",
+        "filingDate": "2025-02-25",
+        "url": "https://www.sec.gov/Archives/edgar/data/72971/000007297125000066/wfc-20241231.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 82296000000,
+          "reprinted": 82296000000,
+          "concept": "RevenuesNetOfInterestExpense",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 19722000000,
+          "reprinted": 19722000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 5.37,
+          "reprinted": 5.37,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 37080000000,
+          "reprinted": 37080000000,
+          "concept": "CashAndDueFromBanks",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 1929845000000,
+          "reprinted": 1929845000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalLiabilities": {
+          "original": 1748779000000,
+          "reprinted": 1748779000000,
+          "concept": "Liabilities",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 179120000000,
+          "reprinted": 179120000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 3035000000,
+          "reprinted": 3035000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -15651000000,
+          "reprinted": -15651000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": -21534000000,
+          "reprinted": -21534000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
+        }
       }
     },
     {
@@ -1801,6 +2715,74 @@
           ],
           "alternates": []
         }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000886982-25-000005",
+        "periodEnd": "2024-12-31",
+        "filingDate": "2025-02-27",
+        "url": "https://www.sec.gov/Archives/edgar/data/886982/000088698225000005/gs-20241231.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 53512000000,
+          "reprinted": 53512000000,
+          "concept": "RevenuesNetOfInterestExpense",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 14276000000,
+          "reprinted": 14276000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 40.54,
+          "reprinted": 40.54,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 182092000000,
+          "reprinted": 182092000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 1675972000000,
+          "reprinted": 1675972000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalLiabilities": {
+          "original": 1553976000000,
+          "reprinted": 1553976000000,
+          "concept": "Liabilities",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 121996000000,
+          "reprinted": 121996000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": -13212000000,
+          "reprinted": -13212000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -49624000000,
+          "reprinted": -49624000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": 7323000000,
+          "reprinted": 7323000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
+        }
       }
     },
     {
@@ -1924,6 +2906,74 @@
             "Net cash provided by (used for) financing activities"
           ],
           "alternates": []
+        }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000895421-25-000304",
+        "periodEnd": "2024-12-31",
+        "filingDate": "2025-02-21",
+        "url": "https://www.sec.gov/Archives/edgar/data/895421/000089542125000304/ms-20241231.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 61761000000,
+          "reprinted": 61761000000,
+          "concept": "RevenuesNetOfInterestExpense",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 13390000000,
+          "reprinted": 13390000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 7.95,
+          "reprinted": 7.95,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 105386000000,
+          "reprinted": 105386000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 1215071000000,
+          "reprinted": 1215071000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalLiabilities": {
+          "original": 1109643000000,
+          "reprinted": 1109643000000,
+          "concept": "Liabilities",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 104511000000,
+          "reprinted": 104511000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 1362000000,
+          "reprinted": 1362000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -29460000000,
+          "reprinted": -29460000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": 46756000000,
+          "reprinted": 46756000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
         }
       }
     },
@@ -2050,6 +3100,74 @@
           ],
           "alternates": []
         }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000831001-25-000067",
+        "periodEnd": "2024-12-31",
+        "filingDate": "2025-02-21",
+        "url": "https://www.sec.gov/Archives/edgar/data/831001/000083100125000067/c-20241231.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 81139000000,
+          "reprinted": 80722000000,
+          "concept": "Revenues",
+          "revised": true
+        },
+        "netIncome": {
+          "original": 12682000000,
+          "reprinted": 12682000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 5.94,
+          "reprinted": 5.94,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 22782000000,
+          "reprinted": 22782000000,
+          "concept": "CashAndDueFromBanks",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 2352945000000,
+          "reprinted": 2352945000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalLiabilities": {
+          "original": 2143579000000,
+          "reprinted": 2143579000000,
+          "concept": "Liabilities",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 208598000000,
+          "reprinted": 208598000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": -19669000000,
+          "reprinted": -19669000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": 86250000000,
+          "reprinted": 86250000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": -38304000000,
+          "reprinted": -38304000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
+        }
       }
     },
     {
@@ -2173,6 +3291,74 @@
             "Net cash provided by financing activities"
           ],
           "alternates": []
+        }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000004962-25-000016",
+        "periodEnd": "2024-12-31",
+        "filingDate": "2025-02-07",
+        "url": "https://www.sec.gov/Archives/edgar/data/4962/000000496225000016/axp-20241231.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 65949000000,
+          "reprinted": 65949000000,
+          "concept": "RevenuesNetOfInterestExpense",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 10129000000,
+          "reprinted": 10129000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 14.01,
+          "reprinted": 14.01,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 3413000000,
+          "reprinted": 3413000000,
+          "concept": "CashAndDueFromBanks",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 271461000000,
+          "reprinted": 271461000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalLiabilities": {
+          "original": 241197000000,
+          "reprinted": 241197000000,
+          "concept": "Liabilities",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 30264000000,
+          "reprinted": 30264000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 14050000000,
+          "reprinted": 14050000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -24402000000,
+          "reprinted": -24402000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": 4436000000,
+          "reprinted": 4436000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
         }
       }
     },
@@ -2307,6 +3493,80 @@
           ],
           "alternates": []
         }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000950170-25-026584",
+        "periodEnd": "2024-12-31",
+        "filingDate": "2025-02-25",
+        "url": "https://www.sec.gov/Archives/edgar/data/2012383/000095017025026584/blk-20241231.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 20407000000,
+          "reprinted": 20407000000,
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "revised": false
+        },
+        "operatingIncome": {
+          "original": 7574000000,
+          "reprinted": 7574000000,
+          "concept": "OperatingIncomeLoss",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 6369000000,
+          "reprinted": 6369000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 42.01,
+          "reprinted": 42.01,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 12762000000,
+          "reprinted": 12762000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 138615000000,
+          "reprinted": 138615000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalLiabilities": {
+          "original": 89260000000,
+          "reprinted": 89260000000,
+          "concept": "Liabilities",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 47495000000,
+          "reprinted": 47495000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 4956000000,
+          "reprinted": 4956000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -3004000000,
+          "reprinted": -3004000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": 2236000000,
+          "reprinted": 2236000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
+        }
       }
     },
     {
@@ -2430,6 +3690,74 @@
             "Net cash provided by (used for) financing activities"
           ],
           "alternates": []
+        }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000316709-25-000010",
+        "periodEnd": "2024-12-31",
+        "filingDate": "2025-02-26",
+        "url": "https://www.sec.gov/Archives/edgar/data/316709/000031670925000010/schw-20241231.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 19606000000,
+          "reprinted": 19606000000,
+          "concept": "Revenues",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 5942000000,
+          "reprinted": 5942000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 2.99,
+          "reprinted": 2.99,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 42083000000,
+          "reprinted": 42083000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 479843000000,
+          "reprinted": 479843000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalLiabilities": {
+          "original": 431468000000,
+          "reprinted": 431468000000,
+          "concept": "Liabilities",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 48375000000,
+          "reprinted": 48375000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 2670000000,
+          "reprinted": 2670000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": 35431000000,
+          "reprinted": 35431000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": -47060000000,
+          "reprinted": -47060000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
         }
       }
     },
@@ -2556,6 +3884,74 @@
           ],
           "alternates": []
         }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000036104-25-000016",
+        "periodEnd": "2024-12-31",
+        "filingDate": "2025-02-21",
+        "url": "https://www.sec.gov/Archives/edgar/data/36104/000003610425000016/usb-20241231.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 27455000000,
+          "reprinted": 27455000000,
+          "concept": "Revenues",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 6299000000,
+          "reprinted": 6299000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 3.79,
+          "reprinted": 3.79,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 56502000000,
+          "reprinted": 56502000000,
+          "concept": "CashAndDueFromBanks",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 678318000000,
+          "reprinted": 678318000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalLiabilities": {
+          "original": 619278000000,
+          "reprinted": 619278000000,
+          "concept": "Liabilities",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 58578000000,
+          "reprinted": 58578000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 11273000000,
+          "reprinted": 11350000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": true
+        },
+        "investingCashFlow": {
+          "original": -24534000000,
+          "reprinted": -24534000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": 8571000000,
+          "reprinted": 8821000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": true
+        }
       }
     },
     {
@@ -2672,6 +4068,68 @@
             "Net cash used by financing activities"
           ],
           "alternates": []
+        }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000200406-25-000038",
+        "periodEnd": "2024-12-29",
+        "filingDate": "2025-02-13",
+        "url": "https://www.sec.gov/Archives/edgar/data/200406/000020040625000038/jnj-20241229.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 88821000000,
+          "reprinted": 88821000000,
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 14066000000,
+          "reprinted": 14066000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 5.79,
+          "reprinted": 5.79,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 24105000000,
+          "reprinted": 24105000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 180104000000,
+          "reprinted": 180104000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalLiabilities": {
+          "original": 108614000000,
+          "reprinted": 108614000000,
+          "concept": "Liabilities",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 24266000000,
+          "reprinted": 24266000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -18599000000,
+          "reprinted": -18599000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": -3132000000,
+          "reprinted": -3132000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
         }
       }
     },
@@ -2798,6 +4256,74 @@
           ],
           "alternates": []
         }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000078003-25-000054",
+        "periodEnd": "2024-12-31",
+        "filingDate": "2025-02-27",
+        "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800325000054/pfe-20241231.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 63627000000,
+          "reprinted": 63627000000,
+          "concept": "Revenues",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 8031000000,
+          "reprinted": 8031000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 1.41,
+          "reprinted": 1.41,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 1043000000,
+          "reprinted": 1043000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 213396000000,
+          "reprinted": 213396000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalLiabilities": {
+          "original": 124899000000,
+          "reprinted": 124899000000,
+          "concept": "Liabilities",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 88203000000,
+          "reprinted": 88203000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 12744000000,
+          "reprinted": 12744000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": 2652000000,
+          "reprinted": 2652000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": -17140000000,
+          "reprinted": -17140000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
+        }
       }
     },
     {
@@ -2912,6 +4438,68 @@
             "Net Cash Used in Financing Activities"
           ],
           "alternates": []
+        }
+      },
+      "priorFiling": {
+        "accessionNumber": "0001628280-25-007732",
+        "periodEnd": "2024-12-31",
+        "filingDate": "2025-02-25",
+        "url": "https://www.sec.gov/Archives/edgar/data/310158/000162828025007732/mrk-20241231.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 64168000000,
+          "reprinted": 64168000000,
+          "concept": "Revenues",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 17117000000,
+          "reprinted": 17117000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 6.74,
+          "reprinted": 6.74,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 13242000000,
+          "reprinted": 13242000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 117106000000,
+          "reprinted": 117106000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 46313000000,
+          "reprinted": 46313000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 21468000000,
+          "reprinted": 21468000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -7734000000,
+          "reprinted": -7734000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": -7032000000,
+          "reprinted": -7032000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
         }
       }
     },
@@ -3037,6 +4625,74 @@
           ],
           "alternates": []
         }
+      },
+      "priorFiling": {
+        "accessionNumber": "0001551152-25-000020",
+        "periodEnd": "2024-12-31",
+        "filingDate": "2025-02-14",
+        "url": "https://www.sec.gov/Archives/edgar/data/1551152/000155115225000020/abbv-20241231.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 56334000000,
+          "reprinted": 56334000000,
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "revised": false
+        },
+        "operatingIncome": {
+          "original": 9137000000,
+          "reprinted": 9137000000,
+          "concept": "OperatingIncomeLoss",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 4278000000,
+          "reprinted": 4278000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 2.39,
+          "reprinted": 2.39,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 5524000000,
+          "reprinted": 5524000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 135161000000,
+          "reprinted": 135161000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 3325000000,
+          "reprinted": 3325000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 18806000000,
+          "reprinted": 18806000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -20820000000,
+          "reprinted": -20820000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": -5211000000,
+          "reprinted": -5211000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
+        }
       }
     },
     {
@@ -3161,6 +4817,74 @@
           ],
           "alternates": []
         }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000731766-25-000063",
+        "periodEnd": "2024-12-31",
+        "filingDate": "2025-02-27",
+        "url": "https://www.sec.gov/Archives/edgar/data/731766/000073176625000063/unh-20241231.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 400278000000,
+          "reprinted": 400278000000,
+          "concept": "Revenues",
+          "revised": false
+        },
+        "operatingIncome": {
+          "original": 32287000000,
+          "reprinted": 32287000000,
+          "concept": "OperatingIncomeLoss",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 14405000000,
+          "reprinted": 14405000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 15.51,
+          "reprinted": 15.51,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 25312000000,
+          "reprinted": 25312000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 298278000000,
+          "reprinted": 298278000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalLiabilities": {
+          "original": 195687000000,
+          "reprinted": 195687000000,
+          "concept": "Liabilities",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 24204000000,
+          "reprinted": 24204000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -20527000000,
+          "reprinted": -20527000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": -3512000000,
+          "reprinted": -3512000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
+        }
       }
     },
     {
@@ -3275,6 +4999,68 @@
             "Net Cash Provided by (Used for) Financing Activities"
           ],
           "alternates": []
+        }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000059478-25-000067",
+        "periodEnd": "2024-12-31",
+        "filingDate": "2025-02-19",
+        "url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/lly-20241231.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 45042700000,
+          "reprinted": 45043000000,
+          "concept": "Revenues",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 10590000000,
+          "reprinted": 10590000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 11.71,
+          "reprinted": 11.71,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 3268400000,
+          "reprinted": 3268000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 78714900000,
+          "reprinted": 78715000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 14192100000,
+          "reprinted": 14272000000,
+          "concept": "StockholdersEquity",
+          "revised": true
+        },
+        "operatingCashFlow": {
+          "original": 8817900000,
+          "reprinted": 8818000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -9301500000,
+          "reprinted": -9302000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": 1230100000,
+          "reprinted": 1230000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
         }
       }
     },
@@ -3399,6 +5185,74 @@
             "Net cash (used in) provided by financing activities"
           ],
           "alternates": []
+        }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000318154-25-000010",
+        "periodEnd": "2024-12-31",
+        "filingDate": "2025-02-14",
+        "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815425000010/amgn-20241231.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 33424000000,
+          "reprinted": 33424000000,
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "revised": false
+        },
+        "operatingIncome": {
+          "original": 7258000000,
+          "reprinted": 7258000000,
+          "concept": "OperatingIncomeLoss",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 4090000000,
+          "reprinted": 4090000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 7.56,
+          "reprinted": 7.56,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 11973000000,
+          "reprinted": 11973000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 91839000000,
+          "reprinted": 91839000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 5877000000,
+          "reprinted": 5877000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 11490000000,
+          "reprinted": 11490000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -1046000000,
+          "reprinted": -1046000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": -9415000000,
+          "reprinted": -9415000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
         }
       }
     },
@@ -3533,6 +5387,80 @@
           ],
           "alternates": []
         }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000064803-25-000007",
+        "periodEnd": "2024-12-31",
+        "filingDate": "2025-02-12",
+        "url": "https://www.sec.gov/Archives/edgar/data/64803/000006480325000007/cvs-20241231.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 372809000000,
+          "reprinted": 372809000000,
+          "concept": "Revenues",
+          "revised": false
+        },
+        "operatingIncome": {
+          "original": 8516000000,
+          "reprinted": 8516000000,
+          "concept": "OperatingIncomeLoss",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 4614000000,
+          "reprinted": 4614000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 3.66,
+          "reprinted": 3.66,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 8586000000,
+          "reprinted": 8586000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 253215000000,
+          "reprinted": 253215000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalLiabilities": {
+          "original": 177485000000,
+          "reprinted": 177485000000,
+          "concept": "Liabilities",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 75560000000,
+          "reprinted": 75560000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 9107000000,
+          "reprinted": 9107000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -7613000000,
+          "reprinted": -7613000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": -1135000000,
+          "reprinted": -1135000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
+        }
       }
     },
     {
@@ -3657,6 +5585,74 @@
           ],
           "alternates": []
         }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000014272-25-000039",
+        "periodEnd": "2024-12-31",
+        "filingDate": "2025-02-12",
+        "url": "https://www.sec.gov/Archives/edgar/data/14272/000001427225000039/bmy-20241231.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 48300000000,
+          "reprinted": 48300000000,
+          "concept": "Revenues",
+          "revised": false
+        },
+        "netIncome": {
+          "original": -8948000000,
+          "reprinted": -8948000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": -4.41,
+          "reprinted": -4.41,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 10346000000,
+          "reprinted": 10346000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 92603000000,
+          "reprinted": 92603000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalLiabilities": {
+          "original": 76215000000,
+          "reprinted": 76215000000,
+          "concept": "Liabilities",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 16335000000,
+          "reprinted": 16335000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 15190000000,
+          "reprinted": 15190000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -21352000000,
+          "reprinted": -21352000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": 5127000000,
+          "reprinted": 5127000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
+        }
       }
     },
     {
@@ -3780,6 +5776,68 @@
             "Net cash provided by/(used in) financing activities"
           ],
           "alternates": []
+        }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000097745-25-000010",
+        "periodEnd": "2024-12-31",
+        "filingDate": "2025-02-20",
+        "url": "https://www.sec.gov/Archives/edgar/data/97745/000009774525000010/tmo-20241231.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 42879000000,
+          "reprinted": 42879000000,
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "revised": false
+        },
+        "operatingIncome": {
+          "original": 7337000000,
+          "reprinted": 7337000000,
+          "concept": "OperatingIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 16.53,
+          "reprinted": 16.53,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 4009000000,
+          "reprinted": 4009000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 97321000000,
+          "reprinted": 97321000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 49584000000,
+          "reprinted": 49584000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 8667000000,
+          "reprinted": 8667000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -5841000000,
+          "reprinted": -5841000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": -6792000000,
+          "reprinted": -6792000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
         }
       }
     },
@@ -3907,6 +5965,74 @@
           ],
           "alternates": []
         }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000104169-25-000021",
+        "periodEnd": "2025-01-31",
+        "filingDate": "2025-03-14",
+        "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416925000021/wmt-20250131.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 674538000000,
+          "reprinted": 674538000000,
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "revised": false
+        },
+        "operatingIncome": {
+          "original": 29348000000,
+          "reprinted": 29348000000,
+          "concept": "OperatingIncomeLoss",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 19436000000,
+          "reprinted": 19436000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 2.41,
+          "reprinted": 2.41,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 9037000000,
+          "reprinted": 9037000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 260823000000,
+          "reprinted": 260823000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 91013000000,
+          "reprinted": 91013000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 36443000000,
+          "reprinted": 36443000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -21379000000,
+          "reprinted": -21379000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": -14822000000,
+          "reprinted": -14822000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
+        }
       }
     },
     {
@@ -4030,6 +6156,74 @@
             "Net Cash Provided by (Used in) Financing Activities"
           ],
           "alternates": []
+        }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000021344-25-000011",
+        "periodEnd": "2024-12-31",
+        "filingDate": "2025-02-20",
+        "url": "https://www.sec.gov/Archives/edgar/data/21344/000002134425000011/ko-20241231.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 47061000000,
+          "reprinted": 47061000000,
+          "concept": "Revenues",
+          "revised": false
+        },
+        "operatingIncome": {
+          "original": 9992000000,
+          "reprinted": 9992000000,
+          "concept": "OperatingIncomeLoss",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 10631000000,
+          "reprinted": 10631000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 2.46,
+          "reprinted": 2.46,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 10828000000,
+          "reprinted": 10828000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 100549000000,
+          "reprinted": 100549000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 24856000000,
+          "reprinted": 24856000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 6805000000,
+          "reprinted": 6805000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": 2524000000,
+          "reprinted": 2524000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": -6910000000,
+          "reprinted": -6910000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
         }
       }
     },
@@ -4164,6 +6358,80 @@
           ],
           "alternates": []
         }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000077476-25-000007",
+        "periodEnd": "2024-12-28",
+        "filingDate": "2025-02-04",
+        "url": "https://www.sec.gov/Archives/edgar/data/77476/000007747625000007/pep-20241228.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 91854000000,
+          "reprinted": 91854000000,
+          "concept": "Revenues",
+          "revised": false
+        },
+        "operatingIncome": {
+          "original": 12887000000,
+          "reprinted": 12887000000,
+          "concept": "OperatingIncomeLoss",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 9578000000,
+          "reprinted": 9578000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 6.95,
+          "reprinted": 6.95,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 8505000000,
+          "reprinted": 8505000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 99467000000,
+          "reprinted": 99467000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalLiabilities": {
+          "original": 81296000000,
+          "reprinted": 81296000000,
+          "concept": "Liabilities",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 18041000000,
+          "reprinted": 18041000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 12507000000,
+          "reprinted": 12507000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -5472000000,
+          "reprinted": -5472000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": -7556000000,
+          "reprinted": -7556000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
+        }
       }
     },
     {
@@ -4278,6 +6546,68 @@
             "TOTAL FINANCING ACTIVITIES"
           ],
           "alternates": []
+        }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000080424-25-000076",
+        "periodEnd": "2025-06-30",
+        "filingDate": "2025-08-04",
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/000008042425000076/pg-20250630.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 84284000000,
+          "reprinted": 84284000000,
+          "concept": "Revenues",
+          "revised": false
+        },
+        "operatingIncome": {
+          "original": 20451000000,
+          "reprinted": 20451000000,
+          "concept": "OperatingIncomeLoss",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 15974000000,
+          "reprinted": 15974000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 6.51,
+          "reprinted": 6.51,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 125231000000,
+          "reprinted": 125231000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalLiabilities": {
+          "original": 72946000000,
+          "reprinted": 72946000000,
+          "concept": "Liabilities",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 17817000000,
+          "reprinted": 17817000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -3818000000,
+          "reprinted": -3818000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": -14036000000,
+          "reprinted": -14036000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
         }
       }
     },
@@ -4403,6 +6733,74 @@
           ],
           "alternates": []
         }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000063908-25-000012",
+        "periodEnd": "2024-12-31",
+        "filingDate": "2025-02-25",
+        "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390825000012/mcd-20241231.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 25920000000,
+          "reprinted": 25920000000,
+          "concept": "Revenues",
+          "revised": false
+        },
+        "operatingIncome": {
+          "original": 11712000000,
+          "reprinted": 11712000000,
+          "concept": "OperatingIncomeLoss",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 8223000000,
+          "reprinted": 8223000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 11.39,
+          "reprinted": 11.39,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 1085000000,
+          "reprinted": 1085000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 55182000000,
+          "reprinted": 55182000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": -3797000000,
+          "reprinted": -3797000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 9447000000,
+          "reprinted": 9447000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -5346000000,
+          "reprinted": -5346000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": -7495000000,
+          "reprinted": -7495000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
+        }
       }
     },
     {
@@ -4518,6 +6916,68 @@
             "Cash provided (used) by financing activities"
           ],
           "alternates": []
+        }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000320187-25-000047",
+        "periodEnd": "2025-05-31",
+        "filingDate": "2025-07-17",
+        "url": "https://www.sec.gov/Archives/edgar/data/320187/000032018725000047/nke-20250531.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 46309000000,
+          "reprinted": 46309000000,
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 3219000000,
+          "reprinted": 3219000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 2.16,
+          "reprinted": 2.16,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 7464000000,
+          "reprinted": 7464000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 36579000000,
+          "reprinted": 36579000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 13213000000,
+          "reprinted": 13213000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 3698000000,
+          "reprinted": 3698000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -275000000,
+          "reprinted": -275000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": -5820000000,
+          "reprinted": -5820000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
         }
       }
     },
@@ -4652,6 +7112,80 @@
           ],
           "alternates": []
         }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000909832-24-000049",
+        "periodEnd": "2024-09-01",
+        "filingDate": "2024-10-09",
+        "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983224000049/cost-20240901.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 254453000000,
+          "reprinted": 254453000000,
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "revised": false
+        },
+        "operatingIncome": {
+          "original": 9285000000,
+          "reprinted": 9285000000,
+          "concept": "OperatingIncomeLoss",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 7367000000,
+          "reprinted": 7367000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 16.56,
+          "reprinted": 16.56,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 9906000000,
+          "reprinted": 9906000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 69831000000,
+          "reprinted": 69831000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalLiabilities": {
+          "original": 46209000000,
+          "reprinted": 46209000000,
+          "concept": "Liabilities",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 23622000000,
+          "reprinted": 23622000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 11339000000,
+          "reprinted": 11339000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -4409000000,
+          "reprinted": -4409000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": -10764000000,
+          "reprinted": -10764000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
+        }
       }
     },
     {
@@ -4785,6 +7319,80 @@
           ],
           "alternates": []
         }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000354950-25-000085",
+        "periodEnd": "2025-02-02",
+        "filingDate": "2025-03-21",
+        "url": "https://www.sec.gov/Archives/edgar/data/354950/000035495025000085/hd-20250202.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 159514000000,
+          "reprinted": 159514000000,
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "revised": false
+        },
+        "operatingIncome": {
+          "original": 21526000000,
+          "reprinted": 21526000000,
+          "concept": "OperatingIncomeLoss",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 14806000000,
+          "reprinted": 14806000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 14.91,
+          "reprinted": 14.91,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 1659000000,
+          "reprinted": 1659000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 96119000000,
+          "reprinted": 96119000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalLiabilities": {
+          "original": 89479000000,
+          "reprinted": 89479000000,
+          "concept": "Liabilities",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 6640000000,
+          "reprinted": 6640000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 19810000000,
+          "reprinted": 19810000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -21031000000,
+          "reprinted": -21031000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": -694000000,
+          "reprinted": -694000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
+        }
       }
     },
     {
@@ -4899,6 +7507,68 @@
             "Cash used in financing activities"
           ],
           "alternates": []
+        }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000027419-25-000018",
+        "periodEnd": "2025-02-01",
+        "filingDate": "2025-03-12",
+        "url": "https://www.sec.gov/Archives/edgar/data/27419/000002741925000018/tgt-20250201.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 106566000000,
+          "reprinted": 106566000000,
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "revised": false
+        },
+        "operatingIncome": {
+          "original": 5566000000,
+          "reprinted": 5566000000,
+          "concept": "OperatingIncomeLoss",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 4091000000,
+          "reprinted": 4091000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 8.86,
+          "reprinted": 8.86,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 57769000000,
+          "reprinted": 57769000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 14666000000,
+          "reprinted": 14666000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 7367000000,
+          "reprinted": 7367000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -2860000000,
+          "reprinted": -2860000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": -3550000000,
+          "reprinted": -3550000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
         }
       }
     },
@@ -5026,6 +7696,74 @@
           ],
           "alternates": []
         }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000829224-24-000057",
+        "periodEnd": "2024-09-29",
+        "filingDate": "2024-11-20",
+        "url": "https://www.sec.gov/Archives/edgar/data/829224/000082922424000057/sbux-20240929.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 36176200000,
+          "reprinted": 36176200000,
+          "concept": "Revenues",
+          "revised": false
+        },
+        "operatingIncome": {
+          "original": 5408800000,
+          "reprinted": 5408800000,
+          "concept": "OperatingIncomeLoss",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 3760900000,
+          "reprinted": 3760900000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 3.31,
+          "reprinted": 3.31,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 31339300000,
+          "reprinted": 31339300000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalLiabilities": {
+          "original": 38780900000,
+          "reprinted": 38780900000,
+          "concept": "Liabilities",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": -7448900000,
+          "reprinted": -7448900000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 6095600000,
+          "reprinted": 6095600000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -2699200000,
+          "reprinted": -2699200000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": -3718200000,
+          "reprinted": -3718200000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
+        }
       }
     },
     {
@@ -5142,6 +7880,68 @@
             "Net Cash Provided by (Used for) Financing Activities"
           ],
           "alternates": []
+        }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000093410-25-000009",
+        "periodEnd": "2024-12-31",
+        "filingDate": "2025-02-21",
+        "url": "https://www.sec.gov/Archives/edgar/data/93410/000009341025000009/cvx-20241231.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 193414000000,
+          "reprinted": 193414000000,
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 17661000000,
+          "reprinted": 17661000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 9.72,
+          "reprinted": 9.72,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 256938000000,
+          "reprinted": 256938000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalLiabilities": {
+          "original": 103781000000,
+          "reprinted": 103781000000,
+          "concept": "Liabilities",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 152318000000,
+          "reprinted": 152318000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 31492000000,
+          "reprinted": 31492000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -8936000000,
+          "reprinted": -8936000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": -23472000000,
+          "reprinted": -23472000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
         }
       }
     },
@@ -5267,6 +8067,74 @@
           ],
           "alternates": []
         }
+      },
+      "priorFiling": {
+        "accessionNumber": "0001163165-25-000012",
+        "periodEnd": "2024-12-31",
+        "filingDate": "2025-02-18",
+        "url": "https://www.sec.gov/Archives/edgar/data/1163165/000116316525000012/cop-20241231.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 54745000000,
+          "reprinted": 54745000000,
+          "concept": "Revenues",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 9245000000,
+          "reprinted": 9245000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 7.81,
+          "reprinted": 7.81,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 5607000000,
+          "reprinted": 5607000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 122780000000,
+          "reprinted": 122780000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalLiabilities": {
+          "original": 57984000000,
+          "reprinted": 57984000000,
+          "concept": "Liabilities",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 64796000000,
+          "reprinted": 64796000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 20124000000,
+          "reprinted": 20124000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -11150000000,
+          "reprinted": -11150000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": -8835000000,
+          "reprinted": -8835000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
+        }
       }
     },
     {
@@ -5385,6 +8253,68 @@
           ],
           "alternates": []
         }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000040545-25-000015",
+        "periodEnd": "2024-12-31",
+        "filingDate": "2025-02-03",
+        "url": "https://www.sec.gov/Archives/edgar/data/40545/000004054525000015/ge-20241231.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 38702000000,
+          "reprinted": 38702000000,
+          "concept": "Revenues",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 6556000000,
+          "reprinted": 6556000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 5.99,
+          "reprinted": 5.99,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 123140000000,
+          "reprinted": 123140000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalLiabilities": {
+          "original": 103576000000,
+          "reprinted": 103576000000,
+          "concept": "Liabilities",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 19342000000,
+          "reprinted": 19342000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 4710000000,
+          "reprinted": 4710000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -1666000000,
+          "reprinted": -1666000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": -6726000000,
+          "reprinted": -6726000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
+        }
       }
     },
     {
@@ -5499,6 +8429,68 @@
             "Net cash provided by (used for) financing activities"
           ],
           "alternates": []
+        }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000018230-25-000008",
+        "periodEnd": "2024-12-31",
+        "filingDate": "2025-02-14",
+        "url": "https://www.sec.gov/Archives/edgar/data/18230/000001823025000008/cat-20241231.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 64809000000,
+          "reprinted": 64809000000,
+          "concept": "Revenues",
+          "revised": false
+        },
+        "operatingIncome": {
+          "original": 13072000000,
+          "reprinted": 13072000000,
+          "concept": "OperatingIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 22.05,
+          "reprinted": 22.05,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 6889000000,
+          "reprinted": 6889000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 87764000000,
+          "reprinted": 87764000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalLiabilities": {
+          "original": 68270000000,
+          "reprinted": 68270000000,
+          "concept": "Liabilities",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 12035000000,
+          "reprinted": 12035000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -2453000000,
+          "reprinted": -2453000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": -9565000000,
+          "reprinted": -9565000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
         }
       }
     },
@@ -5633,6 +8625,80 @@
           ],
           "alternates": []
         }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000012927-25-000015",
+        "periodEnd": "2024-12-31",
+        "filingDate": "2025-02-03",
+        "url": "https://www.sec.gov/Archives/edgar/data/12927/000001292725000015/ba-20241231.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 66517000000,
+          "reprinted": 66517000000,
+          "concept": "Revenues",
+          "revised": false
+        },
+        "operatingIncome": {
+          "original": -10707000000,
+          "reprinted": -10707000000,
+          "concept": "OperatingIncomeLoss",
+          "revised": false
+        },
+        "netIncome": {
+          "original": -11817000000,
+          "reprinted": -11817000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": -18.36,
+          "reprinted": -18.36,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 13801000000,
+          "reprinted": 13801000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 156363000000,
+          "reprinted": 156363000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalLiabilities": {
+          "original": 160277000000,
+          "reprinted": 160277000000,
+          "concept": "Liabilities",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": -3908000000,
+          "reprinted": -3908000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": -12080000000,
+          "reprinted": -12080000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -11973000000,
+          "reprinted": -11973000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": 25209000000,
+          "reprinted": 25209000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
+        }
       }
     },
     {
@@ -5755,6 +8821,74 @@
             "Net cash (used for) provided by financing activities"
           ],
           "alternates": []
+        }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000773840-25-000010",
+        "periodEnd": "2024-12-31",
+        "filingDate": "2025-02-14",
+        "url": "https://www.sec.gov/Archives/edgar/data/773840/000077384025000010/hon-20241231.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 38498000000,
+          "reprinted": 34717000000,
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "revised": true
+        },
+        "operatingIncome": {
+          "original": 8699000000,
+          "reprinted": 7667000000,
+          "concept": "OperatingIncomeLoss",
+          "revised": true
+        },
+        "netIncome": {
+          "original": 5705000000,
+          "reprinted": 5705000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 8.71,
+          "reprinted": 8.71,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 10567000000,
+          "reprinted": 9906000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": true
+        },
+        "totalAssets": {
+          "original": 75196000000,
+          "reprinted": 75196000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 18619000000,
+          "reprinted": 18619000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 6097000000,
+          "reprinted": 6097000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -10157000000,
+          "reprinted": -10157000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": 6839000000,
+          "reprinted": 6839000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
         }
       }
     },
@@ -5880,6 +9014,74 @@
             "Net cash used in financing activities"
           ],
           "alternates": []
+        }
+      },
+      "priorFiling": {
+        "accessionNumber": "0001090727-25-000019",
+        "periodEnd": "2024-12-31",
+        "filingDate": "2025-02-18",
+        "url": "https://www.sec.gov/Archives/edgar/data/1090727/000109072725000019/ups-20241231.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 91070000000,
+          "reprinted": 91070000000,
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "revised": false
+        },
+        "operatingIncome": {
+          "original": 8468000000,
+          "reprinted": 8468000000,
+          "concept": "OperatingIncomeLoss",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 5782000000,
+          "reprinted": 5782000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 6.75,
+          "reprinted": 6.75,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 6112000000,
+          "reprinted": 6112000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 70070000000,
+          "reprinted": 70070000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 16718000000,
+          "reprinted": 16718000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 10122000000,
+          "reprinted": 10122000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -217000000,
+          "reprinted": -217000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": -6850000000,
+          "reprinted": -6850000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
         }
       }
     },
@@ -6014,6 +9216,80 @@
           ],
           "alternates": []
         }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000936468-25-000009",
+        "periodEnd": "2024-12-31",
+        "filingDate": "2025-01-28",
+        "url": "https://www.sec.gov/Archives/edgar/data/936468/000093646825000009/lmt-20241231.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 71043000000,
+          "reprinted": 71043000000,
+          "concept": "Revenues",
+          "revised": false
+        },
+        "operatingIncome": {
+          "original": 7013000000,
+          "reprinted": 7013000000,
+          "concept": "OperatingIncomeLoss",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 5336000000,
+          "reprinted": 5336000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 22.31,
+          "reprinted": 22.31,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 2483000000,
+          "reprinted": 2483000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 55617000000,
+          "reprinted": 55617000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalLiabilities": {
+          "original": 49284000000,
+          "reprinted": 49284000000,
+          "concept": "Liabilities",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 6333000000,
+          "reprinted": 6333000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 6972000000,
+          "reprinted": 6972000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -1792000000,
+          "reprinted": -1792000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": -4139000000,
+          "reprinted": -4139000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
+        }
       }
     },
     {
@@ -6137,6 +9413,74 @@
             "Net cash provided by (used for) financing activities"
           ],
           "alternates": []
+        }
+      },
+      "priorFiling": {
+        "accessionNumber": "0001558370-24-016169",
+        "periodEnd": "2024-10-27",
+        "filingDate": "2024-12-12",
+        "url": "https://www.sec.gov/Archives/edgar/data/315189/000155837024016169/de-20241027x10k.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 51716000000,
+          "reprinted": 51716000000,
+          "concept": "Revenues",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 7100000000,
+          "reprinted": 7100000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 25.62,
+          "reprinted": 25.62,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 7324000000,
+          "reprinted": 7324000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 107320000000,
+          "reprinted": 107320000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalLiabilities": {
+          "original": 84395000000,
+          "reprinted": 84395000000,
+          "concept": "Liabilities",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 22836000000,
+          "reprinted": 22836000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 9231000000,
+          "reprinted": 9231000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -6464000000,
+          "reprinted": -6464000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": -2717000000,
+          "reprinted": -2717000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
         }
       }
     },
@@ -6264,6 +9608,74 @@
           ],
           "alternates": []
         }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000066740-25-000006",
+        "periodEnd": "2024-12-31",
+        "filingDate": "2025-02-05",
+        "url": "https://www.sec.gov/Archives/edgar/data/66740/000006674025000006/mmm-20241231.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 24575000000,
+          "reprinted": 24575000000,
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "revised": false
+        },
+        "operatingIncome": {
+          "original": 4822000000,
+          "reprinted": 4822000000,
+          "concept": "OperatingIncomeLoss",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 4173000000,
+          "reprinted": 4173000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 7.55,
+          "reprinted": 7.55,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 39868000000,
+          "reprinted": 39868000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalLiabilities": {
+          "original": 35974000000,
+          "reprinted": 35974000000,
+          "concept": "Liabilities",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 3842000000,
+          "reprinted": 3842000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 1819000000,
+          "reprinted": 1819000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -3206000000,
+          "reprinted": -3206000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": 1098000000,
+          "reprinted": 1098000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
+        }
       }
     },
     {
@@ -6379,6 +9791,68 @@
             "Net cash used in financing activities"
           ],
           "alternates": []
+        }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000732712-25-000006",
+        "periodEnd": "2024-12-31",
+        "filingDate": "2025-02-12",
+        "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271225000006/vz-20241231.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 134788000000,
+          "reprinted": 134788000000,
+          "concept": "Revenues",
+          "revised": false
+        },
+        "operatingIncome": {
+          "original": 28686000000,
+          "reprinted": 28686000000,
+          "concept": "OperatingIncomeLoss",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 17506000000,
+          "reprinted": 17506000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 4.14,
+          "reprinted": 4.14,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 4194000000,
+          "reprinted": 4194000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 384711000000,
+          "reprinted": 384711000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 36912000000,
+          "reprinted": 36912000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -18674000000,
+          "reprinted": -18674000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": -17100000000,
+          "reprinted": -17100000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
         }
       }
     },
@@ -6496,6 +9970,50 @@
             "Net Cash Used in Financing Activities"
           ],
           "alternates": []
+        }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000732717-25-000013",
+        "periodEnd": "2024-12-31",
+        "filingDate": "2025-02-12",
+        "url": "https://www.sec.gov/Archives/edgar/data/732717/000073271725000013/t-20241231.htm"
+      },
+      "revisions": {
+        "revenue": {
+          "original": 122336000000,
+          "reprinted": 122336000000,
+          "concept": "Revenues",
+          "revised": false
+        },
+        "operatingIncome": {
+          "original": 19049000000,
+          "reprinted": 19049000000,
+          "concept": "OperatingIncomeLoss",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 10948000000,
+          "reprinted": 10948000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 1.49,
+          "reprinted": 1.49,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 3298000000,
+          "reprinted": 3298000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 394795000000,
+          "reprinted": 394795000000,
+          "concept": "Assets",
+          "revised": false
         }
       }
     },
@@ -6621,6 +10139,74 @@
           ],
           "alternates": []
         }
+      },
+      "priorFiling": {
+        "accessionNumber": "0000753308-25-000011",
+        "periodEnd": "2024-12-31",
+        "filingDate": "2025-02-14",
+        "url": "https://www.sec.gov/Archives/edgar/data/753308/000075330825000011/nee-20241231.htm"
+      },
+      "revisions": {
+        "operatingIncome": {
+          "original": 7479000000,
+          "reprinted": 7479000000,
+          "concept": "OperatingIncomeLoss",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 6946000000,
+          "reprinted": 6946000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 3.37,
+          "reprinted": 3.37,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 1487000000,
+          "reprinted": 1487000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 190144000000,
+          "reprinted": 190144000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalLiabilities": {
+          "original": 129283000000,
+          "reprinted": 129283000000,
+          "concept": "Liabilities",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 50101000000,
+          "reprinted": 50101000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 13260000000,
+          "reprinted": 13260000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -22264000000,
+          "reprinted": -22264000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": 7000000000,
+          "reprinted": 7000000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
+        }
       }
     },
     {
@@ -6736,6 +10322,68 @@
             "Net cash provided by financing activities"
           ],
           "alternates": []
+        }
+      },
+      "priorFiling": {
+        "accessionNumber": "0001326160-25-000072",
+        "periodEnd": "2024-12-31",
+        "filingDate": "2025-02-27",
+        "url": "https://www.sec.gov/Archives/edgar/data/1326160/000132616025000072/duk-20241231.htm"
+      },
+      "revisions": {
+        "operatingIncome": {
+          "original": 7926000000,
+          "reprinted": 7926000000,
+          "concept": "OperatingIncomeLoss",
+          "revised": false
+        },
+        "netIncome": {
+          "original": 4524000000,
+          "reprinted": 4524000000,
+          "concept": "NetIncomeLoss",
+          "revised": false
+        },
+        "epsDiluted": {
+          "original": 5.71,
+          "reprinted": 5.71,
+          "concept": "EarningsPerShareDiluted",
+          "revised": false
+        },
+        "cash": {
+          "original": 314000000,
+          "reprinted": 314000000,
+          "concept": "CashAndCashEquivalentsAtCarryingValue",
+          "revised": false
+        },
+        "totalAssets": {
+          "original": 186343000000,
+          "reprinted": 186343000000,
+          "concept": "Assets",
+          "revised": false
+        },
+        "totalEquity": {
+          "original": 50127000000,
+          "reprinted": 50127000000,
+          "concept": "StockholdersEquity",
+          "revised": false
+        },
+        "operatingCashFlow": {
+          "original": 12328000000,
+          "reprinted": 12328000000,
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "revised": false
+        },
+        "investingCashFlow": {
+          "original": -13123000000,
+          "reprinted": -13123000000,
+          "concept": "NetCashProvidedByUsedInInvestingActivities",
+          "revised": false
+        },
+        "financingCashFlow": {
+          "original": 859000000,
+          "reprinted": 859000000,
+          "concept": "NetCashProvidedByUsedInFinancingActivities",
+          "revised": false
         }
       }
     }

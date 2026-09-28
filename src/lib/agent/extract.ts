@@ -7,6 +7,7 @@ import { detectScale, parseAmount } from "../sec/units";
 import { EXTRACTION_PROMPT, FIELD_GUIDE } from "./prompts";
 import {
   currentPeriodColumn,
+  priorPeriodColumn,
   figureAt,
   renderForAgent,
   sameFigure,
@@ -84,6 +85,7 @@ function resolve(
   spec: FieldSpec,
   answer: AgentAnswer | undefined,
   column: number,
+  priorColumn: number | null,
 ): ExtractedFigure {
   const scale = spec.unit === "USD" ? detectScale(table) : 1;
   const base = {
@@ -91,6 +93,9 @@ function resolve(
     scale,
     agentPrinted: answer?.printedValue ?? null,
     note: answer?.note ?? "no answer returned for this field",
+    priorValue: null,
+    priorPrinted: null,
+    failedChecks: [],
   };
   const row =
     answer?.rowIndex !== null && answer?.rowIndex !== undefined
@@ -112,8 +117,13 @@ function resolve(
   }
   const printed = figureAt(row, column);
   const amount = printed ? parseAmount(printed) : null;
+  const priorPrinted =
+    priorColumn === null ? null : figureAt(row, priorColumn);
+  const priorAmount = priorPrinted ? parseAmount(priorPrinted) : null;
   return {
     ...base,
+    priorPrinted,
+    priorValue: priorAmount === null ? null : priorAmount * scale,
     value: amount === null ? null : amount * scale,
     rowIndex: answer!.rowIndex,
     rowLabel: parseAmount(row[0]) === null ? row[0] : "(unlabeled total row)",
@@ -133,6 +143,7 @@ export async function runExtraction(
 ): Promise<AgentStepResult<StatementExtraction>> {
   const specs = FIELDS.filter((f) => f.statement === kind);
   const column = currentPeriodColumn(table, periodEnd);
+  const priorColumn = priorPeriodColumn(table, periodEnd);
   const fieldList = specs
     .map((s) => `- ${s.key}: ${FIELD_GUIDE[s.key]}`)
     .join("\n");
@@ -161,6 +172,7 @@ export async function runExtraction(
       spec,
       step.output.fields.find((f) => f.field === spec.key),
       column,
+      priorColumn,
     ),
   );
 
@@ -170,6 +182,7 @@ export async function runExtraction(
       statement: kind,
       tableIndex: table.index,
       currentColumn: column,
+      priorColumn,
       figures,
     },
   };

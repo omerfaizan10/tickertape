@@ -9,7 +9,8 @@
     "lint": "eslint",
     "db:migrate": "tsx scripts/migrate.ts",
     "golden:build": "tsx scripts/build-golden-set.ts",
-    "eval": "tsx scripts/eval.ts"
+    "eval": "tsx scripts/eval.ts",
+    "eval:revisions": "tsx scripts/eval-revisions.ts"
   },
   "dependencies": {
     "cheerio": "^1.2.0",

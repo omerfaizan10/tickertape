@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { FiguresTable } from "@/components/figures-table";
 import { ChecksList } from "@/components/checks-list";
+import { RevisionsPanel } from "@/components/revisions-panel";
 import type { AnalysisResult, TraceEvent } from "@/lib/agent/types";
 
 const SUGGESTIONS = ["AAPL", "NVDA", "JPM", "KO", "TSLA", "COST"];
@@ -38,6 +39,19 @@ const STEPS: { agent: string; label: string; detail: string }[] = [
   },
 ];
 
+const PRIOR_STEPS: typeof STEPS = [
+  {
+    agent: "restatement_check",
+    label: "last year's 10-K",
+    detail: "read it the same way, then compare its figures with their reprint (code)",
+  },
+  {
+    agent: "revision_explainer",
+    label: "restatement explainer",
+    detail: "runs only if something was revised; must quote the filing",
+  },
+];
+
 interface FilingInfo {
   ticker: string;
   companyName: string;
@@ -50,6 +64,7 @@ type DoneResult = Omit<AnalysisResult, "events">;
 
 export function AnalyzeForm() {
   const [ticker, setTicker] = useState("");
+  const [priorYear, setPriorYear] = useState(true);
   const [running, setRunning] = useState(false);
   const [filing, setFiling] = useState<FilingInfo | null>(null);
   const [events, setEvents] = useState<TraceEvent[]>([]);
@@ -69,7 +84,7 @@ export function AnalyzeForm() {
       const res = await fetch("/api/analyze", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ticker: symbol }),
+        body: JSON.stringify({ ticker: symbol, priorYear }),
       });
       if (!res.ok || !res.body) {
         const body = await res.json().catch(() => null);
@@ -133,6 +148,16 @@ export function AnalyzeForm() {
           >
             {running ? "analyzing..." : "analyze latest 10-K"}
           </button>
+          <label className="flex items-center gap-1.5 text-xs text-text-muted">
+            <input
+              type="checkbox"
+              checked={priorYear}
+              disabled={running}
+              onChange={(e) => setPriorYear(e.target.checked)}
+              className="accent-[var(--accent)]"
+            />
+            check for restatements
+          </label>
           <span className="text-xs text-text-faint">or try</span>
           {SUGGESTIONS.map((s) => (
             <button
@@ -174,7 +199,7 @@ export function AnalyzeForm() {
 
       {filing ? (
         <ol className="flex flex-col gap-2 rounded-lg border border-border bg-surface p-4">
-          {STEPS.map((step) => {
+          {(priorYear ? [...STEPS, ...PRIOR_STEPS] : STEPS).map((step) => {
             const hits = events.filter((e) => e.agentName === step.agent);
             const last = hits[hits.length - 1];
             const state = last
@@ -250,6 +275,14 @@ export function AnalyzeForm() {
             </h2>
             <ChecksList checks={result.checks} />
           </section>
+          {result.priorYear ? (
+            <section>
+              <h2 className="mb-3 text-xs uppercase tracking-wide text-text-faint">
+                restatements
+              </h2>
+              <RevisionsPanel check={result.priorYear} />
+            </section>
+          ) : null}
         </>
       ) : result?.error ? (
         <div className="rounded border border-escalate/30 bg-escalate-soft px-3 py-2 text-sm text-escalate">

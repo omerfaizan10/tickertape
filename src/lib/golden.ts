@@ -1,6 +1,8 @@
 import { existsSync, readFileSync, readdirSync } from "fs";
 import { join } from "path";
 import type { AnswerKey } from "./eval/answer-key";
+import type { RevisionTruth } from "./eval/revisions-truth";
+import type { FieldKey } from "./fields";
 import { parseFiling, type FilingTable } from "./sec/filing-text";
 import { locateStatement, type StatementKind } from "./sec/locate-statements";
 
@@ -25,6 +27,16 @@ export interface GoldenFiling {
   exhibits: string[];
   statements: Partial<Record<StatementKind, LocatedStatement>>;
   answerKey: AnswerKey;
+  // The 10-K before this one, whose figures this one reprints for
+  // comparison, and per field whether the reprint differs from what that
+  // filing originally reported.
+  priorFiling: {
+    accessionNumber: string;
+    periodEnd: string;
+    filingDate: string;
+    url: string;
+  } | null;
+  revisions: Partial<Record<FieldKey, RevisionTruth>>;
 }
 
 export interface GoldenSet {
