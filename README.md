@@ -2,18 +2,20 @@
 
 Agents that read 10-K filings, graded by the SEC.
 
+**Live:** [tickertape-sec.vercel.app](https://tickertape-sec.vercel.app). Type any US ticker on the [analyze](https://tickertape-sec.vercel.app/analyze) page and watch the agents read its latest 10-K.
+
 Every US public company files its annual financial statements twice: once as the human-readable 10-K, and once as structured XBRL data. Tickertape has agents read the first and grades them against the second, for the exact same filing and period. The agents never see the XBRL. It's the answer key.
 
 ## Results
 
 On a golden set of the latest 10-K from 54 large US companies across tech, banks, healthcare, consumer, energy, industrials, telecom and utilities, with `gpt-6-luna` (reasoning off):
 
-|                           |                                                                                       |
-| ------------------------- | ------------------------------------------------------------------------------------- |
-| **Figure accuracy**       | **544 / 545 (99.8%)** exact against the SEC's XBRL, sign included                     |
-| **Misread figures**       | 0 (every figure is read from the printed cell, not from the model's claim)            |
-| **Cost / latency**        | about $0.0006 and 3 seconds per filing                                                |
-| **Restatement detection** | **12 / 12** real restatements caught, **0** false alarms across 527 unrevised figures |
+|                           |                                                                                                                            |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| **Figure accuracy**       | **544 / 545 (99.8%)** exact against the SEC's XBRL, sign included                                                          |
+| **Misread figures**       | 0 (every figure is read from the printed cell, not from the model's claim)                                                 |
+| **Cost / latency**        | about $0.0006 and 3 seconds per filing                                                                                     |
+| **Restatement detection** | **12 / 12** real restatements caught, **0** false alarms across 527 unrevised figures                                      |
 | **Management's claims**   | 90 / 90 checkable MD&A claims match the statements; the checker catches 966 / 968 planted false claims with 0 false alarms |
 
 Full reports, including every miss: [`eval/results.md`](eval/results.md) (extraction), [`eval/revisions.md`](eval/revisions.md) (restatements), [`eval/narrative.md`](eval/narrative.md) (management's claims) and [`eval/models.md`](eval/models.md) (model comparison).
@@ -22,12 +24,12 @@ Full reports, including every miss: [`eval/results.md`](eval/results.md) (extrac
 
 Same pipeline, prompts and checks; only the model that picks rows changes.
 
-| Model | Accuracy | Filed before the model's cutoff | Filed after it | Cost / filing |
-|---|---|---|---|---|
-| `gpt-6-luna`, reasoning off | 544/545 (99.8%) | 99.8% | 100% (51) | $0.0006 |
-| `gpt-6-luna`, default reasoning | 544/545 (99.8%) | 99.8% | 100% (51) | $0.0007 |
-| `gpt-6-sol` | 544/545 (99.8%) | 99.8% | 100% (51) | $0.0128 |
-| `gpt-4o-mini` | 541/545 (99.3%) | none (cutoff 2023) | 99.3% | $0.0010 |
+| Model                           | Accuracy        | Filed before the model's cutoff | Filed after it | Cost / filing |
+| ------------------------------- | --------------- | ------------------------------- | -------------- | ------------- |
+| `gpt-6-luna`, reasoning off     | 544/545 (99.8%) | 99.8%                           | 100% (51)      | $0.0006       |
+| `gpt-6-luna`, default reasoning | 544/545 (99.8%) | 99.8%                           | 100% (51)      | $0.0007       |
+| `gpt-6-sol`                     | 544/545 (99.8%) | 99.8%                           | 100% (51)      | $0.0128       |
+| `gpt-4o-mini`                   | 541/545 (99.3%) | none (cutoff 2023)              | 99.3%          | $0.0010       |
 
 Once code does everything except choosing the row, a model twenty times the price chooses the same rows, and reasoning adds cost without changing a figure. Filings made after a model's training cutoff score as well as those before it, so the figures are being read, not recalled.
 
